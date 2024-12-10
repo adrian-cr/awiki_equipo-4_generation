@@ -1,0 +1,47 @@
+:root {
+    --bg-color: #e9f7ff;
+    --primary-color: #77aaff;
+    --secondary-color: #ff83c2;
+    --hg-color: #b4ffe3;
+    --font-primary: 'Montserrat', sans-serif; 
+    --font-secundary: 'Inter', sans-serif; 
+    background-color: var(--bg-color);
+    color: black ;
+}
+
+ /* Se agrega la fuente principal Montserrat a todos los titulos y subtitulos de la pagina */
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-primary);
+}
+
+/* Se agrega la fuente secundaria Inter a todo el sitio (Parrafos, botones, enlaces, etc... */
+body{
+    font-family: var(--font-secundary);
+}
+
+.barraNavegacion{
+    background-color: var(--secondary-color);
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    left: 0;
+    padding: 20px;
+  }
+
+.barraTop{
+    background-color: var(--primary-color);
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-top: 20px;
+}
+#logo{
+    position: absolute;
+    top:0;
+    left:0;
+    margin-left: -30px;
+}
+#titulo{
+    text-align: center;
+}
