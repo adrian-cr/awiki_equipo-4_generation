@@ -32,7 +32,7 @@ body{
     background-color: var(--primary-color);
     height: 10%;
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     padding-top: 20px;
 }
@@ -43,5 +43,36 @@ body{
     margin-left: -30px;
 }
 #titulo{
+    text-align: center;
+}
+.subtitulo{
+    text-align: center;
+}
+
+.complemento{
+    text-align: center;
+}
+
+main{
+padding: 50px;
+}
+
+.imagenIntro{
+    height: 300px; width: 650px;
+    border-radius: 50px;
+}
+.imagenesIniciales{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+justify-content: space-around;
+}
+
+.introduccion1{
+    text-align: center;
+    width: 500px;
+}
+
+.textos{
     text-align: center;
 }
