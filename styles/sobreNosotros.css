@@ -45,3 +45,16 @@ body{
 #titulo{
     text-align: center;
 }
+
+.card-body{
+    background-color: var(--primary-color);
+}
+
+.card-title{
+    font-family: var(--font-primary) bold;
+}
+
+.card-text{
+    text-align: justify;
+    font-family: var(--font-secundary);
+}
