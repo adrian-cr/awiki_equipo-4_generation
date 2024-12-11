@@ -3,8 +3,8 @@
     --primary-color: #77aaff;
     --secondary-color: #ff83c2;
     --hg-color: #b4ffe3;
-    --font-primary: 'Montserrat', sans-serif; 
-    --font-secundary: 'Inter', sans-serif; 
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secundary: 'Inter', sans-serif;
     background-color: var(--bg-color);
     color: black ;
 }
@@ -36,13 +36,15 @@ body{
     top: 0;
     padding-top: 20px;
 }
+
 #logo{
     position: absolute;
     top:0;
     left:0;
     margin-left: -30px;
 }
-#titulo{
+
+.titulo{
     text-align: center;
 }
 
@@ -66,19 +68,25 @@ body{
     text-align: center;
 }
 
+/** CAMBIOS ALBERT **/
 main{
 padding: 50px;
+}
+
+.contenedorIntros {
+  margin: 50px auto;
+  padding: 20px;
 }
 
 .imagenIntro{
     height: 300px; width: 650px;
     border-radius: 50px;
 }
-.imagenesIniciales{
+.contenedorIntro{
     display: flex;
     align-items: center;
-    gap: 50px;
-justify-content: space-around;
+    margin-bottom: 50px;
+  justify-content: space-around;
 }
 
 .introduccion1{
@@ -86,6 +94,52 @@ justify-content: space-around;
     width: 500px;
 }
 
-.textos{
+.envoltorioMisionVision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.contenedorMisionVision {
+  width: 500px;
+}
+
+.tituloMisionVision {
+  text-align: center;
+}
+
+.textoMisionVision{
     text-align: center;
+}
+
+.envoltorio-tarjetas-perfil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+.tarjeta-perfil {
+  align-items: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.foto-perfil {
+  border: #77aaff solid 10px;
+  border-radius: 150px;
+  height: 300px;
+  margin-bottom: 30px;
+  object-fit: cover;
+  width:100%;
+}
+
+.card-body {
+  border-radius: 30px;
+  height: calc(100% - 330px);
+  padding: 15px;
+  text-align: center;
 }
