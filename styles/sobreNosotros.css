@@ -19,29 +19,123 @@ body{
     font-family: var(--font-secundary);
 }
 
-.barraNavegacion{
-    background-color: var(--secondary-color);
-    height: 100%;
-    width: 10%;
-    position: fixed;
-    left: 0;
-    padding: 20px;
-  }
 
-.barraTop{
-    background-color: var(--primary-color);
-    height: 10%;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    padding-top: 20px;
+/* Estilos Bootstrap */
+
+.contenedor-busqueda-bootstrap {
+  width: 60%;
 }
 
-#logo{
-    position: absolute;
-    top:0;
-    left:0;
-    margin-left: -30px;
+.container-fluid {
+  display: flex !important;
+  justify-content: flex-end !important;
+  width: 100%;
+}
+
+.envoltorio-menu-navegacion{
+  align-items: center;
+  flex-basis: 80%;
+  justify-content: center !important;
+  width:50% !important;
+}
+
+.menu-navegacion {
+  display: flex !important;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+}
+
+.envoltorio-barra-busqueda {
+  width: 100%;
+}
+
+.barra-busqueda {
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+  width: 100% !important;
+}
+
+.campo-busqueda {
+  margin-right: 5px;
+  width: 70%;
+}
+
+.boton-menu {
+  border: none;
+  width: 20%;
+}
+
+.boton-menu:hover {
+  box-shadow: 0px 0px 5px white !important;
+}
+
+.boton-menu:focus {
+  border: none;
+  box-shadow: none;
+}
+
+/* Fin Estilos Bootstrap */
+
+.barra-navegacion{
+  align-items: center;
+  background-color: var(--primary-color) !important;
+  display: flex;
+  height: 80px;
+  justify-content: space-evenly;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-logo{
+  width: 12%;
+}
+
+.logo {
+  height: 70%;
+  width: 90%;
+}
+
+.barra-busqueda {
+  display: flex;
+  height: 30px;
+  width: 50%;
+}
+
+.boton-busqueda {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 7px;
+  color: white;
+  line-height: 0;
+  width: 80px !important;
+}
+
+.boton-busqueda:hover {
+  color: white;
+  background-color: #fe96ca;
+}
+
+
+.nav-icon-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.nav-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.nav-perfil {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
 }
 
 .titulo{
@@ -69,6 +163,7 @@ body{
 }
 
 /** CAMBIOS ALBERT **/
+
 main{
 padding: 50px;
 }
@@ -79,7 +174,8 @@ padding: 50px;
 }
 
 .imagenIntro{
-    height: 300px; width: 650px;
+    height: 300px;
+    width: 650px;
     border-radius: 50px;
 }
 .contenedorIntro{
@@ -117,8 +213,8 @@ padding: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: space-around;
-  padding: 0px;
+  justify-content: space-evenly;
+  padding: 50px auto;
 }
 
 .tarjeta-perfil {
@@ -142,4 +238,10 @@ padding: 50px;
   height: calc(100% - 330px);
   padding: 15px;
   text-align: center;
+}
+
+@media screen and (max-width:990px){
+  .nav-icon-container {
+    width: 25%;
+  }
 }
