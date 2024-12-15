@@ -1,0 +1,123 @@
+/*seccion titulo*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+}
+
+body {
+    font-family: var(--font-secundary);
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    min-height: 100vh;
+}
+
+/*contenedores*/
+
+main.main{
+    display: flex;
+    flex-wrap: wrap;
+    margin:20px;
+    padding: 10px;
+    flex:1;
+}
+
+#envoltorio2 {
+    flex:2;
+    padding: 10px;
+    gap:20px;
+    margin: 10px;
+    height:100%;
+    background: URL(../images/beach-with.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+div.formatoCarta1 {
+    flex:1;
+    margin: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding: 10px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    height: 100%;
+}
+
+/*Textos*/
+
+#titulo1 {
+    background: var(--secondary-color);
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+#titulo2 {
+    color: black;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.texto1 {
+    color: black;
+    width: auto;
+    margin: 50px;
+    text-align: justify;
+
+}
+
+#texto2 {
+    margin: 10px;
+}
+
+.textoPiePagina{
+    font-size: 10px;
+    margin: 5px;
+}
+
+/*Botones*/
+
+.btn {
+    color: white;
+    background-color: #fe96ca;
+    border-color: var(--secondary-color);
+}
+
+/*Imagenes*/
+
+#imagenPiePagina{
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+}
+
+#piePagina{
+    background: var(--hg-color);
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+/*Media queries*/
+
+@media screen and (max-width:990px){
+    .main {
+        flex-direction:column;
+    }
+    .formatoCarta1{
+        margin:0;
+        margin-top:20px;
+        flex:1;
+    }
+    .envoltorio2{
+        flex:1;
+    }
+
+}
