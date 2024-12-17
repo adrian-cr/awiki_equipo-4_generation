@@ -261,3 +261,188 @@ main {
   box-shadow: none;
 }
 /* Fin Estilos Bootstrap */
+
+/* .barra-navegacion{
+  align-items: center;
+  background-color: var(--primary-color) !important;
+  display: flex;
+  height: 80px;
+  justify-content: space-evenly;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-logo{
+  width: 12%;
+}
+
+.logo {
+  height: 70%;
+  width: 90%;
+}
+
+.barra-busqueda {
+  display: flex;
+  height: 30px;
+  width: 50%;
+}
+
+.boton-busqueda {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 7px;
+  color: white;
+  line-height: 0;
+  width: 80px !important;
+}
+
+.boton-busqueda:hover {
+  color: white;
+  background-color: #fe96ca;
+}
+
+
+.nav-icon-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.nav-icon {
+  color: white;
+  font-size: 30px;
+}
+
+.nav-perfil {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.card-body{
+    background-color: var(--primary-color);
+}
+
+.card-title{
+    font-family: var(--font-primary) bold;
+}
+
+.card-text{
+    text-align: justify;
+    font-family: var(--font-secundary);
+}
+.subtitulo{
+    text-align: center;
+}
+
+.complemento{
+    text-align: center;
+} */
+
+/** CAMBIOS ALBERT **/
+
+/* main{
+padding: 50px;
+}
+
+.contenedorIntros {
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.imagenIntro{
+    height: 300px;
+    width: 650px;
+    border-radius: 50px;
+}
+.contenedorIntro{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  justify-content: space-around;
+}
+
+.introduccion1{
+    text-align: center;
+    width: 500px;
+}
+
+.envoltorioMisionVision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+.contenedorMisionVision {
+  width: 500px;
+}
+
+.tituloMisionVision {
+  text-align: center;
+}
+
+.textoMisionVision{
+    text-align: center;
+}
+
+.envoltorio-tarjetas-perfil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: space-evenly;
+  padding: 50px auto;
+}
+
+.tarjeta-perfil {
+  align-items: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.foto-perfil {
+  border: #77aaff solid 10px;
+  border-radius: 150px;
+  height: 300px;
+  margin-bottom: 30px;
+  object-fit: cover;
+  width:100%;
+}
+
+.card-body {
+  border-radius: 30px;
+  height: calc(100% - 330px);
+  padding: 15px;
+  text-align: center;
+}
+
+#imagenPiePagina{
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+}
+
+#piePagina{
+  background: var(--primary-color);
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+.textoPiePagina{
+  font-size: 10px;
+  margin: 5px;
+}
+
+@media screen and (max-width:990px){
+  .nav-icon-container {
+    width: 25%;
+  }
+} */
