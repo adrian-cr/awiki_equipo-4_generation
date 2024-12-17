@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital@0;1&display=swap');
+
+:root {
+    --bg-color: #e9f7ff;
+    --primary-color: #77aaff;
+    --secondary-color: #ff83c2;
+    --hg-color: #b4ffe3;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: black;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--primary-font);
+    font-weight: 600;
+}
+
+p{
+  font-family: var(--secondary-font);
+}
+
+li {
+  list-style: none;
+}
+
+/* Se agrega la fuente secundaria Inter a todo el sitio (Parrafos, botones, enlaces, etc... */
+body{
+    font-family: var(--secondary-font);
+    font-size: 1.5em;
+    font-weight: 200;
+}
+
+main {
+  padding: 50px;
+  }
