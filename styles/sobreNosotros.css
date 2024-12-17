@@ -18,6 +18,10 @@ h1, h2, h3, h4, h5, h6{
     font-weight: 600;
 }
 
+li {
+  list-style: none;
+}
+
 /* Se agrega la fuente secundaria Inter a todo el sitio (Parrafos, botones, enlaces, etc... */
 body{
     font-family: var(--secondary-font);
@@ -176,7 +180,6 @@ main {
 }
 
 .tarjeta-perfil {
-  align-items: space-between;
   display: flex;
   flex-wrap: wrap;
   width: 300px;
@@ -196,7 +199,29 @@ main {
   height: calc(100% - 330px);
   padding: 15px;
   text-align: center;
+  justify-content: center !important;
 }
+
+/* PIE DE PÁGINA */
+#imagenPiePagina{
+  width: 100px;
+  height: 30px;
+  margin: 5px;
+}
+
+#piePagina{
+  background: var(--primary-color);
+  width: 100%;
+  height: 80px;
+  text-align: center;
+}
+
+.textoPiePagina{
+  font-size: 10px;
+  margin: 5px;
+}
+
+/* MEDIA QUERIES */
 
 @media screen and (max-width:990px){
   .nav-icon-container {
@@ -260,6 +285,8 @@ main {
   border: none;
   box-shadow: none;
 }
+
+
 /* Fin Estilos Bootstrap */
 
 /* .barra-navegacion{
@@ -423,23 +450,7 @@ padding: 50px;
   text-align: center;
 }
 
-#imagenPiePagina{
-  width: 100px;
-  height: 30px;
-  margin: 5px;
-}
 
-#piePagina{
-  background: var(--primary-color);
-  width: 100%;
-  height: 80px;
-  text-align: center;
-}
-
-.textoPiePagina{
-  font-size: 10px;
-  margin: 5px;
-}
 
 @media screen and (max-width:990px){
   .nav-icon-container {
