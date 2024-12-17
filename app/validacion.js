@@ -3,21 +3,24 @@ const txtTelefono = document.getElementById("telefono");
 const txtEmail = document.getElementById("email");
 const txtMensaje = document.getElementById("mensaje");
 const botonEnviar = document.getElementById("boton-enviar");
-const mensajeError = document.getElementById("mensaje-error")
-console.log(txtNombre.value);
+const mensajeError = document.getElementById("mensaje-error");
 
 function validarNombre() {
   if (txtNombre.value.length < 3) {
     mensajeError.style.display = "block";
     mensajeError.insertAdjacentHTML("beforeend", `<li>Ingrese un nombre válido.</li>`);
+    return false;
   }
+  return true;
 }
 
 function validarTelefono() {
   if (txtTelefono.value.length !== 10 || Number.isNaN(txtTelefono.value)) {
     mensajeError.style.display = "block";
     mensajeError.insertAdjacentHTML("beforeend", `<li>Ingrese un teléfono válido.</li>`);
+    return false;
   }
+  return true;
 }
 
 function validarEmail() {
@@ -25,14 +28,18 @@ function validarEmail() {
   if (!regex.test(txtEmail.value)) {
     mensajeError.style.display = "block";
     mensajeError.insertAdjacentHTML("beforeend", `<li>Ingrese un correo válido.</li>`);
+    return false;
   }
+  return true;
 }
 
 function validarMensaje(){
   if (txtMensaje.value.length < 30 || txtMensaje.value.length > 280) {
     mensajeError.style.display = "block";
     mensajeError.insertAdjacentHTML("beforeend", `<li>Tu mensaje puede contener de 30 a 280 caracteres.</li>`);
+    return false;
   }
+  return true;
 }
 
 function borrarErrores(){
@@ -40,12 +47,18 @@ function borrarErrores(){
   mensajeError.style.display = "none";
 }
 
+function validarDatos() {
+  let datosValidos = true;
+  borrarErrores();
+  datosValidos = validarNombre() && datosValidos;
+  datosValidos = validarTelefono() && datosValidos;
+  datosValidos = validarEmail() && datosValidos;
+  datosValidos = validarMensaje() && datosValidos;
+  return datosValidos;
+}
 
 botonEnviar.addEventListener("click", e => {
-  e.preventDefault();
-  borrarErrores();
-  validarNombre();
-  validarTelefono();
-  validarEmail();
-  validarMensaje();
+  if (!validarDatos()) {
+    e.preventDefault();
+  }
 })
