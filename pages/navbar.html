@@ -50,32 +50,49 @@
                     </form>
                 </div>
 
-            <div class="icons">
+            <div class="icons justify-content-end" >
 
-                <svg xmlns="http://www.w3.org/2000/svg" title="Amigos" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                  </svg>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" title="Amigos" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                      </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" title="Notificaciones" width="36" height="36" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                      </svg>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" title="Perfil" width="40" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                      </svg>
+                </div>
+                
 
-                <svg xmlns="http://www.w3.org/2000/svg" title="Notificaciones" width="36" height="36" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
-                  </svg>
+                
 
-                <svg xmlns="http://www.w3.org/2000/svg" title="Perfil" width="40" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                  </svg>
+                
             </div>
 
             </div>
         </div>
 
         <style>
-            .d-flex{
-                display: flex; align-items: center; justify-content: center;
-                
-            }
+           .icons {
+                    display: flex;
+                    justify-content: flex-end;  /* Centra los iconos horizontalmente */
+                    gap: 15px;
+                                    /* Espacio entre los iconos */
+                    }
 
-            .icons{
-                float: right;
+            .icons div {
+                display: flex;  /* Asegura que los íconos dentro del div estén centrados si es necesario */
+                align-items: center;
+                     }
+
+            .navbar {
+                display: flex;
+                justify-content: flex-end;
             }
 
         </style>
