@@ -102,12 +102,35 @@ div.formatoCarta1 {
     margin: 5px;
 }
 
+/*Formato Formulario*/
+
+.input-group-text{
+    font-family:'Inter', sans-serif;     
+}
+
+.form-control{
+    font-family:'Inter', sans-serif;     
+}
+
+/*Alertas*/
+#mensajeError{
+    border-radius: 5px;
+}
+.alerta-error{
+    font-size: 15px;
+    font-family: var(--secondary-font);
+
+}
+
 /*Botones*/
 
-.btn {
+#boton-enviar {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7em;
     color: white;
     background-color: #fe96ca;
     border-color: var(--secondary-color);
+    border-radius: 5px;
 }
 
 /*Imagenes*/
@@ -138,6 +161,7 @@ div.formatoCarta1 {
     }
     .envoltorio2{
         flex:1;
+    
     }
 
 }
