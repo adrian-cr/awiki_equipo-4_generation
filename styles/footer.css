@@ -1,0 +1,35 @@
+@import url(./style.css);
+
+
+footer{
+    background-color: var(--primary-color);
+    background-size: 85%;
+}
+
+hr{
+    width: 60px;
+    background-color: var(--secondary-color); 
+    height: 3px
+ }
+a,i,p{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+  
+}
+
+#copyright{
+    background-color: #ff83c2;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+#icon{
+     text-decoration: none; 
+}
+h6{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+}
