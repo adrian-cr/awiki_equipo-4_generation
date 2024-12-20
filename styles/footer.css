@@ -1,0 +1,52 @@
+@import url(./style.css);
+
+
+footer{
+    background-color: var(--primary-color);
+    background-size: 85%;
+}
+
+hr{
+    background-color: var(--secondary-color);
+    height: 3px;
+    margin-bottom: 0px;
+    width: 60px;
+ }
+a,i,p{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#copyright{
+    background-color: #ff83c2;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+
+}
+#icon{
+     text-decoration: none;
+}
+h6{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+
+.logo {
+  width: 200px;
+}
+
+#logo-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.columna-contenido {
+  margin-bottom: 20px;
+  text-align: center;
+}
