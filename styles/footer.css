@@ -15,8 +15,8 @@ hr{
 a,i,p{
     font-family: var(--secondary-font);
     font-weight: 400;
-    font-size: 15px;
-    margin-bottom: 0;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 #copyright{
@@ -34,4 +34,19 @@ h6{
     font-weight: 400;
     font-size: 15px;
     margin-bottom: -10px;
+}
+
+.logo {
+  width: 200px;
+}
+
+#logo-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.columna-contenido {
+  margin-bottom: 20px;
+  text-align: center;
 }
