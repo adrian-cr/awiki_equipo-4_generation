@@ -1,0 +1,61 @@
+.navbar {
+  background-color: #77aaff;
+}
+.nb-logo {
+  height: auto;
+  margin-left: 2%;
+  min-width: 10%;
+}
+.nb-search-form {
+  width: 50%;
+}
+
+.nb-search-button{
+  background-color: #ff83c2;
+  color: white;
+  border: #ff83c2;
+}
+
+.nb-icon-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+  width: 13%;
+}
+
+.nb-icon-menu-link {
+  color: white;
+  width: 25px;
+}
+
+@media screen and (max-width:991px) {
+  .nb-search-form {
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .nb-icon-menu {
+    margin: 20px auto 10px;
+    width: 100%;
+  }
+
+  .nb-icon-menu svg {
+    display: none;
+  }
+
+  .nb-collapse-button {
+    border-color: var(--primary-color);
+    box-shadow: none !important;
+  }
+
+  .nb-collapse-button[aria-expanded="true"] + .nb-main-container .nb-text-menu {
+    display: flex !important;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .nb-text-menu-link {
+    color: white;
+    font-size: 1rem;
+  }
+}
