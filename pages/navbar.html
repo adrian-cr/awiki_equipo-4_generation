@@ -10,15 +10,15 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg" style="background-color: #77aaff;">
         <div class="container-fluid">
-            <img src="../images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="d-inline-block align-text-top">
+            <img src="../images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
                 <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                     </li>
@@ -43,61 +43,54 @@
                         <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul> -->
-                <div>
-                    <form class="d-flex justify-content-between lh-condensed" role="search"> 
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+
+            <div class="icon justify-content-end ms-auto collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <form class="d-flex search-form mx-auto" role="search"> 
+                        <input class="form-control me-2" type="search" placeholder="Buscar restaurantes, hoteles, personas..." aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
-                </div>
-
-            <div class="icons justify-content-end" >
-
-                <div>
+                
+                <div class="iconos">
                     <svg xmlns="http://www.w3.org/2000/svg" title="Amigos" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                         <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
                       </svg>
-                </div>
-                <div>
+
                     <svg xmlns="http://www.w3.org/2000/svg" title="Notificaciones" width="36" height="36" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
                         <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                       </svg>
-                </div>
-                <div>
+               
                     <svg xmlns="http://www.w3.org/2000/svg" title="Perfil" width="40" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                       </svg>
                 </div>
                 
-
-                
-
-                
             </div>
-
-            </div>
-        </div>
-
-        <style>
-           .icons {
-                    display: flex;
-                    justify-content: flex-end;  /* Centra los iconos horizontalmente */
-                    gap: 15px;
-                                    /* Espacio entre los iconos */
-                    }
-
-            .icons div {
-                display: flex;  /* Asegura que los íconos dentro del div estén centrados si es necesario */
-                align-items: center;
-                     }
-
-            .navbar {
-                display: flex;
-                justify-content: flex-end;
-            }
-
-        </style>
+        </div> 
     
     </nav>
+
+    <style>
+
+        button.btn-outline-success{
+            background-color: #ff83c2;
+            color: white;
+            border: #ff83c2;
+        }
+
+        div.container>form.search-form{
+            display: flex;
+            justify-content: center !important;
+            align-items: center;
+        }
+
+        .icon{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
