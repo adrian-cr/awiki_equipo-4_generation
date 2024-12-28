@@ -10,9 +10,8 @@
     --secondary-font: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: var(--primary-font);
-  font-weight: 600;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--primary-font) !important;
 }
 
 
@@ -27,12 +26,14 @@ li {
 
 /* Se agrega la fuente secundaria Inter a todo el sitio (Parrafos, botones, enlaces, etc... */
 body{
-    font-family: var(--secondary-font);
-    font-size: 1.5em;
-    font-weight: 200;
     display:flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+body * {
+  font-family: var(--secondary-font);
+    font-weight: 200 !important;
 }
 
 main {
@@ -41,5 +42,12 @@ main {
   }
 
   a {
-    text-decoration: none;
+    color: var(--bg-color) !important;
+    text-decoration: none !important;
+  }
+
+  a:hover, button:hover {
+    color: white !important;
+    font-weight: 300 !important;
+    transition: 300ms;
   }

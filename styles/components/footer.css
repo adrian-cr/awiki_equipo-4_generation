@@ -1,0 +1,56 @@
+@import url(./style.css);
+
+.footer{
+    background-color: var(--primary-color);
+}
+/* LOGO SECTION */
+.ft-logo-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.ft-logo {
+  width: 200px;
+}
+
+/* MENU SECTION */
+.ft-menu-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.ft-menu-section-title {
+  color: var(--bg-color);
+  font-weight: 700 !important;
+  font-size: 1em;
+  margin-bottom: -10px;
+  width: 100%;
+}
+
+.ft-menu-section-rule {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    height: 2px;
+    margin-bottom: 5px;
+    opacity: 1;
+    width: 20%;
+ }
+
+.ft-menu-section-item {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* SOCIAL MEDIA ICONS */
+.ft-sm-icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.ft-sm-icon{
+  font-size: 1.2em;
+}
