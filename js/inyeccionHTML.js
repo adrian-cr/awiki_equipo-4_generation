@@ -2,8 +2,8 @@ const headElement = document.getElementsByTagName("head")[0];
 const bodyElement = document.getElementsByTagName("body")[0];
 
 const cssLinksHTML = `
+  <link rel="stylesheet" href="../styles/components/header.css"/>
   <link rel="stylesheet" href="../styles/components/footer.css"/>
-  <link rel="stylesheet" href="../styles/components/navbarUsuario.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>`;
 const userHeaderHTML = `
   <header>

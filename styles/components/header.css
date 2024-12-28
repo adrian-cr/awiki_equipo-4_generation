@@ -1,7 +1,7 @@
-@import url(./style.css);
+@import url(../style.css);
 
 .navbar {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
 }
 .nb-logo {
   height: auto;
