@@ -11,39 +11,6 @@
   <link rel="stylesheet" href="../styles/contacto.css">
 </head>
 <body>
-  <nav class="barra-navegacion">
-      <a class="navbar-logo" href="#">
-          <img class="logo" src="../images/Logo_de_pagina.webp" alt="Logo_Awiki" width="200" height="80">
-      </a>
-      <!-- <form class="barra-busqueda" role="search">
-      <input class="form-control" type="search" placeholder="Buscar restaurantes, hoteles, personas..." aria-label="Search">
-      <button class="boton-busqueda" type="submit">Buscar</button>
-    </form> -->
-      <div class="contenedor-busqueda-bootstrap navbar navbar-expand-lg">
-          <div class="container-fluid">
-              <div class="envoltorio-menu-navegacion collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="menu-navegacion navbar-nav">
-                      <li class="envoltorio-barra-busqueda nav-item">
-                          <form class="barra-busqueda" role="search">
-                              <input class="campo-busqueda form-control" type="search"
-                                  placeholder="Buscar restaurantes, hoteles, personas..." aria-label="Search">
-                              <button class="boton-busqueda btn" type="submit">Buscar</button>
-                          </form>
-                      </li>
-                  </ul>
-              </div>
-              <button class="boton-menu navbar-toggler" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-                  <i class="nav-icon bi bi-search"></i>
-              </button>
-          </div>
-      </div>
-      <div class="nav-icon-container">
-          <i class="bi bi-people-fill nav-icon"></i>
-          <i class="bi bi-bell-fill nav-icon"></i>
-          <img class="nav-perfil" src="../images/avatar.png" alt="Profile">
-      </div>
-  </nav>
 
   <div class="title" id="envoltorio1">
       <h1 id="titulo1">¡Contáctanos!</h1>
@@ -65,34 +32,30 @@
       <form id="formulario-contacto" class="card-body" action="./index.html">
         <div class="input-group flex-nowrap mb-3">
           <label for="nombre" class="input-group-text">Nombre:</label>
-          <input id="nombre" type="text" class="form-control" name="nombre" placeholder="Nombre completo" autofocus required>
+          <input id="nombre" type="text" class="form-control" name="nombre" autofocus required>
         </div>
         <div class="input-group flex-nowrap mb-3" >
           <label for="telefono" class="input-group-text">Número:</label>
-          <input id="telefono" type="text" class="form-control" name="telefono" placeholder="(lada)..." required>
+          <input id="telefono" type="text" class="form-control" name="telefono" required>
         </div>
         <div class="input-group flex-nowrap mb-3">
           <label for="email" class="input-group-text">Correo Electrónico:</label>
-          <input id="email" type="text" class="form-control" name="email" placeholder="..." required>
+          <input id="email" type="text" class="form-control" name="email" required>
         </div>
         <div class="input-group flex-nowrap mb-3">
           <label for="mensaje" class="input-group-text">Comentarios:</label>
-          <textarea id="mensaje" type="text" class="form-control" name="mensaje" placeholder="..." required></textarea>
+          <textarea id="mensaje" type="text" class="form-control" name="mensaje" required></textarea>
         </div>
-        <input type="submit" id="boton-enviar" value="send">
+        <input type="submit" id="boton-enviar" value="Enviar">
       </form>
     </div>
   </main>
-  <footer id="piePagina">
-    <img src="../images/Logo_de_pagina_monocromatic.webp" alt="Logo" id="imagenPiePagina">
-    <p class="textoPiePagina">Todos los derechos reservados, 2024.</p>
-    <p class="textoPiePagina">Informacion legal. | Aviso de privacidad.</p>
-  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script src="../app/envioDatos.js"></script>
-  <script src="../app/validacion.js"></script>
+  <script src="../js/inyeccionHTML.js"></script>
+  <script src="../js/envioDatos.js"></script>
+  <script src="../js/validacion.js"></script>
 </body>
 </html>
