@@ -1,0 +1,46 @@
+:root {
+    --bg-color: #e9f7ff;
+    --primary-color: #77aaff;
+    --secondary-color: #ff83c2;
+    --hg-color: #b4ffe3;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
+}
+
+.form-container{
+    margin: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+} 
+
+.was-validated{
+    padding: 3%;
+    border: 1.2px solid gray;
+    border-radius: 9%;
+}
+
+.custom-file{
+    position: relative;
+    border: 1px gray solid;
+    border-radius: 10%;
+    padding: 1.5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 1px 0px 0px gray;
+}
+
+.files-text{
+    display: flex;
+    font-weight: bolder;
+}
+
+.btn-primary {
+    background-color: #ff83c2; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Opcional: elimina el borde */
+    font-family: var(--primary-font);
+}
+
+.btn-primary:hover {
+    background-color: #FF9ED4; /* Color al pasar el mouse */
+    box-shadow: 2px 2px 7px 1px #FF9ED4;
+}
