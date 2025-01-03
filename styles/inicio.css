@@ -1,0 +1,81 @@
+@import url(../styles/style.css);
+
+/* Logo */
+/* PrimeraParte */
+.contenedores{
+    margin: 50px auto;
+    padding: 20px;
+    
+}
+
+.contenedorIntro{
+    display: flex; 
+    flex-direction: column;
+    justify-content: left; 
+    align-items: flex-start; /* Alinea los elementos dentro en el lado izquierdo del contenedor */ 
+    text-align: left;
+    
+}
+
+.contenedorImagenes{
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+
+}
+
+#primeraImagen{
+    width: 300px;
+    height: 400px;
+    margin: 50px;
+}
+
+#segundaImagen{
+    width: 300px;
+    height: 400px;
+    margin: 50px;
+}
+
+img{
+    width: 200px;
+    height: 60px;
+}
+
+h1{
+    font-weight: 600 !important;
+    text-align: left;
+}
+
+#subtitulo-dos{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+/* Segunda Parte */
+
+.envoltorioImg{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px auto;
+}
+
+.tarjetaImagen{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    justify-content: center;
+} 
+
+.imagen{
+    width: 300px;
+    height: 590px;
+    border-radius: 35px;
+}
+
+.boton-ver{
+    color: blueviolet;
+}
+

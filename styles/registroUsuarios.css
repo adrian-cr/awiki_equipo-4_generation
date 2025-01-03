@@ -1,0 +1,115 @@
+@import url(../styles/style.css);
+
+main{
+    display: flex;
+}
+
+
+body{
+    background: url(../images/beach-with0.jpg);
+    display: flex;
+}
+
+/* navbar */
+.navbar{
+    background-color: var(--primary-color);
+}
+
+
+
+ #correo-electronico1{
+    margin: 10px;
+    
+}
+
+#contraseña1{
+    margin: 10px;
+}
+
+#boton-sesion{
+    margin: 10px;
+} 
+
+
+/* titulo */
+.tituloAwiki{
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    margin: 10px;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
+#awiki{
+    color: white;
+    font-weight: bolder !important;
+    font-size: 64px;
+}
+
+/* Subtitulos */
+
+.subtitulos{
+   color: white;
+   font-weight: bolder !important;
+   font-size: 36px;
+}
+
+/* formulario */
+
+.formulario1{
+    flex: 100%;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+div.formulario-registro{
+    background: var(--hg-color);
+    border-radius: 5px;
+    /* height: 100%;
+    width: 100%; */
+    padding: 30px;
+
+}
+
+/* botones */
+#boton-enviar {
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    color: white;
+    background-color: #fe96ca;
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+    width: 300px;
+}
+
+#boton-sesion{
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    color: white;
+    background-color: #fe96ca;
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+    width: 300px;
+}
+
+@media screen and (max-width:990px){
+    .main {
+        flex-direction:column;
+    }
+    .formulario1{
+        margin:0;
+        margin-top:20px;
+        flex:1;
+    }
+
+}
+
+/* extras */
+
+#olvidaste{
+    font-size: 15px;
+}
