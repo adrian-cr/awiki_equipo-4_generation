@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #e9f7ff;
+    --primary-color: #77aaff;
+    --secondary-color: #ff83c2;
+    --hg-color: #b4ffe3;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
+}
+
+.form-container {
+    margin: 100px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  
+  .was-validated {
+    padding: 3%;
+    border: 1.2px solid gray;
+    border-radius: 25px;
+  }
+
+  .custom-file {
+    position: relative;
+    display: inline-block;
+    width: 100%; 
+  }
+
+  .files-text {
+    display: flex;
+    font-weight: bolder;
+    margin-bottom: 10px; 
+  }
+
+  .btn-primary {
+    background-color: #ff83c2; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Opcional: elimina el borde */
+    font-family: var(--primary-font);
+}
+
+.btn-primary:hover {
+    background-color: #FF9ED4; /* Color al pasar el mouse */
+    box-shadow: 2px 2px 7px 1px #FF9ED4;
+}
+  
+
+  #image-preview {
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+  }
+
+  .custom-file-input {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .custom-file-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    height: 40px;
+    padding: 0.625rem 1.25rem;
+    line-height: 1.5;
+    border-color: #ccc;
+    background-color: #f8f9fa;
+    border-radius: 0.25rem;
+    transition: box-shadow 0.15s ease-in-out;
+  } 
+  
+  .custom-file-label::after {
+    content: "Seleccionar archivo";
+    display: block;
+    width: 100%;
+    white-space: nowrap;   
+    text-overflow: ellipsis;
+  }
+     
+  

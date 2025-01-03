@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reseñas</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../styles/components/reseñas.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Reseña</h2>
+    <form>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Destino</label>
+            <input type="txt" class="form-control" id="exampleFormControlInput1" placeholder="Cabo San Lucas ">
+          </div>
+
+        <div class="form-group">
+            <label>¿Cómo calificarías tu experiencia en este destino?</label>
+            <div class="star-rating">
+                <input type="radio" id="five-stars" name="star" value="5"><label for="five-stars" class="fas fa-star"></label>
+                <input type="radio" id="four-stars" name="star" value="4"><label for="four-stars" class="fas fa-star"></label>
+                <input type="radio" id="three-stars" name="star" value="3"><label for="three-stars" class="fas fa-star"></label>
+                <input type="radio" id="two-stars" name="star" value="2"><label for="two-stars" class="fas fa-star"></label>
+                <input type="radio" id="one-star" name="star" value="1"><label for="one-star" class="fas fa-star"></label>
+            </div>
+        </div>
+
+    
+        <div class="form-group">
+            <label>¿Que tipo de viaje fue?</label>
+            <div class="radio-container">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"  id="business" value="business">
+                    <label class="form-check-label" for="business">Negocios</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id ="couples" value="couples">
+                    <label class="form-check-label" for="couples">Pareja</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"  id="family" value="family">
+                    <label class="form-check-label" for="family">Familia</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio"  id="friends" value="friends">
+                    <label class="form-check-label" for="friends">Amigos</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="solo" value="solo">
+                    <label class="form-check-label" for="solo">Solo</label>
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="form-group">
+            <label>¿Cuándo fue tu visita?</label>
+            <select class="form-control">
+                <option></option>
+                
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="">¿Cómo calificarias los siguientes criterios en una escala de 1-100?</label>
+            <hr>
+            <label>Costo</label>
+            <div class="range-labels">
+                <span>1</span>
+                <span>100</span>
+            </div>
+            <input type="range" class="form-control-range" min="1" max="100" step="1">
+        </div>
+
+        <div class="form-group">
+            <label>Transporte</label>
+            <div class="range-labels">
+                <span>1</span>
+                <span>100</span>
+            </div>
+            <input type="range" class="form-control-range" min="1" max="100" step="1">
+        </div>
+
+        <div class="form-group">
+            <label>Comida</label>
+            <div class="range-labels">
+                <span>1</span>
+                <span>100</span>
+            </div>
+            <input type="range" class="form-control-range" min="1" max="100" step="1">
+        </div>
+
+        <div class="form-group">
+            <label>Alojamiento</label>
+            <div class="range-labels">
+                <span>1</span>
+                <span>100</span>
+            </div>
+            <input type="range" class="form-control-range" min="1" max="100" step="1">
+        </div>
+
+        <div class="form-group">
+            <label>Agregar comentario ...</label>
+            <textarea class="form-control" rows="4"></textarea>
+        </div>
+
+
+        <div class="form-group">
+            <label>Añadir fotos</label>
+            <input type="file" class="form-control-file">
+        </div>
+
+    
+        <button type="submit" class="btn btn-primary" id="boton-enviar">Enviar reseña</button>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../js/inyeccionHTML.js"></script>
+
+</body>
+</html>
