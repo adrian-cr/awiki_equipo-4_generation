@@ -1,39 +1,51 @@
 @import url(../styles/style.css);
 
-/* Logo */
 /* PrimeraParte */
-.contenedores{
-    margin: 50px auto;
-    padding: 20px;
-    
-}
-
 .contenedorIntro{
     display: flex; 
-    flex-direction: column;
-    justify-content: left; 
-    align-items: flex-start; /* Alinea los elementos dentro en el lado izquierdo del contenedor */ 
-    text-align: left;
-    
+    flex-direction: column; 
+    justify-content: center;
+    /* justify-content: space-evenly; */
+    /* flex-wrap: wrap; */
+    /* gap: 50px; */
+    /* padding: 50px auto; */
+
 }
 
-.contenedorImagenes{
+div.contenedores{
+    margin: 20px;
+    padding-right: 500px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contenedoresImg{
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
-
+    gap: 20px;
+    /* align-items: flex-start;
+    margin: 10px;
+    padding: 20px */
 }
 
-#primeraImagen{
+#primera-imagen{
+    width: 300px;
+    height: 400px;
+    /* margin: 5px;
+    margin-right: 50px;
+    margin-left: 50px; */
+    border-radius: 35px;
+}
+
+#segunda-imagen{
     width: 300px;
     height: 400px;
     margin: 50px;
-}
-
-#segundaImagen{
-    width: 300px;
-    height: 400px;
-    margin: 50px;
+    border-radius: 35px;
 }
 
 img{
@@ -67,7 +79,7 @@ h1{
     flex-wrap: wrap;
     width: 300px;
     justify-content: center;
-} 
+}
 
 .imagen{
     width: 300px;
@@ -75,7 +87,18 @@ h1{
     border-radius: 35px;
 }
 
-.boton-ver{
-    color: blueviolet;
-}
+/* tercera parte */
 
+.mejores-calificados{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px auto;
+    }
+
+
+.bi-star-fill{
+    color: var(--secondary-color);
+    margin: 5px;
+}
