@@ -1,0 +1,42 @@
+@import url(../style.css);
+
+.main {
+  text-align: center;
+}
+
+.bsu-title {
+  margin-bottom: 30px;
+}
+
+.bsu-form {
+  min-width: 70vw;
+  text-align: center;
+}
+
+.bsu-form-body {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.bsu-form-column {
+  width: 40%;
+  text-align: left;
+}
+
+/* .bsu-field-section-title {
+  margin-bottom: 0;
+} */
+
+.bsu-form-field-label {
+
+}
+
+.bsu-address {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bsu-street-number-section {
+  display: flex;
+}
