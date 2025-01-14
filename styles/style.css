@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 p, li, input::placeholder, button {
   font-family: var(--secondary-font) !important;
   font-weight: 200 !important;
+  margin-bottom: 0;
 }
 
 li {
@@ -61,4 +62,10 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-clear-button {
+  display: none;
 }
