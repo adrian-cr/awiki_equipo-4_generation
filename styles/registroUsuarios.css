@@ -2,21 +2,21 @@
 
 main{
     display: flex;
+
 }
 
 
 body{
     background: url(../images/beach-with0.jpg);
-    display: flex;
 }
 
 /* navbar */
-.navbar{
+.navbar{ 
     background-color: var(--primary-color);
 }
 
  #correo-electronico1{
-    margin: 10px;    
+    margin: 10px;
 }
 
 #contraseña1{
@@ -25,20 +25,22 @@ body{
 
 #boton-sesion{
     margin: 10px;
-} 
+}
 
 
 /* titulo */
 .tituloAwiki{
     display: flex;
-    align-items: center;
-    padding-top: 100px;
     justify-content: flex-start;
     align-items: flex-start;
-    flex-direction: row;
+    margin: 10px;
+    margin-top: 100px;
+    /* padding-top: 100px;
+    justify-content: flex-start;
+    align-items: flex-start;
     margin: 10px;
     padding-left: 100px;
-    padding-top: 100px;
+    padding-top: 100px; */
 }
 
 #awiki{
@@ -58,9 +60,12 @@ body{
 /* formulario */
 
 .formulario1{
-    flex: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    /* flex: 100%;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 10px; */
 }
 
 div.formulario-registro{
