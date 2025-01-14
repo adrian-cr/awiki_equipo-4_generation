@@ -1,0 +1,145 @@
+@import url(../style.css);
+
+.main {
+  background-color: var(--bg-color);
+}
+
+.bsu-form-title {
+  margin-bottom: 30px;
+}
+
+.bsu-form {
+  min-width: 90vw;
+  text-align: center;
+}
+
+.bsu-form-body {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.bsu-form-column {
+  background-color:  white;
+  border: var(--secondary-color) solid 5px;
+  box-shadow: 0px 0px 50px white;
+  border-radius: 50px;
+  padding: 10px;
+  width: 50%;
+
+}
+
+.bsu-form-section {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.bsu-form-section-title {
+  font-family: var(--primary-font) !important;
+  font-weight: 500 !important;
+}
+
+.bsu-form-field-container {
+  margin-top: 10px;
+}
+
+.bsu-form-field {
+  background-color: #f8feff;
+}
+
+
+.bsu-form-field[type="time"] {
+  margin: 5px;
+}
+
+
+.bsu-form-field-footer {
+  margin-top: -18px;
+  font-style: italic;
+  width: 100%;
+}
+
+.bsu-form-section-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#address-section .bsu-form-section-row {
+  gap: 20px;
+  text-align: left;
+}
+
+#address-section .bsu-form-field-container {
+  flex-grow: 1;
+}
+
+#schedule-container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.bsu-form-schedule-subsection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.bsu-form-schedule-field-container {
+  align-items: center;
+  display: flex;
+}
+
+#check-in-out-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 0;
+  width: 100%;
+}
+
+#check-in-out-container .bsu-form-field-container {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  min-width:25%;
+}
+
+#check-in-out-container .bsu-form-label {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width:1270px) {
+  .bsu-form-schedule-subsection {
+    display: block;
+  }
+}
+
+@media screen and (max-width:940px) {
+  .bsu-form-section-container {
+    flex-wrap: wrap;
+    row-gap: 0 !important;
+    width: 100%;
+  }
+  .bsu-form-body {
+    flex-wrap: wrap;
+  }
+  .bsu-form-column {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width:700px) {
+
+}

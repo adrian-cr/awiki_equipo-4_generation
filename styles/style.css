@@ -10,14 +10,21 @@
     --secondary-font: 'Inter', sans-serif;
 }
 
+body * {
+  font-family: var(--secondary-font);
+  font-weight: 200 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--primary-font) !important;
+  font-weight: 500 !important;
 }
 
 
 p, li, input::placeholder, button {
   font-family: var(--secondary-font) !important;
   font-weight: 200 !important;
+  margin-bottom: 0;
 }
 
 li {
@@ -29,11 +36,6 @@ body{
     display:flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-body * {
-  font-family: var(--secondary-font);
-    font-weight: 200 !important;
 }
 
 main {
@@ -51,3 +53,19 @@ main {
     font-weight: 300 !important;
     transition: 300ms;
   }
+
+  *::placeholder {
+    color: rgb(153, 160, 168) !important;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-clear-button {
+  display: none;
+}
