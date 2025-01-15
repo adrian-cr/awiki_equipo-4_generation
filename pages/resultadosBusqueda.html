@@ -4,11 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resultados de Búsqueda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="../styles/forms/resultadosBusqueda.css">
+  </head>
 <body>
-  <main style="height: 70vh">
+  <div class="container mt-5">
+
+    <div class="filtros">
+    <button type="button" class="btn btn-success" ><i class="bi bi-star-fill"></i>Calificación</button>
+    <button type="button" class="btn btn-success" ><i class="bi bi-chat-right-dots-fill"></i> # Reseñas</button>
+    <button type="button" class="btn btn-success" ><i class="bi bi-geo-alt-fill"></i>Distancia</button>
+   </div>
+   <hr>
 
     <div class="card" style="width: 18rem;">
       <img src="../images/Tepotzotlan.jpg" class="card-img-top" alt="Imagen Tepotzotlan">
@@ -16,18 +26,16 @@
         <h5 class="card-title">Tepoztlan, México</h5>
         <p class="card-direction">Direccion</p>
         <p class="card-Description">Esto es una descripcion</p>
-        <p class="card-rating" data-coreui-toggle="rating">
-          <i class="fas fa-star"></i>
-          <span class="rating-value">5</span>
-        </p>
-        
+        <i class="fa fa-star rating-color"></i>
+      
       </div>
     </div>
+       
 
+  </div>
+ </body>
 
-
-  </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../js/inyeccionHTML.js"></script>
-</body>
+
 </html>
