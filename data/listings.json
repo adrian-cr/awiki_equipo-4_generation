@@ -6,8 +6,8 @@
         "descripcion": "Museo contemporáneo con exhibiciones sobre economía, finanzas y desarrollo sustentable",
         "ubicacion": {
             "municipio": "Delegación Cuauhtémoc",
-            "estado": "Ciudad de México"
-        }
+            "estado": "Ciudad de México"},
+        "categoria": "Museo"
     },
 
     {"nombreNegocio": "York Pub",
@@ -17,7 +17,8 @@
     "ubicacion": {
         "municipio": "Guadalajara",
         "estado": "Jalisco"
-        }
+        },
+    "categoria": "Restaurante"
     },
 
     {"nombreNegocio": "Museo Maya de Cancún y Zona Arqueológica de San Miguelito",
@@ -27,7 +28,8 @@
     "ubicacion": {
         "municipio": "Cancún",
         "estado": "Quintana Roo"
-    }
+    },
+    "categoria": "Museo"
 },
 
     {"nombreNegocio": "Museo de Cuatro Ciénegas",
@@ -37,7 +39,8 @@
     "ubicacion": {
     "municipio": "Cuatro Ciénegas de Carranza",
     "estado": "Coahuila"
-    }
+    },
+    "categoria": "Museo"
 },
 
     {"nombreNegocio": "Hotel RIU",
@@ -47,7 +50,8 @@
     "ubicacion": {
     "municipio": "Cancún",
     "estado": "Yucatán"
-    }
+    },
+    "categoria": "Hotel"
 },
 
     {"nombreNegocio": "Museo Nacional de la Ballena (Munba)",
@@ -57,7 +61,8 @@
     "ubicacion": {
     "municipio": "Mazatlán",
     "estado": "Sinaloa"
-    }
+    },
+    "categoria": "Museo"
 },
 
     {"nombreNegocio": "Museo del Desierto",
@@ -67,7 +72,8 @@
     "ubicacion": {
     "municipio": "Saltillo",
     "estado": "Coahuila"
-    }
+    },
+    "categoria": "Museo"
 },
 
     {"nombreNegocio": "Porfirio's",
@@ -77,7 +83,8 @@
     "ubicacion": {
     "municipio": "Zaragoza",
     "estado": "Puebla"
-    }
+    },
+    "categoria": "Restaurante"
 },
 
     {"nombreNegocio": "Museo de la Luz",
@@ -87,7 +94,8 @@
     "ubicacion": {
     "municipio": "Mérida",
     "estado": "Yucatán"
-    }
+    },
+    "categoria": "Museo"
 },
 
     {"nombreNegocio": "Moshi Moshi",
@@ -97,7 +105,8 @@
     "ubicacion": {
     "municipio": "Monterrey",
     "estado": "Nuevo León"
-    }
+    },
+    "categoria": "Restaurante"
 }
 
     ]
