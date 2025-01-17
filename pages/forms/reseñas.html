@@ -6,120 +6,149 @@
     <title>Formulario de Reseñas</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="../../styles/forms/reseñas.css">
+    
 </head>
 <body>
-<div class="container mt-5">
+<div class="container mt-5 form">
     <h2>Reseña</h2>
     <form>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Destino</label>
-            <input type="txt" class="form-control" id="exampleFormControlInput1" placeholder="Cabo San Lucas ">
-          </div>
+            <label for="" class="form-label">Destino</label>
+            <select class="form-control" id="destino">
+                <option value="" disabled selected>Selecciona un destino...</option>
+                <option value="text">Cabo San Lucas</option>
+                <option value="text">Cancún</option>
+                <option value="text">Puerto Vallarta</option>
+                <option value="text">Acapulco</option>
+                <option value="text">Ciudad de México</option>
+            </select>
+        </div>
+
 
         <div class="form-group">
             <label>¿Cómo calificarías tu experiencia en este destino?</label>
-            <div class="star-rating">
-                <input type="radio" id="five-stars" name="star" value="5"><label for="five-stars" class="fas fa-star"></label>
-                <input type="radio" id="four-stars" name="star" value="4"><label for="four-stars" class="fas fa-star"></label>
-                <input type="radio" id="three-stars" name="star" value="3"><label for="three-stars" class="fas fa-star"></label>
-                <input type="radio" id="two-stars" name="star" value="2"><label for="two-stars" class="fas fa-star"></label>
-                <input type="radio" id="one-star" name="star" value="1"><label for="one-star" class="fas fa-star"></label>
+            <div class="star-rating" data-category="experiencia">
+                <input type="radio" id="5-s" name="star-experiencia" value="5"><label for="5-s" class="fas fa-star"></label>
+                <input type="radio" id="4-s" name="star-experiencia" value="4"><label for="4-s" class="fas fa-star"></label>
+                <input type="radio" id="3-s" name="star-experiencia" value="3"><label for="3-s" class="fas fa-star"></label>
+                <input type="radio" id="2-s" name="star-experiencia" value="2"><label for="2-s" class="fas fa-star"></label>
+                <input type="radio" id="1-s" name="star-experiencia" value="1"><label for="1-s" class="fas fa-star"></label>
             </div>
         </div>
-
 
         <div class="form-group">
             <label>¿Que tipo de viaje fue?</label>
             <div class="radio-container">
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio"  id="business" value="business">
+                    <input class="form-check-input" type="radio" name="tipo-viaje" id="business" value="business">
                     <label class="form-check-label" for="business">Negocios</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id ="couples" value="couples">
+                    <input class="form-check-input" type="radio" name="tipo-viaje" id="couples" value="couples">
                     <label class="form-check-label" for="couples">Pareja</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio"  id="family" value="family">
+                    <input class="form-check-input" type="radio" name="tipo-viaje" id="family" value="family">
                     <label class="form-check-label" for="family">Familia</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio"  id="friends" value="friends">
+                    <input class="form-check-input" type="radio" name="tipo-viaje" id="friends" value="friends">
                     <label class="form-check-label" for="friends">Amigos</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" id="solo" value="solo">
+                    <input class="form-check-input" type="radio" name="tipo-viaje" id="solo" value="solo">
                     <label class="form-check-label" for="solo">Solo</label>
                 </div>
             </div>
         </div>
+        
 
 
         <div class="form-group">
             <label>¿Cuándo fue tu visita?</label>
             <select class="form-control">
-                <option></option>
+                <option>2024</option>
+                <option>2023</option>
 
             </select>
         </div>
 
         <div class="form-group">
-            <label for="">¿Cómo calificarias los siguientes criterios en una escala de 1-100?</label>
+            <label for="">¿Cómo calificarías los siguientes criterios en una escala del 1 al 5, basándote en tu experiencia en el destino?</label>
             <hr>
+        </div>
+
+     
+        <div class="form-group rating-costo">
             <label>Costo</label>
-            <div class="range-labels">
-                <span>1</span>
-                <span>100</span>
+            <div class="star-rating" data-category="costo">
+                <input type="radio" id="5-c" name="star-criterios" value="5"><label for="5-c" class="fas fa-star"></label>
+                <input type="radio" id="4-c" name="star-criterios" value="4"><label for="4-c" class="fas fa-star"></label>
+                <input type="radio" id="3-c" name="star-criterios" value="3"><label for="3-c" class="fas fa-star"></label>
+                <input type="radio" id="2-c" name="star-criterios" value="2"><label for="2-c" class="fas fa-star"></label>
+                <input type="radio" id="1-c" name="star-criterios" value="1"><label for="1-c" class="fas fa-star"></label>
             </div>
-            <input type="range" class="form-control-range" min="1" max="100" step="1">
         </div>
-
-        <div class="form-group">
+        
+        <div class="form-group rating-transporte">
             <label>Transporte</label>
-            <div class="range-labels">
-                <span>1</span>
-                <span>100</span>
+            <div class="star-rating" data-category="transporte">
+                <input type="radio" id="5-t" name="star-criterios" value="5"><label for="5-t" class="fas fa-star"></label>
+                <input type="radio" id="4-t" name="star-criterios" value="4"><label for="4-t" class="fas fa-star"></label>
+                <input type="radio" id="3-t" name="star-criterios" value="3"><label for="3-t" class="fas fa-star"></label>
+                <input type="radio" id="2-t" name="star-criterios" value="2"><label for="2-t" class="fas fa-star"></label>
+                <input type="radio" id="1-t" name="star-criterios" value="1"><label for="1-t" class="fas fa-star"></label>
             </div>
-            <input type="range" class="form-control-range" min="1" max="100" step="1">
         </div>
 
-        <div class="form-group">
+        <div class="form-group rating-comida">
             <label>Comida</label>
-            <div class="range-labels">
-                <span>1</span>
-                <span>100</span>
+            <div class="star-rating" data-category="comida">
+                <input type="radio" id="5-co" name="star-criterios" value="5"><label for="5-co" class="fas fa-star"></label>
+                <input type="radio" id="4-co" name="star-criterios" value="4"><label for="4-co" class="fas fa-star"></label>
+                <input type="radio" id="3-co" name="star-criterios" value="3"><label for="3-co" class="fas fa-star"></label>
+                <input type="radio" id="2-co" name="star-criterios" value="2"><label for="2-co" class="fas fa-star"></label>
+                <input type="radio" id="1-co" name="star-criterios" value="1"><label for="1-co" class="fas fa-star"></label>
             </div>
-            <input type="range" class="form-control-range" min="1" max="100" step="1">
         </div>
 
-        <div class="form-group">
+        <div class="form-group rating-alojamiento">
             <label>Alojamiento</label>
-            <div class="range-labels">
-                <span>1</span>
-                <span>100</span>
+            <div class="star-rating" data-category="alojamiento">
+                <input type="radio" id="5-a" name="star-criterios" value="5"><label for="5-a" class="fas fa-star"></label>
+                <input type="radio" id="4-a" name="star-criterios" value="4"><label for="4-a" class="fas fa-star"></label>
+                <input type="radio" id="3-a" name="star-criterios" value="3"><label for="3-a" class="fas fa-star"></label>
+                <input type="radio" id="2-a" name="star-criterios" value="2"><label for="2-a" class="fas fa-star"></label>
+                <input type="radio" id="1-a" name="star-criterios" value="1"><label for="1-a" class="fas fa-star"></label>
             </div>
-            <input type="range" class="form-control-range" min="1" max="100" step="1">
         </div>
 
+
+        
         <div class="form-group">
             <label>Agregar comentario ...</label>
-            <textarea class="form-control" rows="4"></textarea>
+            <textarea class="form-control" id="comentario" type="text" name="comentario" rows="4"></textarea>
+            <ul id="mensaje-error" class="alert alert-danger" role="alert" style="display: none;"> </ul>
+           
         </div>
-
 
         <div class="form-group">
-            <label>Añadir fotos</label>
-            <input type="file" class="form-control-file">
+            <label for="file-upload" class="form-label">Añadir fotos</label>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="file-upload">
+                <label class="custom-file-label" for="file-upload"><i class="fas fa-camera"></i> Subir foto</label>
+            </div>
         </div>
 
-
-        <button type="submit" class="btn btn-primary" id="boton-enviar">Enviar reseña</button>
+        <button type="submit" class="btn btn-primary" id="boton-enviar" value="Enviar">Enviar reseña</button>
+        
     </form>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="../js/inyeccionHTML.js"></script>
+<script src="../../js/validacionReseñas.js"></script>
 
 </body>
 </html>
