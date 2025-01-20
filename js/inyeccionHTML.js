@@ -1,22 +1,28 @@
+const GITHUB_ROOT = "https://adrian-cr.github.io/awiki_equipo-4_generation/";
+
 // DOM Elements
 const headElement = document.getElementsByTagName("head")[0];
 const bodyElement = document.getElementsByTagName("body")[0];
 
 // Page Fetchers
-const getRootURL = url => {
+const getRootURL = (url) => {
   const trimmedURL = url.slice(pageURL.indexOf("://") + 3);
-  const rootURL = url.slice(0, pageURL.indexOf("://") + 3) + trimmedURL.slice(0, trimmedURL.indexOf("/"));
+  const rootURL =
+    url.slice(0, pageURL.indexOf("://") + 3) +
+    trimmedURL.slice(0, trimmedURL.indexOf("/"));
   return rootURL;
-}
-const getCurrentPage = url => {
+};
+const getCurrentPage = (url) => {
   const splitURL = url.slice(0, url.indexOf(".html")).split("/");
   return splitURL[splitURL.length - 1];
-}
+};
+
+const isGithubURL = (url) => url.indexOf(GITHUB_ROOT) != -1;
 
 // Page-Related Data
-const userPages = ["home","mi-blog", "mis-resenas", "main", "dummyUserPage"];
+const userPages = ["home", "mi-blog", "mis-resenas", "main", "dummyUserPage"];
 const pageURL = window.location.href;
-const currentRoot = getRootURL(pageURL);
+const currentRoot = isGithubURL(pageURL) ? GITHUB_ROOT : getRootURL(pageURL);
 
 // HTML/CSS Injectables
 const cssLinksHTML = `
@@ -136,15 +142,14 @@ const footerHTML = `
       </section>
     </footer>`;
 
-
-
-
 // * Main event listener *
-window.addEventListener("load", e => {
-  console.log(getRootURL(pageURL));
+window.addEventListener("load", (e) => {
   headElement.insertAdjacentHTML("beforeend", cssLinksHTML);
-  bodyElement.insertAdjacentHTML("afterbegin", userPages.includes(getCurrentPage(pageURL)) ? userHeaderHTML : nonUserHeaderHTML);
+  bodyElement.insertAdjacentHTML(
+    "afterbegin",
+    userPages.includes(getCurrentPage(pageURL))
+      ? userHeaderHTML
+      : nonUserHeaderHTML
+  );
   bodyElement.insertAdjacentHTML("beforeend", footerHTML);
-}
-
-)
+});
