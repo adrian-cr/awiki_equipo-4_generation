@@ -15,19 +15,20 @@
 
 .bsu-form-body {
   display: flex;
-  gap: 20px;
+  gap: 2%;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   width: 100%;
 }
 
 .bsu-form-column {
   background-color:  white;
-  border: var(--secondary-color) solid 5px;
+  border: var(--secondary-color) solid 3px;
   box-shadow: 0px 0px 50px white;
   border-radius: 50px;
-  padding: 10px;
-  width: 50%;
+  padding: 20px;
+  width: 30%;
 
 }
 
@@ -43,10 +44,12 @@
 
 .bsu-form-field-container {
   margin-top: 10px;
+  flex-grow: 1;
 }
 
 .bsu-form-field {
   background-color: #f8feff;
+  text-align: center;
 }
 
 
@@ -54,9 +57,13 @@
   margin: 5px;
 }
 
+.bsu-form-selection-default-optio {
+  font-weight: 900;
+
+}
 
 .bsu-form-field-footer {
-  margin-top: -18px;
+  font-size: 0.8em;
   font-style: italic;
   width: 100%;
 }
@@ -64,24 +71,55 @@
 .bsu-form-section-row {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
+  text-align: center;
   width: 100%;
 }
 
-#address-section .bsu-form-section-row {
-  gap: 20px;
-  text-align: left;
+.bsu-form-field-container {
+
 }
 
-#address-section .bsu-form-field-container {
-  flex-grow: 1;
+/* CATEGORÍA (SOLO HOTELES) */
+.bsu-form-hotel-cat-option-container {
+  padding: 0;
 }
 
+ .bsu-form-hotel-cat-option + label {
+   font-size: 2rem;
+   color: var(--secondary-color);
+   opacity: 1;
+ }
+
+ .bsu-form-hotel-cat-option:hover + label ~ * {
+  opacity: 0.7;
+  color: var(--primary-color);
+}
+
+ .bsu-form-hotel-cat-option:checked + label ~ * {
+  opacity: 0.7;
+  color: var(--primary-color);
+ }
+
+
+
+
+
+
+
+
+
+
+
+/* HORARIOS (NO APLICA PARA HOTELES)*/
 #schedule-container {
   align-items: flex-start;
+  column-gap: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -92,11 +130,17 @@
   justify-content: space-between;
 }
 
+.bsu-form-schedule-column {
+  width: 85%;
+}
+
 .bsu-form-schedule-field-container {
   align-items: center;
   display: flex;
+  justify-content: center;
 }
 
+/* HORARIOS CHECK-IN/OUT (SOLO HOTELES) */
 #check-in-out-container {
   display: flex;
   gap: 20px;
@@ -108,7 +152,9 @@
 #check-in-out-container .bsu-form-field-container {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
+  justify-content: center;
   min-width:25%;
 }
 
@@ -118,28 +164,24 @@
 }
 
 
-
-@media screen and (max-width:1270px) {
+/* MEDIA QUERIES */
+@media screen and (max-width:1310px) {
   .bsu-form-schedule-subsection {
     display: block;
   }
 }
 
-@media screen and (max-width:940px) {
+@media screen and (max-width:1000px) {
   .bsu-form-section-container {
     flex-wrap: wrap;
-    row-gap: 0 !important;
     width: 100%;
   }
   .bsu-form-body {
     flex-wrap: wrap;
   }
   .bsu-form-column {
+    margin-bottom: 30px;
     width: 90%;
   }
-
-}
-
-@media screen and (max-width:700px) {
 
 }
