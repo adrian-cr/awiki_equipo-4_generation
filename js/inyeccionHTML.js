@@ -1,48 +1,21 @@
+// DOM Elements
 const headElement = document.getElementsByTagName("head")[0];
 const bodyElement = document.getElementsByTagName("body")[0];
 
+// HTML/CSS Injectables
 const cssLinksHTML = `
-  <link rel="stylesheet" href="../styles/components/header.css"/>
-  <link rel="stylesheet" href="../styles/components/footer.css"/>
+  <link rel="stylesheet" href="/styles/components/header.css"/>
+  <link rel="stylesheet" href="/styles/components/footer.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>`;
 const userHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">
       <!-- nb = navbar -->
       <div class="container-fluid">
-        <img class="nb-logo" src="../images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"/>
+        <a href="/"><img class="nb-logo" src="/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"/></a>
         <button class="nb-collapse-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon nb-collapse-button-icon"></span>
         </button>
-        <!--
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">Action</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Another action</a>
-                </li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-        -->
         <div class="nb-main-container justify-content-end ms-auto collapse navbar-collapse" id="navbarSupportedContent">
           <form class="nb-search-form d-flex search-form mx-auto" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar restaurantes, hoteles, personas..." aria-label="Search"/>
@@ -78,7 +51,7 @@ const nonUserHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <img class="nb-logo" src="../images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top">
+        <a href="/"><img class="nb-logo" src="/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"></a>
         <button class="nb-collapse-button navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -90,9 +63,9 @@ const nonUserHeaderHTML = `
             <button class="nb-search-button btn btn-outline-success" type="submit">Buscar</button>
           </form>
           <div class="nb-text-menu nb-text-menu-nu">
-            <a class="nb-text-menu-link" href="./sobreNosotros.html" title="Sobre Nosotros">Sobre Nosotros</a>
-            <a class="nb-text-menu-link" href="./contacto.html" title="Contacto">Contacto</a>
-            <a class="nb-text-menu-link" href="./login" title="Registrate">Registrate</a>
+            <a class="nb-text-menu-link" href="/pages/sobreNosotros.html" title="Sobre Nosotros">Sobre Nosotros</a>
+            <a class="nb-text-menu-link" href="/pages/contacto.html" title="Contacto">Contacto</a>
+            <a class="nb-text-menu-link" href="/pages/signup.html" title="Registrate">Registrate</a>
           </div>
         </div>
       </div>
@@ -104,16 +77,16 @@ const footerHTML = `
         <div class="container text-left text-md-start mt-5 mb-4">
           <div class="row mt-3">
             <div class="ft-logo-container content-column d-flex justify-content-md-center justify-content-lg-start col-sm-12 col-md-3 col-lg-5 col-xl-5 mx-auto mb-4">
-              <img class="ft-logo" src="../images/Logo_de_pagina.webp" alt="Logo"/>
+              <a href="/"><img class="ft-logo" src="/images/Logo_de_pagina.webp" alt="Logo"/></a>
             </div>
             <div class="ft-menu-section col-sm-4 col-md-2 col-lg-2 col-xl-2 mx-auto">
               <h6 class="ft-menu-section-title">Awiki</h6>
               <hr class="ft-menu-section-rule mx-auto" />
               <p class="ft-menu-section-item">
-                <a href="./contacto.html">Contacto</a>
+                <a href="/pages/contacto.html">Contacto</a>
               </p>
               <p class="ft-menu-section-item">
-                <a href="./sobreNosotros.html">Sobre Nosotros</a>
+                <a href="/pages/sobreNosotros.html">Sobre Nosotros</a>
               </p>
             </div>
             <div class="ft-menu-section col-sm-4 col-md-2 col-lg-2 col-xl-2 mx-auto">
@@ -141,22 +114,26 @@ const footerHTML = `
                   <i class="fab fa-linkedin"></i>
                 </a>
               </div>
-
             </div>
           </div>
         </div>
       </section>
     </footer>`;
 
+// Page-Related Data
 const userPages = ["home","mi-blog", "mis-resenas", "main", "dummyUserPage"];
-/* userPages.push("contacto"); */
-const currentURL = window.location.href;
-const splitURL = currentURL.slice(0, currentURL.indexOf(".html")).split("/");
-const currentPage = splitURL[splitURL.length - 1];
+const pageURL = window.location.href;
 
+// Page Fetcher
+const getCurrentPage = url => {
+  const splitURL = url.slice(0, url.indexOf(".html")).split("/");
+  return splitURL[splitURL.length - 1];
+}
+
+// * Main event listener *
 window.addEventListener("load", e => {
   headElement.insertAdjacentHTML("beforeend", cssLinksHTML);
-  bodyElement.insertAdjacentHTML("afterbegin", userPages.includes(currentPage) ? userHeaderHTML : nonUserHeaderHTML);
+  bodyElement.insertAdjacentHTML("afterbegin", userPages.includes(getCurrentPage(pageURL)) ? userHeaderHTML : nonUserHeaderHTML);
   bodyElement.insertAdjacentHTML("beforeend", footerHTML);
 }
 
