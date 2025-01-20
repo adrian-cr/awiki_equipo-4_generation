@@ -2,17 +2,33 @@
 const headElement = document.getElementsByTagName("head")[0];
 const bodyElement = document.getElementsByTagName("body")[0];
 
+// Page Fetchers
+const getRootURL = url => {
+  const trimmedURL = url.slice(pageURL.indexOf("://") + 3);
+  const rootURL = url.slice(0, pageURL.indexOf("://") + 3) + trimmedURL.slice(0, trimmedURL.indexOf("/"));
+  return rootURL;
+}
+const getCurrentPage = url => {
+  const splitURL = url.slice(0, url.indexOf(".html")).split("/");
+  return splitURL[splitURL.length - 1];
+}
+
+// Page-Related Data
+const userPages = ["home","mi-blog", "mis-resenas", "main", "dummyUserPage"];
+const pageURL = window.location.href;
+const currentRoot = getRootURL(pageURL);
+
 // HTML/CSS Injectables
 const cssLinksHTML = `
-  <link rel="stylesheet" href="/styles/components/header.css"/>
-  <link rel="stylesheet" href="/styles/components/footer.css"/>
+  <link rel="stylesheet" href="${currentRoot}/styles/components/header.css"/>
+  <link rel="stylesheet" href="${currentRoot}/styles/components/footer.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>`;
 const userHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">
       <!-- nb = navbar -->
       <div class="container-fluid">
-        <a href="/"><img class="nb-logo" src="/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"/></a>
+        <a href="${currentRoot}"><img class="nb-logo" src="${currentRoot}/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"/></a>
         <button class="nb-collapse-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon nb-collapse-button-icon"></span>
         </button>
@@ -51,7 +67,7 @@ const nonUserHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a href="/"><img class="nb-logo" src="/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"></a>
+        <a href="${currentRoot}"><img class="nb-logo" src="${currentRoot}/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"></a>
         <button class="nb-collapse-button navbar-toggler" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -63,9 +79,9 @@ const nonUserHeaderHTML = `
             <button class="nb-search-button btn btn-outline-success" type="submit">Buscar</button>
           </form>
           <div class="nb-text-menu nb-text-menu-nu">
-            <a class="nb-text-menu-link" href="/pages/sobreNosotros.html" title="Sobre Nosotros">Sobre Nosotros</a>
-            <a class="nb-text-menu-link" href="/pages/contacto.html" title="Contacto">Contacto</a>
-            <a class="nb-text-menu-link" href="/pages/signup.html" title="Registrate">Registrate</a>
+            <a class="nb-text-menu-link" href="${currentRoot}/pages/sobreNosotros.html" title="Sobre Nosotros">Sobre Nosotros</a>
+            <a class="nb-text-menu-link" href="${currentRoot}/pages/contacto.html" title="Contacto">Contacto</a>
+            <a class="nb-text-menu-link" href="${currentRoot}/pages/signup.html" title="Registrate">Registrate</a>
           </div>
         </div>
       </div>
@@ -77,7 +93,7 @@ const footerHTML = `
         <div class="container text-left text-md-start mt-5 mb-4">
           <div class="row mt-3">
             <div class="ft-logo-container content-column d-flex justify-content-md-center justify-content-lg-start col-sm-12 col-md-3 col-lg-5 col-xl-5 mx-auto mb-4">
-              <a href="/"><img class="ft-logo" src="/images/Logo_de_pagina.webp" alt="Logo"/></a>
+              <a href="${currentRoot}"><img class="ft-logo" src="${currentRoot}/images/Logo_de_pagina.webp" alt="Logo"/></a>
             </div>
             <div class="ft-menu-section col-sm-4 col-md-2 col-lg-2 col-xl-2 mx-auto">
               <h6 class="ft-menu-section-title">Awiki</h6>
@@ -120,18 +136,12 @@ const footerHTML = `
       </section>
     </footer>`;
 
-// Page-Related Data
-const userPages = ["home","mi-blog", "mis-resenas", "main", "dummyUserPage"];
-const pageURL = window.location.href;
 
-// Page Fetcher
-const getCurrentPage = url => {
-  const splitURL = url.slice(0, url.indexOf(".html")).split("/");
-  return splitURL[splitURL.length - 1];
-}
+
 
 // * Main event listener *
 window.addEventListener("load", e => {
+  console.log(getRootURL(pageURL));
   headElement.insertAdjacentHTML("beforeend", cssLinksHTML);
   bodyElement.insertAdjacentHTML("afterbegin", userPages.includes(getCurrentPage(pageURL)) ? userHeaderHTML : nonUserHeaderHTML);
   bodyElement.insertAdjacentHTML("beforeend", footerHTML);
