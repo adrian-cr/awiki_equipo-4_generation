@@ -1,5 +1,9 @@
 @import url(../style.css);
 
+fieldset {
+  background-color: unset !important;
+}
+
 .main {
   background-color: var(--bg-color);
 }
@@ -47,7 +51,7 @@
   flex-grow: 1;
 }
 
-.bsu-form-field {
+.bsu-form-field:not([type="fieldset"]) {
   background-color: #f8feff;
   text-align: center;
 }
@@ -77,10 +81,6 @@
   width: 100%;
 }
 
-.bsu-form-field-container {
-
-}
-
 /* CATEGORÍA (SOLO HOTELES) */
 .bsu-form-hotel-cat-option-container {
   padding: 0;
@@ -101,15 +101,6 @@
   opacity: 0.7;
   color: var(--primary-color);
  }
-
-
-
-
-
-
-
-
-
 
 
 /* HORARIOS (NO APLICA PARA HOTELES)*/

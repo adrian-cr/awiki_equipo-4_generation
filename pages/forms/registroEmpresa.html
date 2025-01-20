@@ -82,7 +82,7 @@
               </div>
               <div class="bsu-form-field-container" id="zipcode-field-container">
                 <label for="zipcode-field" class="bsu-form-field-label form-label">Código Postal</label>
-                <input type="text" pattern="[0-9]{5}" class="bsu-form-field form-control" name="codigoPostal" id="zipcode-field" placeholder="06782">
+                <input type="number" class="bsu-form-field form-control" name="codigoPostal" id="zipcode-field" placeholder="06782">
               </div>
             </div>
           </section>
@@ -107,7 +107,7 @@
               </div>
               <div class="bsu-form-field-container" id="district-field-container">
                 <label for="website-field" class="form-label">Sitio Web</label>
-                <input type="email" class="bsu-form-field form-control" name="sitioWeb" id="website-field" placeholder="www.lacasadelqueso.com">
+                <input type="url" class="bsu-form-field form-control" name="sitioWeb" id="website-field" placeholder="www.lacasadelqueso.com">
               </div>
             </div>
           </section>
@@ -118,9 +118,9 @@
         </div>
         <div class="bsu-form-column">
 <!--* TIPO *-->
-          <section class="bsu-form-section" id="type-section">
-            <label for="business-description" class="bsu-form-section-title form-label">¿Qué tipo de negocio es?</label>
-            <select class="bsu-form-field form-control" name="tipo" id="type-selection">
+          <section class="bsu-form-section" id="business-type-section">
+            <label for="business-type-selection" class="bsu-form-section-title form-label">¿Qué tipo de negocio es?</label>
+            <select class="bsu-form-field form-control" name="tipo" id="business-type-selection">
               <option value="N/A" selected hidden>- Elige una opción -</option>
               <option value="bar">Bar</option>
               <option value="biblioteca">Biblioteca</option>
@@ -138,33 +138,33 @@
 <!--* CATEGORÍA (SOLO HOTELES) *-->
           <section class="bsu-form-section" id="hotel-category-section">
             <p class="bsu-form-section-title">¿Qué categoría es tu hotel?</p>
-            <div class="bsu-form-hotel-cat-option-container form-check">
-              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotelCat1" value="1" style="display:none">
-              <label class="form-check-label" for="hotelCat1">
+            <fieldset class="bsu-form-field bsu-form-hotel-cat-option-container form-check" id="category-container">
+              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotel-cat-1" value="1" style="display:none">
+              <label class="form-check-label" for="hotel-cat-1">
                 <i class="bi bi-star-fill"></i>
               </label>
-              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotelCat2" value="2" style="display:none">
-              <label class="form-check-label" for="hotelCat2">
+              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotel-cat-2" value="2" style="display:none">
+              <label class="form-check-label" for="hotel-cat-2">
                 <i class="bi bi-star-fill"></i>
               </label>
-              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotelCat3" value="3" style="display:none" >
-              <label class="form-check-label" for="hotelCat3">
+              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotel-cat-3" value="3" style="display:none" >
+              <label class="form-check-label" for="hotel-cat-3">
                 <i class="bi bi-star-fill"></i>
               </label>
-              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotelCat4" value="4" style="display:none">
-              <label class="form-check-label" for="hotelCat4">
+              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotel-cat-4" value="4" style="display:none">
+              <label class="form-check-label" for="hotel-cat-4">
                 <i class="bi bi-star-fill"></i>
               </label>
-              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotelCat5" value="5" style="display:none" checked>
-              <label class="form-check-label" for="hotelCat5">
+              <input class="bsu-form-hotel-cat-option form-check-input" type="radio" name="categoriaHotel" id="hotel-cat-5" value="5" style="display:none" checked>
+              <label class="form-check-label" for="hotel-cat-5">
                 <i class="bi bi-star-fill"></i>
               </label>
-            </div>
+            </fieldset>
           </section>
 <!--* TIPO DE PRODUCTOS (SOLO TIENDAS) *-->
           <section class="bsu-form-section" id="type-section">
-            <label for="business-description" class="bsu-form-section-title form-label">¿Qué productos vendes?</label>
-            <select class="bsu-form-field form-control" name="tipoProducto" id="type-selection">
+            <label for="product-type-selection" class="bsu-form-section-title form-label">¿Qué productos vendes?</label>
+            <select class="bsu-form-field form-control" name="tipoProducto" id="product-type-selection">
               <option value="N/A" disabled selected hidden>- Elige una opción -</option>
               <option value="deportivo">Artículos Deportivos</option>
               <option value="especializado">Artículos Especializados</option>
@@ -177,15 +177,15 @@
           </section>
 <!--* TIPO DE COMIDA (SOLO RESTAURANTES) *-->
           <section class="bsu-form-section" id="cuisine-section">
-            <label for="business-cuisine" class="bsu-form-section-title form-label">¿Qué tipo de comida sirves?</label>
-            <select class="bsu-form-field form-control" name="tipoComida" id="cuisine-selection">
-              <option value="none" selected hidden>- Elige una opción -</option>
+            <label for="cuisine-type-selection" class="bsu-form-section-title form-label">¿Qué tipo de comida sirves?</label>
+            <select class="bsu-form-field form-control" name="tipoComida" id="cuisine-type-selection">
+              <option value="N/A" selected hidden>- Elige una opción -</option>
               <option value="arabe">Árabe</option>
               <option value="china">China</option>
               <option value="ensaladas">Ensaladas</option>
               <option value="francesa">Francesa</option>
               <option value="griega">Griega</option>
-              <option value="griega">Helados</option>
+              <option value="helados">Helados</option>
               <option value="hamburguesas">Hamburguesas</option>
               <option value="india">India</option>
               <option value="italiana">Italiana</option>
@@ -194,8 +194,9 @@
               <option value="mariscos">Mariscos</option>
               <option value="mexicana">Mexicana</option>
               <option value="pizza">Pizza</option>
-              <option value="pizza">Postres</option>
+              <option value="postres">Postres</option>
               <option value="sandwiches">Sándwiches</option>
+              <option value="tacos">Tacos</option>
               <option value="varios">Varios</option>
               <option value="otro">Otro</option>
             </select>
@@ -203,89 +204,89 @@
 <!--* HORARIOS (NO APLICA PARA HOTELES) *-->
           <section class="bsu-form-section" id="schedule-section">
             <p class="bsu-form-section-title">¿Cuáles son tus horarios?</p>
-              <div class="bsu-form-section-container" id="schedule-container">
-                <div class="bsu-form-schedule-column">
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="monday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="lunesAbierto" id="monday-checkbox">
-                      <label class="bsu-form-label" for="available-monday">&nbsp;Lunes</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="monday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaLunes" id="opening-time-monday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreLunes" id="closing-time-monday" step="900" value="22:30">
-                    </div>
+            <fieldset class="bsu-form-field bsu-form-section-container" id="schedule-container">
+              <div class="bsu-form-schedule-column">
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="monday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="lunesAbierto" id="monday-checkbox">
+                    <label class="bsu-form-label" for="available-monday">&nbsp;Lunes</label>
                   </div>
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="tuesday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="martesAbierto" id="tuesday-checkbox">
-                      <label class="bsu-form-label" for="available-tuesday">&nbsp;Martes</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="tuesday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaMartes" id="opening-time-tuesday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreMartes" id="closing-time-tuesday" step="900" value="22:30">
-                    </div>
-                  </div>
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="wednesday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="miercolesAbierto" id="wednesday-checkbox">
-                    <label class="bsu-form-label" for="available-wednesday">&nbsp;Miércoles</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="wednesday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaMiercoles" id="opening-time-wednesday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreMiercoles" id="closing-time-wednesday" step="900" value="22:30">
-                    </div>
-                  </div>
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="thursday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="juevesAbierto" id="thursday-checkbox">
-                      <label class="bsu-form-label" for="available-thursday">&nbsp;Jueves</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="thursday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaJueves" id="opening-time-thursday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreJueves" id="closing-time-thursday" step="900" value="22:30">
-                    </div>
+                  <div class="bsu-form-schedule-field-container" id="monday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaLunes" id="opening-time-monday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreLunes" id="closing-time-monday" step="900" value="22:30">
                   </div>
                 </div>
-                <div class="bsu-form-schedule-column">
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="friday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="viernesAbierto" id="friday-checkbox">
-                      <label class="bsu-form-label" for="available-friday">&nbsp;Viernes</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="friday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaViernes" id="opening-time-friday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreViernes" id="closing-time-friday" step="900" value="22:30">
-                    </div>
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="tuesday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="martesAbierto" id="tuesday-checkbox">
+                    <label class="bsu-form-label" for="available-tuesday">&nbsp;Martes</label>
                   </div>
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="saturday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="sabadoAbierto" id="saturday-checkbox">
-                      <label class="bsu-form-label" for="available-saturday">&nbsp;Sábado</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="saturday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaSabado" id="opening-time-saturday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreSabado" id="closing-time-saturday" step="900" value="22:30">
-                    </div>
-                  </div>
-                  <div class="bsu-form-schedule-subsection">
-                    <div class="bsu-form-schedule-field-container" id="sunday-available-checkbox-container">
-                      <input type="checkbox" class="bsu-form-field form-check-input" name="domingoAbierto" id="sunday-checkbox">
-                    <label class="bsu-form-label" for="available-friday">&nbsp;Domingo</label>
-                    </div>
-                    <div class="bsu-form-schedule-field-container" id="sunday-times-subfield-container">
-                      <input class="bsu-form-field form-control" type="time" name="aperturaDomingo" id="opening-time-sunday" step="900" value="08:00">
-                      -
-                      <input class="bsu-form-field form-control" type="time" name="cierreDomingo" id="closing-time-sunday" step="900" value="22:30">
-                    </div>
+                  <div class="bsu-form-schedule-field-container" id="tuesday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaMartes" id="opening-time-tuesday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreMartes" id="closing-time-tuesday" step="900" value="22:30">
                   </div>
                 </div>
-            </div>
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="wednesday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="miercolesAbierto" id="wednesday-checkbox">
+                  <label class="bsu-form-label" for="available-wednesday">&nbsp;Miércoles</label>
+                  </div>
+                  <div class="bsu-form-schedule-field-container" id="wednesday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaMiercoles" id="opening-time-wednesday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreMiercoles" id="closing-time-wednesday" step="900" value="22:30">
+                  </div>
+                </div>
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="thursday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="juevesAbierto" id="thursday-checkbox">
+                    <label class="bsu-form-label" for="available-thursday">&nbsp;Jueves</label>
+                  </div>
+                  <div class="bsu-form-schedule-field-container" id="thursday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaJueves" id="opening-time-thursday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreJueves" id="closing-time-thursday" step="900" value="22:30">
+                  </div>
+                </div>
+              </div>
+              <div class="bsu-form-schedule-column">
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="friday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="viernesAbierto" id="friday-checkbox">
+                    <label class="bsu-form-label" for="available-friday">&nbsp;Viernes</label>
+                  </div>
+                  <div class="bsu-form-schedule-field-container" id="friday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaViernes" id="opening-time-friday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreViernes" id="closing-time-friday" step="900" value="22:30">
+                  </div>
+                </div>
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="saturday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="sabadoAbierto" id="saturday-checkbox">
+                    <label class="bsu-form-label" for="available-saturday">&nbsp;Sábado</label>
+                  </div>
+                  <div class="bsu-form-schedule-field-container" id="saturday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaSabado" id="opening-time-saturday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreSabado" id="closing-time-saturday" step="900" value="22:30">
+                  </div>
+                </div>
+                <div class="bsu-form-schedule-subsection">
+                  <div class="bsu-form-schedule-field-container" id="sunday-available-checkbox-container">
+                    <input type="checkbox" class="bsu-form-field form-check-input" name="domingoAbierto" id="sunday-checkbox">
+                  <label class="bsu-form-label" for="available-friday">&nbsp;Domingo</label>
+                  </div>
+                  <div class="bsu-form-schedule-field-container" id="sunday-times-subfield-container">
+                    <input class="bsu-form-field form-control" type="time" name="aperturaDomingo" id="opening-time-sunday" step="900" value="08:00">
+                    -
+                    <input class="bsu-form-field form-control" type="time" name="cierreDomingo" id="closing-time-sunday" step="900" value="22:30">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
           </section>
 <!--* HORARIOS DE CHECK-IN/OUT (SOLO HOTELES) *-->
           <section class="bsu-form-section" id="check-in-out-section">
@@ -312,5 +313,6 @@
       crossorigin="anonymous"
     >
   </script>
+  <script type="module" src="/js/validations/validacionRegistroEmpresa.js"></script>
 </body>
 </html>
