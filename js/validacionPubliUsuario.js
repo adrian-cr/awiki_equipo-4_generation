@@ -1,16 +1,16 @@
 const txtpublication = document.getElementById("validationTextarea");
 const mensajeError = document.getElementById("mensaje-error");
 const btnPublicar = document.getElementById("btnPublicar");
-
+import * as validators from "../modules/validators.js";
 
 function validarPublication() {
-    if (txtpublication.value.length < 8) {
+    if (!validators.isPostValid(txtpublication.id)) {
       mensajeError.style.display = "block";
       mensajeError.insertAdjacentHTML("beforeend", `<li>Ingrese una publicación válida.</li>`);
       return false;
     }
-    return true;
-  }
+     return true;
+   }
 
   function borrarErrores(){
     mensajeError.innerHTML = "";
