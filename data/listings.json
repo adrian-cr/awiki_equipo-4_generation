@@ -66,7 +66,7 @@
 },
 
     {"nombreNegocio": "Museo del Desierto",
-    "imagen": "url/.imagen",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Museo_del_Desierto%2C_Saltillo%2C_Coahuila.jpg/1200px-Museo_del_Desierto%2C_Saltillo%2C_Coahuila.jpg",
     "rating": 4.8,
     "descripcion": "Museo de historia natural y regional con fósiles, esqueletos de dinosaurios y un zoológico de animales vivos.",
     "ubicacion": {
