@@ -1,4 +1,4 @@
-const GITHUB_ROOT = "https://adrian-cr.github.io/awiki_equipo-4_generation/";
+const GITHUB_ROOT = "https://adrian-cr.github.io/awiki_equipo-4_generation";
 
 // DOM Elements
 const headElement = document.getElementsByTagName("head")[0];
@@ -105,10 +105,10 @@ const footerHTML = `
               <h6 class="ft-menu-section-title">Awiki</h6>
               <hr class="ft-menu-section-rule mx-auto" />
               <p class="ft-menu-section-item">
-                <a href="/pages/contacto.html">Contacto</a>
+                <a href="${currentRoot}pages/contacto.html">Contacto</a>
               </p>
               <p class="ft-menu-section-item">
-                <a href="/pages/sobreNosotros.html">Sobre Nosotros</a>
+                <a href="${currentRoot}pages/sobreNosotros.html">Sobre Nosotros</a>
               </p>
             </div>
             <div class="ft-menu-section col-sm-4 col-md-2 col-lg-2 col-xl-2 mx-auto">
