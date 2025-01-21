@@ -181,7 +181,6 @@
 
 .container-fluid {
   display: flex !important;
-  justify-content: flex-end !important;
   width: 100%;
 }
 
