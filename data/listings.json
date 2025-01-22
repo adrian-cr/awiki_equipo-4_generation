@@ -1,0 +1,115 @@
+{
+    "data": [
+        {"nombreNegocio": "Museo Intereactivo de Economía (MIDE)",
+        "imagen": "https://lh5.googleusercontent.com/p/AF1QipMh2WEg3K16SzFWaIqAGcJVq4ByU5zvobyxbVXw=w426-h240-k-no",
+        "rating": 4.6,
+        "descripcion": "Museo contemporáneo con exhibiciones sobre economía, finanzas y desarrollo sustentable",
+        "ubicacion": {
+            "municipio": "Delegación Cuauhtémoc",
+            "estado": "Ciudad de México"},
+        "categoria": "Museo"
+    },
+
+    {"nombreNegocio": "York Pub",
+    "imagen": "https://yorkpub.com.mx/img/ambiente/foto4.jpg",
+    "rating": 4.8,
+    "descripcion": "York Pub debuta en la Colonia Americana de Guadalajara, Jalisco en el año 2012 como un verdadero y original pub inglés, inspirado en la cultura británica y su gran afición por el trago, la buena cerveza, ricos platillos y la convivencia en grupo.",
+    "ubicacion": {
+        "municipio": "Guadalajara",
+        "estado": "Jalisco"
+        },
+    "categoria": "Restaurante"
+    },
+
+    {"nombreNegocio": "Museo Maya de Cancún y Zona Arqueológica de San Miguelito",
+    "imagen": "https://lh5.googleusercontent.com/p/AF1QipPCXjZWASrWOJp0_XgBmo-FLO5fUXMZ2hhPYeNb=w426-h240-k-no",
+    "rating": 4.5,
+    "descripcion": " Museo con una colección importante de artefactos arqueológicos mayas en un ambiente diseñado elegantemente.",
+    "ubicacion": {
+        "municipio": "Cancún",
+        "estado": "Quintana Roo"
+    },
+    "categoria": "Museo"
+},
+
+    {"nombreNegocio": "Museo de Cuatro Ciénegas",
+    "imagen": "https://lh5.googleusercontent.com/p/AF1QipMeWesFmCgDaqQxTpgCScvAJeUsyBtLmuU5Cl1r=w408-h544-k-no ",
+    "rating": 4.5,
+    "descripcion": "Sitio único en México, con una amplia variedad de especias endémicas y un ecosistema valioso para la investigación científica y el turismo.",
+    "ubicacion": {
+    "municipio": "Cuatro Ciénegas de Carranza",
+    "estado": "Coahuila"
+    },
+    "categoria": "Museo"
+},
+
+    {"nombreNegocio": "Hotel RIU",
+    "imagen": "https://cdn-bunny.menteurbana.mx/wp-content/uploads/2016/08/1in2D78N-e24nKE6I-Destacada-9.jpg",
+    "rating": 5.0,
+    "descripcion": "El Hotel Riu Cancún (Todo Incluido 24 horas) está situado en el corazón de una de las zonas más populares de Cancún para los turistas, en una ubicación privilegiada en una playa de arena blanca y agua turquesa.",
+    "ubicacion": {
+    "municipio": "Cancún",
+    "estado": "Yucatán"
+    },
+    "categoria": "Hotel"
+},
+
+    {"nombreNegocio": "Museo Nacional de la Ballena (Munba)",
+    "imagen": "https://lh5.googleusercontent.com/p/AF1QipP5X3YjBLtOFoPTfHYe9kWTR47j3b2E4iU6cP4C=w408-h544-k-no",
+    "rating": 4.6,
+    "descripcion": "El Museo Nacional de la Ballena (MUNBA) es un espacio para sumergirse en el fascinante mundo de los cetáceos; desde las majestuosas ballenas, hasta los simpáticos delfines.Como visitante podrás adquirir un conocimiento profundo sobre su historia de vida a través de experiencias sensoriales, exhibiciones interactivas y una de las más diversas colecciones de esqueletos de cetáceos en México y Latinoamérica.",
+    "ubicacion": {
+    "municipio": "Mazatlán",
+    "estado": "Sinaloa"
+    },
+    "categoria": "Museo"
+},
+
+    {"nombreNegocio": "Museo del Desierto",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Museo_del_Desierto%2C_Saltillo%2C_Coahuila.jpg/1200px-Museo_del_Desierto%2C_Saltillo%2C_Coahuila.jpg",
+    "rating": 4.8,
+    "descripcion": "Museo de historia natural y regional con fósiles, esqueletos de dinosaurios y un zoológico de animales vivos.",
+    "ubicacion": {
+    "municipio": "Saltillo",
+    "estado": "Coahuila"
+    },
+    "categoria": "Museo"
+},
+
+    {"nombreNegocio": "Porfirio's",
+    "imagen": "https://porfirios.com.mx/en/wp-content/uploads/sites/2/2023/09/porfirios-mejor-restaurante-mexicano-en-puebla.jpg",
+    "rating": 3.8,
+    "descripcion": "Por las tardes, la experiencia culinaria en Porfirio's va más allá, permitiéndote conocer un poco más de nuestro México a través de una experiencia vibrante, donde la música y el baile te harán sentir a México en tu piel.",
+    "ubicacion": {
+    "municipio": "Zaragoza",
+    "estado": "Puebla"
+    },
+    "categoria": "Restaurante"
+},
+
+    {"nombreNegocio": "Museo de la Luz",
+    "imagen": "https://lh5.googleusercontent.com/p/AF1QipNskfJ724OuQWEsfOo2koWPT9nH9_nEU0eei4zF=w408-h544-k-no",
+    "rating": 4.7,
+    "descripcion": "Con un importante legado y una marcada vocación científica, el Museo de la Luz, Mérida, desarrolla programas y exhibiciones que responden a la vanguardia museológica actual.",
+    "ubicacion": {
+    "municipio": "Mérida",
+    "estado": "Yucatán"
+    },
+    "categoria": "Museo"
+},
+
+    {"nombreNegocio": "Moshi Moshi",
+    "imagen": "https://static.wixstatic.com/media/05e3f5_fe54d01ca5974b7c8d6dcbded3e43e9a~mv2.jpg",
+    "rating": 4.2,
+    "descripcion": "De Japón para la banda 🍣🍜. Moshi Moshi es un restaurante con kaiten sushi, banda giratoria 🍱. Consiéntete con tus antojos japoneses favoritos, cocinados diariamente con los mejores ingredientes de proveedores locales y extranjeros.",
+    "ubicacion": {
+    "municipio": "Monterrey",
+    "estado": "Nuevo León"
+    },
+    "categoria": "Restaurante"
+}
+
+    ]
+
+
+}

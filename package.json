@@ -1,0 +1,11 @@
+{
+  "name": "awiki_equipo-4_generation",
+  "version": "1.0.0",
+  "description": "Proyecto integrador del programa Desarrollador Full-Stack Java de Generation México (cohorte 49).",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json"
+  },
+  "author": "",
+  "license": "ISC"
+}

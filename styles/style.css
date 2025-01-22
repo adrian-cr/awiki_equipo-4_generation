@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital@0;1&display=swap');
+
+:root {
+    --bg-color: #e9f7ff;
+    --primary-color: #77aaff;
+    --secondary-color: #ff83c2;
+    --hg-color: #b4ffe3;
+    --primary-font: 'Montserrat', sans-serif;
+    --secondary-font: 'Inter', sans-serif;
+}
+
+body * {
+  font-family: var(--secondary-font);
+  font-weight: 200 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--primary-font) !important;
+  font-weight: 500 !important;
+}
+
+
+p, li, input::placeholder, button {
+  font-family: var(--secondary-font) !important;
+  font-weight: 200 !important;
+  margin-bottom: 0;
+}
+
+.negrita {
+  font-weight: 400 !important;
+}
+
+li {
+  list-style: none;
+}
+
+/* Se agrega la fuente secundaria Inter a todo el sitio (Parrafos, botones, enlaces, etc... */
+body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+  padding: 50px;
+ flex-grow: 1;
+  }
+
+  a {
+    color: var(--bg-color) !important;
+    text-decoration: none !important;
+  }
+
+  a:hover, button:hover {
+    color: white !important;
+    font-weight: 300 !important;
+    transition: 300ms;
+  }
+
+  *::placeholder {
+    color: rgb(153, 160, 168) !important;
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-clear-button {
+  display: none;
+}

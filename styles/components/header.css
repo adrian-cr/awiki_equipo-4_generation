@@ -1,0 +1,80 @@
+@import url(../style.css);
+
+.navbar {
+  background-color: var(--primary-color) !important;
+}
+.nb-logo {
+  height: auto;
+  margin-left: 2%;
+  min-width: 10%;
+}
+.nb-search-form {
+  width: 50%;
+}
+
+.nb-search-button{
+  background-color: var(--secondary-color) !important;
+  color: var(--bg-color) !important;
+  border: var(--secondary-color) !important;
+}
+
+.nb-icon-menu {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2%;
+  width: 13%;
+}
+
+.nb-icon-menu-link svg {
+  color: var(--bg-color);
+  width: 25px;
+}
+
+.nb-text-menu-nu {
+  align-content: center;
+  display: flex !important;
+  justify-content: space-evenly;
+  width: 25%;
+}
+
+.nb-collapse-button {
+  border-color: var(--primary-color) !important;
+  box-shadow: none !important;
+
+}
+
+.nb-text-menu-link {
+  color: var(--bg-color);
+  font-size: 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (max-width:1250px) {
+  .nb-text-menu-nu {
+    min-width: 35%;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .nb-search-form {
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .nb-icon-menu {
+    margin: 20px auto 10px;
+    width: 100%;
+  }
+
+  .nb-icon-menu svg {
+    display: none;
+  }
+
+  .nb-collapse-button[aria-expanded="true"] + .nb-main-container .nb-text-menu {
+    display: flex !important;
+    justify-content: space-evenly;
+    margin: 20px auto 10px;
+    width: 100%;
+  }
+}
