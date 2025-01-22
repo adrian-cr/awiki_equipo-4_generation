@@ -7,20 +7,16 @@
     --secondary-font: 'Inter', sans-serif;
 }
 
-<<<<<<< HEAD
 .fullForm{
     border: 1px solid;
     border-radius: 15px;
     padding: 8px
 }
 
-=======
->>>>>>> Rama_VD
 .form-container{
     margin: 100px;
     margin-left: 150px;
     margin-right: 150px;
-<<<<<<< HEAD
     border-radius: 50px;
 } 
 
@@ -28,10 +24,6 @@
     display: flex;
 } */
 
-=======
-} 
-
->>>>>>> Rama_VD
 .was-validated{
     padding: 3%;
     border: 1.2px solid gray;
@@ -63,7 +55,6 @@
     background-color: #FF9ED4; /* Color al pasar el mouse */
     box-shadow: 2px 2px 7px 1px #FF9ED4;
 }
-<<<<<<< HEAD
 
 /* Media Querias */
 /* @media (min-width:768px){
@@ -78,5 +69,3 @@
         margin: 20px auto;
     }
 }
-=======
->>>>>>> Rama_VD

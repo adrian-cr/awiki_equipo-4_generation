@@ -6,10 +6,7 @@
 .titulo {
     font-weight: 600 !important;
     text-align: center;
-<<<<<<< HEAD
-=======
     font-size: 30px;
->>>>>>> Rama_VD
 }
 
 .titulo-mv {
@@ -39,15 +36,9 @@
 }
 
 .imagen-intro {
-<<<<<<< HEAD
-    height: 300px;
-    width: 650px;
-    border-radius: 50px;
-=======
     height: 300px; 
     width: 500px; /* valor inicial 650px */
     border-radius: 20px; 
->>>>>>> Rama_VD
 }
 .contenedor-intro {
     display: flex;
@@ -61,13 +52,10 @@
     width: 500px;
 }
 
-<<<<<<< HEAD
-=======
 p {
   font-size: 20px;
 }
 
->>>>>>> Rama_VD
 @media (max-width: 900px) {
   .contenedor-intro {
       flex-direction: column;
@@ -81,15 +69,9 @@ p {
   }
 
   .imagen-intro {
-<<<<<<< HEAD
-      width: 100%;
-      height: auto;
-      max-width: 400px;
-=======
       width: 100%; 
       height: auto; 
       max-width: 400%; 
->>>>>>> Rama_VD
   }
 
   .intro {
@@ -123,11 +105,7 @@ p {
 
 .card-body{
     align-items: center;
-<<<<<<< HEAD
-    background-color: var(--primary-color);
-=======
     background-color: none /*var(--primary-color)*/;
->>>>>>> Rama_VD
     display: flex;
     flex-wrap: wrap;
 }
@@ -138,11 +116,7 @@ p {
 
 .card-text{
     font-family: var(--font-secundary);
-<<<<<<< HEAD
-    font-size: 0.7em;
-=======
     font-size: 1.5em;
->>>>>>> Rama_VD
     text-align: center;
 }
 
@@ -166,16 +140,12 @@ p {
   height: 300px;
   margin-bottom: 30px;
   object-fit: cover;
-<<<<<<< HEAD
-  width:100%;
-=======
   width: 100%;
   transform: rotate(-20deg);
   transition: all .3s;
 }
 .foto-perfil:hover{
 transform: rotate(0);
->>>>>>> Rama_VD
 }
 
 .card-body {
