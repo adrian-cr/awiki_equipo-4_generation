@@ -160,3 +160,9 @@ export const isHotelCategoryValid = fieldClass => {
   let checkedFieldValue = fieldValues.filter(i => i.checked)[0].value;
   return [1, 2, 3, 4, 5].includes(parseInt(checkedFieldValue));
 }
+
+//VALIDACION DE PUBLICACIONES
+export const isPostValid = fieldID => {
+  let fieldValue = document.getElementById(fieldID).value;
+  return fieldValue.length >= 1;
+}
