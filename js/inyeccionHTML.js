@@ -87,7 +87,7 @@ const nonUserHeaderHTML = `
           <div class="nb-text-menu nb-text-menu-nu">
             <a class="nb-text-menu-link" href="${currentRoot}/pages/sobreNosotros.html" title="Sobre Nosotros">Sobre Nosotros</a>
             <a class="nb-text-menu-link" href="${currentRoot}/pages/contacto.html" title="Contacto">Contacto</a>
-            <a class="nb-text-menu-link" href="${currentRoot}/pages/signup.html" title="Registrate">Registrate</a>
+            <a class="nb-text-menu-link" href="${currentRoot}/pages/forms/registroUsuarios.html" title="Registrate">Registrate</a>
           </div>
         </div>
       </div>
