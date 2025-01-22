@@ -37,18 +37,18 @@
           <div class="container">
               <div class="formulario1">
                   <h2>Inicia sesión</h2>
-                  <form id="formulario1" class="needs-validation" novalidate>
+                  <form id="formulario1" class="needs-validation">
                       <div class="col-mb-4">
                         <label for="formInicioSesion" class="form-label">Correo electrónico</label>
                         <input type="text" class="form-control" id="correoSesion" placeholder="Correo electrónico">
-                        <div class="invalid-feedback">Por favor, ingresa una dirección valida</div>
-                        <div class="valid-feedback">Nice</div>
+                        <!-- <div class="invalid-feedback">Por favor, ingresa una dirección valida</div> -->
+                        <!-- <div class="valid-feedback">Nice</div> -->
                       </div>
                     <div class="col-mb-4">
                       <label for="inputPassword4" class="form-label">Contraseña</label>
                       <input type="password" class="form-control" id="contraseñaSesion">
-                      <div class="invalid-feedback">Contraseña incorrecta</div>
-                      <div class="valid-feedback">Nice</div>
+                      <!-- <div class="invalid-feedback">Contraseña incorrecta</div> -->
+                      <!-- <div class="valid-feedback">Nice</div> -->
                     </div>
                     <input type="submit" id="botonSesion" value="Inicia sesión">
                     <p class="warnings" id="warnings"></p> 
@@ -58,26 +58,31 @@
               <div class="formulario">
                   <h2>Regístrate</h2>
                   <h3>¡Es gratis y cualquiera puede hacerlo!</h3>
-                  <form id="formulario2">
+                  <form id="formulario2" class="form-registro">
                     <div class="mb-3">
                         <label for="formNombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="formNombre" placeholder="Nombre">
+                        <input name="campoNombre" type="text" class="form-control" id="formNombre" placeholder="Nombre">
+                        <div class="invalid-feedback"></div>
                     </div>
                     <div class="mb-3">
                         <label for="formApellido" class="form-label">Apellido</label>
-                        <input type="text" class="form-control" id="formApellido" placeholder="Apellido">
+                        <input name="campoApellido"type="text" class="form-control" id="formApellido" placeholder="Apellido">
+                        <div class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
                         <label for="formCorreo" class="form-label">Correo electrónico</label>
-                        <input type="text" class="form-control" id="formCorreo" placeholder="Correo electrónico">
+                        <input name="campoCorreo"type="text" class="form-control" id="formCorreo" placeholder="Correo electrónico">
+                        <div class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
                         <label for="inputContraseña" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="inputContraseña">
+                        <input name="campoContraseña"type="password" class="form-control" id="inputContraseña">
+                        <div class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
                         <label for="inputConfirmar" class="form-label">Confirmar contraseña</label>
-                        <input type="password" class="form-control" id="inputConfirmar">
+                        <input name="campoConfirmar"type="password" class="form-control" id="inputConfirmar">
+                        <div class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
                         <div class="form-check">
@@ -88,7 +93,7 @@
                         </div>
                       </div>
                        <input type="submit" id="botonRegistro" value="Regístrate">
-                       <p class="warnings" id="advertencia"></p>
+                       <!-- <p class="warnings" id="advertencia"></p> -->
                     
 
                   </form>
@@ -111,7 +116,9 @@
       crossorigin="anonymous"
     >
   </script>
-  <script src="../../js/validacionRegistro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../../js/basesDatos/registroUsuario.js"></script>
+  <script type="module" src="../../js/validacionRegistro.js" ></script>
   <!-- <script src="../js/inyeccionHTML.js"></script> -->
 </body>
 </html>

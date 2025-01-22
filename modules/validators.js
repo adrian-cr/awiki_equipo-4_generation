@@ -67,7 +67,7 @@ export const isZipcodeValid = fieldID => {
   return zipValRegex.test(fieldValue);
 }
 
-// VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web
+// VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web, contraseña
 export const isPhoneValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   let phoneValRegex = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");
@@ -82,6 +82,11 @@ export const isUrlValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   let websiteValRegex = new RegExp("(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,}");
   return websiteValRegex.test(fieldValue);
+}
+export const isPasswordValid = fieldID =>{
+  let fieldValue= document.getElementById(fieldID).value;
+  let passwordValRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
+  return passwordValRegex.test(fieldValue);
 }
 
 //VALIDACIÓN DE INFORMACIÓN DE NEGOCIO: descripción, tipo de negocio, tipo de comida, tipo de producto, categoría de hotel
