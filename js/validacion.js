@@ -15,7 +15,17 @@ function validarNombre() {
 }
 
 function validarTelefono() {
-  if (txtTelefono.value.length !== 10 || Number.isNaN(txtTelefono.value)) {
+
+  if (/^0+$/.test(txtTelefono.value)) {
+    mensajeError.style.display = "block";
+    mensajeError.insertAdjacentHTML("beforeend", `<li class="alerta-error"><strong>Igrese un teléfono válido.</strong></li>`);
+    return false;
+  }
+
+  let numberRegex = new RegExp("^(\\+\\d{1,2}\\s?)?\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{4}$");
+  if(!numberRegex.test (txtTelefono.value))
+  // if (txtTelefono.value.length !== 10 || Number.isNaN(txtTelefono.value)) 
+    {
     mensajeError.style.display = "block";
     mensajeError.insertAdjacentHTML("beforeend", `<li class="alerta-error"><strong>Igrese un teléfono válido.</strong></li>`);
     return false;

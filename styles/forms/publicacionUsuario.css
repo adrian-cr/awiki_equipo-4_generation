@@ -7,11 +7,22 @@
     --secondary-font: 'Inter', sans-serif;
 }
 
+.fullForm{
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 8px
+}
+
 .form-container{
     margin: 100px;
     margin-left: 150px;
     margin-right: 150px;
+    border-radius: 50px;
 } 
+
+/* .fullForm{
+    display: flex;
+} */
 
 .was-validated{
     padding: 3%;
@@ -43,4 +54,18 @@
 .btn-primary:hover {
     background-color: #FF9ED4; /* Color al pasar el mouse */
     box-shadow: 2px 2px 7px 1px #FF9ED4;
+}
+
+/* Media Querias */
+/* @media (min-width:768px){
+    .form-container{
+        margin: 50px auto;
+        max-width: 600px;
+    }
+} */
+
+@media(max-width:767.98px){
+    .form-container{
+        margin: 20px auto;
+    }
 }

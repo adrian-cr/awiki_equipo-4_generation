@@ -11,11 +11,16 @@ window.onload = function() {
       // these IDs from the previous steps
       emailjs.sendForm('service_eikj0hg', 'template_wi3e0gk', this)
           .then(() => {
-              console.log('SUCCESS!');
+            Swal.fire({
+              title: "¡Datos enviados con éxito!",
+              text: "Gracias por contactarnos, te responderemos pronto",
+              icon: "success",
+              draggable: true
+            });
           }, (error) => {
               console.log('FAILED...', error);
           });
 
-    window.location.assign("../index.html")
+    // window.location.assign("../index.html")
   });
 }
