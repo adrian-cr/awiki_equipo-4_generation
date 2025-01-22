@@ -1,6 +1,12 @@
 @import url(../styles/style.css);
 
 /* PrimeraParte */
+
+.carousel{
+    display: flex;
+    overflow-x: auto;    
+    
+}
 .contenedorIntro{
     display: flex; 
     flex-direction: column; 
@@ -49,10 +55,10 @@
     border-radius: 35px;
 }
 
-img{
+/* img{
     width: 200px;
-    height: 60px;
-}
+    height: 600px;
+} */
 
 h1{
     font-weight: 600 !important;
@@ -103,3 +109,11 @@ h1{
     color: var(--secondary-color);
     margin: 5px;
 }
+
+.btn{
+    color: var(--secondary-color);
+}
+
+
+
+
