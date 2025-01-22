@@ -61,7 +61,7 @@ function validData(){
     // mensajesError.insertAdjacentHTML("beforeend", '<p>Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial</p>')
   }
 
-  if(confirmarContraseña.value!== contraseñaRegistro.value){
+  if(confirmarContraseña.id!== contraseñaRegistro.id){
     mensajesError.push({input:confirmarContraseña, mensaje:'Las contraseñas no coinciden'});
     // mensajesError.style.display='block';
     // mensajesError.insertAdjacentHTML("beforeend", '<p>Las contraseñas no coinciden</p>');
