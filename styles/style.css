@@ -27,6 +27,13 @@ p, li, input::placeholder, button {
   margin-bottom: 0;
 }
 
+<<<<<<< HEAD
+=======
+.negrita {
+  font-weight: 400 !important;
+}
+
+>>>>>>> Rama_VD
 li {
   list-style: none;
 }

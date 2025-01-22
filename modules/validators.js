@@ -67,7 +67,11 @@ export const isZipcodeValid = fieldID => {
   return zipValRegex.test(fieldValue);
 }
 
+<<<<<<< HEAD
 // VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web, contraseña
+=======
+// VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web
+>>>>>>> Rama_VD
 export const isPhoneValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   let phoneValRegex = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");
@@ -83,11 +87,14 @@ export const isUrlValid = fieldID => {
   let websiteValRegex = new RegExp("(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,}");
   return websiteValRegex.test(fieldValue);
 }
+<<<<<<< HEAD
 export const isPasswordValid = fieldID =>{
   let fieldValue= document.getElementById(fieldID).value;
   let passwordValRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
   return passwordValRegex.test(fieldValue);
 }
+=======
+>>>>>>> Rama_VD
 
 //VALIDACIÓN DE INFORMACIÓN DE NEGOCIO: descripción, tipo de negocio, tipo de comida, tipo de producto, categoría de hotel
 export const isBusinessDescriptionValid = fieldID => {
@@ -160,9 +167,12 @@ export const isHotelCategoryValid = fieldClass => {
   let checkedFieldValue = fieldValues.filter(i => i.checked)[0].value;
   return [1, 2, 3, 4, 5].includes(parseInt(checkedFieldValue));
 }
+<<<<<<< HEAD
 
 //VALIDACION DE PUBLICACIONES
 export const isPostValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   return fieldValue.length >= 1;
 }
+=======
+>>>>>>> Rama_VD

@@ -125,11 +125,16 @@ div.formatoCarta1 {
 /*Botones*/
 
 #boton-enviar {
+<<<<<<< HEAD
     padding: 8px;
     padding-left: 15px;
     padding-right: 15px;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
+=======
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7em;
+>>>>>>> Rama_VD
     color: white;
     background-color: #fe96ca;
     border-color: var(--secondary-color);

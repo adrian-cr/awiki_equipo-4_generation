@@ -15,6 +15,7 @@ function validarNombre() {
 }
 
 function validarTelefono() {
+<<<<<<< HEAD
 
   if (/^0+$/.test(txtTelefono.value)) {
     mensajeError.style.display = "block";
@@ -26,6 +27,9 @@ function validarTelefono() {
   if(!numberRegex.test (txtTelefono.value))
   // if (txtTelefono.value.length !== 10 || Number.isNaN(txtTelefono.value)) 
     {
+=======
+  if (txtTelefono.value.length !== 10 || Number.isNaN(txtTelefono.value)) {
+>>>>>>> Rama_VD
     mensajeError.style.display = "block";
     mensajeError.insertAdjacentHTML("beforeend", `<li class="alerta-error"><strong>Igrese un teléfono válido.</strong></li>`);
     return false;
