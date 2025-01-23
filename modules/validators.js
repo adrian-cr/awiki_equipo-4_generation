@@ -85,7 +85,7 @@ export const isUrlValid = fieldID => {
 }
 export const isPasswordValid = fieldID =>{
   let fieldValue= document.getElementById(fieldID).value;
-  let passwordValRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$");
+  let passwordValRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
   return passwordValRegex.test(fieldValue);
 }
 
