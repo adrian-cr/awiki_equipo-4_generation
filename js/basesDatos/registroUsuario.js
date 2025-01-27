@@ -9,7 +9,6 @@ const procesaTodo = (event) =>{
     const datosCompletos = Object.fromEntries(datos.entries());
     console.log(datosCompletos)
     console.log(JSON.stringify(datosCompletos)); // Verificar el JSON
-  
     //Obtener los usuarios previos desde localStorage (si existen) y se agregan
     const usuariosPrevios=JSON.parse(localStorage.getItem('usuarios'))|| [];
     usuariosPrevios.push(datosCompletos);
@@ -26,6 +25,6 @@ const procesaTodo = (event) =>{
 
 formulario.addEventListener("submit", (event) => {
     const newUsuario = procesaTodo(event);
-    // localStorage.setItem('usuario', JSON.stringify(newUsuario));
-    // postData(newPublicacion);
+//     localStorage.setItem('usuario', JSON.stringify(newUsuario));
+//     postData(newPublicacion);
 })
