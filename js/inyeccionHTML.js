@@ -87,7 +87,7 @@ const nonUserHeaderHTML = `
           <div class="nb-text-menu nb-text-menu-nu">
             <a class="nb-text-menu-link" href="${currentRoot}/pages/sobreNosotros.html" title="Sobre Nosotros">Sobre Nosotros</a>
             <a class="nb-text-menu-link" href="${currentRoot}/pages/contacto.html" title="Contacto">Contacto</a>
-            <a class="nb-text-menu-link" href="${currentRoot}/pages/signup.html" title="Registrate">Registrate</a>
+            <a class="nb-text-menu-link" href="${currentRoot}/pages/forms/registroUsuarios.html" title="Registrate">Registrate</a>
           </div>
         </div>
       </div>
@@ -115,10 +115,10 @@ const footerHTML = `
               <h6 class="ft-menu-section-title">Explora</h6>
               <hr class="ft-menu-section-rule mx-auto"/>
               <p class="ft-menu-section-item">
-                <a href="#">Lugares</a>
+                <a href="${currentRoot}/pages/resultadosBusqueda.html">Lugares</a>
               </p>
               <p class="ft-menu-section-item">
-                <a href="#">Personas</a>
+                <a href="">Personas</a>
               </p>
             </div>
             <div class="ft-menu-section col-sm-4 col-md-3 col-lg-3 col-xl-3 mx-auto">

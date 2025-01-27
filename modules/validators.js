@@ -102,7 +102,7 @@ export const isZipcodeValid = fieldID => {
   return zipValRegex.test(fieldValue);
 }
 
-// VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web
+// VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web, contraseña
 export const isPhoneValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   let phoneValRegex = new RegExp(/^[1-9]{1}[0-9]{9}$/);
@@ -117,6 +117,11 @@ export const isUrlValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   let websiteValRegex = new RegExp(/^(www\.)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,5}$/);
   return websiteValRegex.test(fieldValue);
+}
+export const isPasswordValid = fieldID =>{
+  let fieldValue= document.getElementById(fieldID).value;
+  let passwordValRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
+  return passwordValRegex.test(fieldValue);
 }
 
 //VALIDACIÓN DE INFORMACIÓN DE NEGOCIO: descripción, tipo de negocio, tipo de comida, tipo de producto, categoría de hotel
@@ -189,4 +194,10 @@ export const isHotelCategoryValid = fieldClass => {
   let fieldValues = Array.from(document.getElementsByClassName(fieldClass));
   let checkedFieldValue = fieldValues.filter(i => i.checked)[0].value;
   return [1, 2, 3, 4, 5].includes(parseInt(checkedFieldValue));
+}
+
+//VALIDACION DE PUBLICACIONES
+export const isPostValid = fieldID => {
+  let fieldValue = document.getElementById(fieldID).value;
+  return fieldValue.length >= 1;
 }

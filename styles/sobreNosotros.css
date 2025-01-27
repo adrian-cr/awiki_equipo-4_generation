@@ -6,6 +6,7 @@
 .titulo {
     font-weight: 600 !important;
     text-align: center;
+    font-size: 30px;
 }
 
 .titulo-mv {
@@ -35,9 +36,9 @@
 }
 
 .imagen-intro {
-    height: 300px;
-    width: 650px;
-    border-radius: 50px;
+    height: 300px; 
+    width: 500px; /* valor inicial 650px */
+    border-radius: 20px; 
 }
 .contenedor-intro {
     display: flex;
@@ -49,6 +50,10 @@
 .intro {
     text-align: center;
     width: 500px;
+}
+
+p {
+  font-size: 20px;
 }
 
 @media (max-width: 900px) {
@@ -64,9 +69,9 @@
   }
 
   .imagen-intro {
-      width: 100%;
-      height: auto;
-      max-width: 400px;
+      width: 100%; 
+      height: auto; 
+      max-width: 400%; 
   }
 
   .intro {
@@ -100,7 +105,7 @@
 
 .card-body{
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: none /*var(--primary-color)*/;
     display: flex;
     flex-wrap: wrap;
 }
@@ -111,7 +116,7 @@
 
 .card-text{
     font-family: var(--font-secundary);
-    font-size: 0.7em;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -135,7 +140,12 @@
   height: 300px;
   margin-bottom: 30px;
   object-fit: cover;
-  width:100%;
+  width: 100%;
+  transform: rotate(-20deg);
+  transition: all .3s;
+}
+.foto-perfil:hover{
+transform: rotate(0);
 }
 
 .card-body {

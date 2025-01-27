@@ -1,6 +1,12 @@
 @import url(../styles/style.css);
 
 /* PrimeraParte */
+
+.carousel{
+    display: flex;
+    overflow-x: auto;    
+    
+}
 .contenedorIntro{
     display: flex; 
     flex-direction: column; 
@@ -12,11 +18,12 @@
 
 }
 
-div.contenedores{
+.contenedores{
+    /* background-color: black; */
     margin: 20px;
     padding-right: 500px;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
@@ -48,10 +55,10 @@ div.contenedores{
     border-radius: 35px;
 }
 
-img{
+/* img{
     width: 200px;
-    height: 60px;
-}
+    height: 600px;
+} */
 
 h1{
     font-weight: 600 !important;
@@ -102,3 +109,11 @@ h1{
     color: var(--secondary-color);
     margin: 5px;
 }
+
+.btn{
+    color: var(--secondary-color);
+}
+
+
+
+
