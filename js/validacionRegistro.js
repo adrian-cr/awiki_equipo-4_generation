@@ -1,8 +1,13 @@
-import * as validators from "../../modules/validators.js";
+//import * as validators from "../../modules/validators.js";
 const form2=document.getElementById("formulario2");
 const inputs= document.querySelectorAll('#formulario2 input');
+//Constantes formulario 1
+const form1 = document.getElementById("formulario1");
+const correoSesion = document.getElementById("correoSesion");
+const contraseñaSesion = document.getElementById("contraseñaSesion");
+const btnSesion = document.getElementById("botonSesion");
 
-//Elementos del formulario//
+//Elementos del formulario registro//
 const nombreRegistro= document.getElementById("formNombre");
 const apellidoRegistro=document.getElementById("formApellido");
 const correoRegistro=document.getElementById("formCorreo");
@@ -32,7 +37,7 @@ console.log("Validando formulario...");
   }
 
   function borrarErrores(){
-    const errores=document.querySelectorAll('.error-message');
+    const errores=Array.from(document.querySelectorAll('.error-message'));
     errores.forEach(erro=> erro.remove());
   }
 
@@ -62,7 +67,7 @@ function validarCorreo(){
 return true;
 }
 function validarContraseña(){
-  let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
+  let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%.^&*-]).{8,}$")
   if(!contraseñaRegex.test(contraseñaRegistro.value)){
     console.log("minimo 8 caracteres")
     // mensajesError.push({input: contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'})
@@ -90,7 +95,7 @@ function validarFormulario(){
 
   mensajesError.forEach(error => mostrarError(error.input, error.mensaje));
 
-  if(isNombreValido && isApellidoValido&& isCorreoValido && isContraseñaValida && isConfirmarValida){
+  if(isNombreValido && isApellidoValido && isCorreoValido && isContraseñaValida && isConfirmarValida){
     console.log("Formulario válido");
   return true;
   }else{
@@ -105,13 +110,13 @@ form2.addEventListener("submit", e =>{
   const esFormularioValido= validarFormulario();
   if(esFormularioValido){
     Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awik! :)",
+            title: "¡Awiki! :)",
             text: "Tu registro ha sido existoso",
             icon: "success"
           });
   }else{
     Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awik! :(:",
+            title: "¡Awiki! :(:",
             text: "Tu registro no ha sido existoso",
             icon: "error"
           });
@@ -119,3 +124,53 @@ form2.addEventListener("submit", e =>{
 });
 
 
+//------------------------Validación formulario inicia sesión
+
+function validarCorreoSesion(){
+  let correoRegex=new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
+  if(!correoRegex.test(correoSesion.value)){
+    mensajesError.push({input: correoSesion, mensaje:'Ingrese un correo válido'})
+    return false;
+  }
+return true;
+}
+function validarContraseñaSesion(){
+  let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$.%^&*-]).{8,}$")
+  if(!contraseñaRegex.test(contraseñaSesion.value)){
+    console.log("Error")
+    // mensajesError.push({input: contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'})
+    return false;
+  }
+  return true;
+}
+
+function validarFormularioSesion(){
+  borrarErrores();
+  const iscorreoSesion = validarCorreoSesion();
+  const iscontraseñaSesion = validarContraseñaSesion();
+
+  mensajesError.forEach(error => mostrarError(error.input, error.mensaje));
+
+  if(iscorreoSesion && iscontraseñaSesion){
+    console.log("Formulario válido");
+  return true;
+  }else{
+  console.log("Formulario inválido");
+  return false;
+  }
+
+}
+
+form1.addEventListener("submit", e =>{
+  e.preventDefault();
+  const esFormularioValidoSesion= validarFormularioSesion();
+  if(esFormularioValidoSesion){
+    //Ruta pagina de feed social;
+  }else{
+    Swal.fire({ //Alerta de SweetAlert
+            title: "¡Awiki triste! :(",
+            text: "Error en inicio de sesión",
+            icon: "error"
+          });
+  }
+});
