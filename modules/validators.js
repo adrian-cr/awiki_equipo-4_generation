@@ -6,11 +6,40 @@
     de lo contrario, retornan 'false'.
 */
 
-//VALIDACIÓN GENERAL: campos vacíos
+//VALIDACIÓN GENERAL: número, campo vacío, lista de campos vacía, campo oculto, sección oculta, campo inexistente
+export const isNumber = fieldID=> {
+  let fieldValue = document.getElementById(fieldID).value;
+  let numValRegex = new RegExp(/^[0-9]{1,}$/);
+  return numValRegex.test(fieldValue);
+}
 export const isFieldEmpty = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
   return fieldValue.length == 0;
 }
+export const isFieldSetEmpty = fieldSetID => {
+  let fieldSet = document.getElementById(fieldSetID);
+  let checkboxes = fieldSet.querySelectorAll("input[type=checkbox]");
+  return Array.from(checkboxes).some(e => e.checked);
+}
+export const isSectionHidden = sectionID => {
+  let sectionElement = document.getElementById(sectionID);
+  return sectionElement.hidden;
+}
+export const isParentSectionHidden = fieldID => {
+  let parent = document.getElementById(fieldID);
+  while (parent) {
+    if (parent.tagName === 'SECTION') {
+      break;
+    }
+    parent = parent.parentElement;
+  }
+  return parent.hidden;
+}
+export const fieldExists = fieldID => {
+  let fieldValue = document.getElementById(fieldID);
+  return fieldValue != null;
+}
+
 
 // VALIDACIÓN DE INFORMACIÓN PERSONAL: nombre/apellido, edad
 export const isNameValid = fieldID => {
@@ -22,7 +51,13 @@ export const isAgeValid = fieldID => {
   return fieldValue > 16 && fieldValue < 100;
 }
 
-//VALIDACIÓN DE DATOS DE DIRECCIÓN: nombre de calle/colonia, estado, código postal
+//VALIDACIÓN DE DATOS DE DIRECCIÓN: número de calle nombre de calle/colonia, estado, código postal
+
+export const isStreetNumberValid = fieldID => {
+  let fieldValue = document.getElementById(fieldID).value;
+  return isNumber(fieldID) && fieldValue != "0";
+}
+
 export const isStateValid = fieldID => {
   const STATE_LIST = [
     "Aguascalientes",
@@ -63,24 +98,24 @@ export const isStateValid = fieldID => {
 }
 export const isZipcodeValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
-  let zipValRegex = new RegExp("^[0-9]{5}(?:-[0-9]{4})?$");
+  let zipValRegex = new RegExp(/^[0-9]{5}(?:-[0-9]{4})?$/);
   return zipValRegex.test(fieldValue);
 }
 
 // VALIDACIÓN DE DATOS DE CONTACTO: teléfono, correo electrónico, sitio web
 export const isPhoneValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
-  let phoneValRegex = new RegExp("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$");
+  let phoneValRegex = new RegExp(/^[1-9]{1}[0-9]{9}$/);
   return phoneValRegex.test(fieldValue);
 }
 export const isEmailValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
-  let emailValRegex = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
+  let emailValRegex = new RegExp(/[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/);
   return emailValRegex.test(fieldValue);
 }
 export const isUrlValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
-  let websiteValRegex = new RegExp("(https:\/\/www\.|http:\/\/www\.|https:\/\/|http:\/\/)?[a-zA-Z0-9]{2,}(\.[a-zA-Z0-9]{2,})(\.[a-zA-Z0-9]{2,})?\/[a-zA-Z0-9]{2,}");
+  let websiteValRegex = new RegExp(/^(www\.)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,5}$/);
   return websiteValRegex.test(fieldValue);
 }
 

@@ -1,86 +1,145 @@
 import * as validators from "../../modules/validators.js";
 
 const formElement = document.getElementsByClassName("bsu-form")[0];
-const fieldElements = document.getElementsByClassName("bsu-form-field");
+const formFieldElements = Array.from(document.getElementsByClassName("bsu-form-field"));
+const formFieldSetElements = Array.from(document.querySelectorAll("fieldset"));
+const formButtonElement = document.getElementsByClassName("bsu-form-submit-button")[0];
 
-//TESTING
-const sampleElement = document.getElementsByClassName("bsu-form-field")[0];
-const textAreaElement = document.getElementsByTagName("textarea")[0];
-const stateFieldElement = document.getElementById("state-field");
-const bizTypeElement = document.getElementById("business-type-selection");
 
-const isFieldValid = (fieldElement) => {
-  const FieldType = fieldElement.type;
-  const fieldValue = fieldElement.value;
-  const fieldID = fieldElement.id;
-  if (validators.isFieldEmpty(fieldID)) {
-    return [false, "empty"];
-  }
-  switch (FieldType) {
-    case "text":
-      if (fieldElement.list != null) {
-        if (!validators.isStateValid) {
+const isFieldValid = formField => {
+  const fieldType = formField.type;
+  const fieldId = formField.id;
+  if (!validators.isParentSectionHidden(fieldId)){
+    if (fieldType != "fieldset"){
+      if (validators.isFieldEmpty(fieldId)) {
+        return [false, "empty"];
+      }//if
+    }//if
+    else {
+      if (!validators.isFieldSetEmpty(fieldId)){
+        console.log(false)
+        return [false, "empty"];
+      }
+    }
+    switch (fieldType) {
+      case "text":
+        if (formField.list != null) {
+          if (!validators.isStateValid(fieldId)) {
+            return [false, "wrong"];
+
+          }//if
+        }//if
+        if (!validators.isNameValid(fieldId)) {
           return [false, "wrong"];
-        }
-      }
-      if (!validators.isNameValid(fieldID)) {
-        return [false, "wrong"];
-      }
-      break;
-    case "textarea":
-      if (!validators.isBusinessDescriptionValid(fieldID)) {
-        return [false, "wrong"];
-      }
-      break;
-    case "number":
-      if (fieldID.indexOf("zip") != -1) {
-        if (!validators.isZipcodeValid(fieldID)) {
+        }//if
+        break;
+      case "textarea":
+        if (!validators.isBusinessDescriptionValid(fieldId)) {
           return [false, "wrong"];
+        }//if
+        break;
+      case "number":
+        if (fieldId.indexOf("zip") != -1) {
+          if (!validators.isZipcodeValid(fieldId)) {
+            return [false, "wrong"];
+          }
         }
-      }
-      break;
-    case "phone":
-      if (!validators.isPhoneValid(fieldID)) {
-        return [false, "wrong"];
-      }
-      break;
-    case "email":
-      if (!validators.isEmailValid(fieldID)) {
-        return [false, "wrong"];
-      }
-      break;
-    case "url":
-      if (!validators.isUrlValid(fieldID)) {
-        return [false, "wrong"];
-      }
-    case "select-one":
-      if (fieldID.indexOf("business-type") != -1) {
-        if (!validators.isBusinessTypeValid(fieldID)) {
+        if (fieldId.indexOf("street") != -1) {
+          if (!validators.isStreetNumberValid(fieldId)) {
+            return [false, "wrong"];
+          }//if
+        }//if
+        break;
+      case "tel":
+        if (!validators.isPhoneValid(fieldId)) {
           return [false, "wrong"];
-        }
-      }
-      if (fieldID.indexOf("product-type") != -1) {
-        if (!validators.isProductTypeValid(fieldID)) {
+        }//if
+        break;
+      case "email":
+        if (!validators.isEmailValid(fieldId)) {
           return [false, "wrong"];
-        }
-      }
-      if (fieldID.indexOf("cuisine-type") != -1) {
-        if (!validators.isCuisineTypeValid(fieldID)) {
+        }//if
+        break;
+      case "url":
+        if (!validators.isUrlValid(fieldId)) {
           return [false, "wrong"];
-        }
-      }
-      break;
-    default:
-      break;
-  } //switch
+        }//if
+      case "select-one":
+        if (fieldId.indexOf("business-type") != -1) {
+          if (!validators.isBusinessTypeValid(fieldId)) {
+            return [false, "wrong"];
+          }//if
+        }//if
+        if (fieldId.indexOf("product-type") != -1) {
+          if (!validators.isProductTypeValid(fieldId)) {
+            return [false, "wrong"];
+          }//if
+        }//if
+        if (fieldId.indexOf("cuisine-type") != -1) {
+          if (!validators.isCuisineTypeValid(fieldId)) {
+            return [false, "wrong"];
+          }//if
+        }//if
+        break;
+      default:
+        break;
+    } //switch
+  }//if
   return [true, "OK"];
-}; //isFieldValid()
+} //isFieldValid()
+const areFieldsValid = formFieldArr => {
+  for (let elem of Array.from(formFieldArr)) {
+    if (!isFieldValid(elem)[0]){
+      return false;
+    }
+  };
+  return true;
+}//areFieldsValid()
+const injectErrorMessages = formField => {
+  const errorFreeFields = ["bsu-time-field", "bsu-radio", "bsu-checkbox"];
+  if (!errorFreeFields.some((e => Array.from(formField.classList).includes(e)))){
+    const wrongFormatMessage = `<div class="invalid-feedback" id="wm-${formField.id}">Valor incorrrecto.</div>`;
+    if (!isFieldValid(formField)[0]) {
+      formField.classList.add("is-invalid");
+      if(isFieldValid(formField)[1] == "wrong") {
+        document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = true;
+        formField.insertAdjacentHTML("afterend", wrongFormatMessage);
+      }//if
+      else {
+        if (validators.fieldExists(`wm-${formField.id}`)) {
+          formField.parentElement.removeChild(document.getElementById(`wm-${formField.id}`));
+        }//if
+        document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
+      }//else
+    }//if
+    else {
+      formField.classList.remove("is-invalid");
+      if (validators.fieldExists(`wm-${formField.id}`)) {
+        formField.parentElement.removeChild(document.getElementById(`wm-${formField.id}`));
+      }//if
+      if (formField.id != "hotel-category") {
+        document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
+      }//if
+    }//else
 
-console.log(bizTypeElement);
+  }
 
-Array.from(fieldElements).forEach((elem) => {
-  elem.addEventListener("blur", (e) => {
-    e.preventDefault();
-    console.log(isFieldValid(elem)[0]);
-  });
-});
+}
+
+
+// VALIDACIÓN DE FORMULARIO
+formElement.addEventListener("click", e => {
+  console.log(areFieldsValid(formFieldElements))
+  if (!areFieldsValid(formFieldElements)) {
+    formButtonElement.disabled = true;
+  }
+  else {
+    formButtonElement.disabled = false;
+  }
+});//form.addEventListener("click")
+
+// VALIDACIÓN DE CAMPOS
+formFieldElements.forEach(elem => elem.addEventListener("blur", e => injectErrorMessages(elem)));
+
+//VALIDACIÓN DE LISTA DE CAMPOS
+formFieldSetElements.forEach(elem => elem.addEventListener("change", e => injectErrorMessages(elem)));
