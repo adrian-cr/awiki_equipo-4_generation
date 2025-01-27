@@ -1,10 +1,22 @@
 import * as validators from "../../modules/validators.js";
 
 const formElement = document.getElementsByClassName("bsu-form")[0];
+const errorFreeFields = ["bsu-time-field", "bsu-radio", "bsu-checkbox"];
+const errorFreeFieldSets = ["hotel-category"];
 const formFieldElements = Array.from(document.getElementsByClassName("bsu-form-field"));
-const formFieldSetElements = Array.from(document.querySelectorAll("fieldset"));
+const errorProneFieldElements = formFieldElements.filter(field => {
+  return !(
+    errorFreeFields.some(errClass => Array.from(field.classList).includes(errClass))
+    ||
+    errorFreeFieldSets.some(errId => field.id == errId)
+  )
+});
+
 const formButtonElement = document.getElementsByClassName("bsu-form-submit-button")[0];
 
+const getInvalidFieldIds = fieldArr => {
+  return fieldArr.filter(field => isFieldValid(field))
+}
 
 const isFieldValid = formField => {
   const fieldType = formField.type;
@@ -17,7 +29,6 @@ const isFieldValid = formField => {
     }//if
     else {
       if (!validators.isFieldSetEmpty(fieldId)){
-        console.log(false)
         return [false, "empty"];
       }
     }
@@ -96,41 +107,34 @@ const areFieldsValid = formFieldArr => {
   return true;
 }//areFieldsValid()
 const injectErrorMessages = formField => {
-  const errorFreeFields = ["bsu-time-field", "bsu-radio", "bsu-checkbox"];
-  if (!errorFreeFields.some((e => Array.from(formField.classList).includes(e)))){
-    const wrongFormatMessage = `<div class="invalid-feedback" id="wm-${formField.id}">Valor incorrrecto.</div>`;
-    if (!isFieldValid(formField)[0]) {
-      formField.classList.add("is-invalid");
-      if(isFieldValid(formField)[1] == "wrong") {
-        document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = true;
-        formField.insertAdjacentHTML("afterend", wrongFormatMessage);
-      }//if
-      else {
-        if (validators.fieldExists(`wm-${formField.id}`)) {
-          formField.parentElement.removeChild(document.getElementById(`wm-${formField.id}`));
-        }//if
-        document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
-      }//else
+  const wrongFormatMessage = `<div class="invalid-feedback" id="wm-${formField.id}">Valor incorrrecto.</div>`;
+  if (!isFieldValid(formField)[0]) {
+    formField.classList.add("is-invalid");
+    if(isFieldValid(formField)[1] == "wrong") {
+      document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = true;
+      formField.insertAdjacentHTML("afterend", wrongFormatMessage);
     }//if
     else {
-      formField.classList.remove("is-invalid");
       if (validators.fieldExists(`wm-${formField.id}`)) {
         formField.parentElement.removeChild(document.getElementById(`wm-${formField.id}`));
       }//if
-      if (formField.id != "hotel-category") {
-        document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
-      }//if
+      document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
     }//else
-
-  }
-
+  }//if
+  else {
+    formField.classList.remove("is-invalid");
+    if (validators.fieldExists(`wm-${formField.id}`)) {
+      formField.parentElement.removeChild(document.getElementById(`wm-${formField.id}`));
+    }//if
+    if (formField.id != "hotel-category") {
+      document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
+    }//if
+  }//else
 }
 
-
 // VALIDACIÓN DE FORMULARIO
-formElement.addEventListener("click", e => {
-  console.log(areFieldsValid(formFieldElements))
-  if (!areFieldsValid(formFieldElements)) {
+formElement.addEventListener("mousedown", e => {
+  if (!areFieldsValid(errorProneFieldElements)) {
     formButtonElement.disabled = true;
   }
   else {
@@ -139,7 +143,6 @@ formElement.addEventListener("click", e => {
 });//form.addEventListener("click")
 
 // VALIDACIÓN DE CAMPOS
-formFieldElements.forEach(elem => elem.addEventListener("blur", e => injectErrorMessages(elem)));
-
-//VALIDACIÓN DE LISTA DE CAMPOS
-formFieldSetElements.forEach(elem => elem.addEventListener("change", e => injectErrorMessages(elem)));
+errorProneFieldElements.forEach(elem => elem.addEventListener("blur", e => {
+    injectErrorMessages(elem);
+}));
