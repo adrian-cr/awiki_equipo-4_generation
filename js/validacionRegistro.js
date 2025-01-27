@@ -17,8 +17,6 @@ const confirmarContraseña= document.getElementById("inputConfirmar");
 // const botonRegistro=document.getElementById("botonRegistro");
 // const mensajeError=document.getElementsByClassName("invalid-feedback");
 
-console.log("Validando formulario...");
-
   // Verificar los valores de los campos
   console.log("Nombre:", nombreRegistro.value);
   console.log("Apellido:", apellidoRegistro.value);
@@ -37,8 +35,8 @@ console.log("Validando formulario...");
   }
 
   function borrarErrores(){
-    const errores=Array.from(document.querySelectorAll('.error-message'));
-    errores.forEach(erro=> erro.remove());
+    const errores=document.querySelectorAll('.error-message');
+    errores.forEach(err=> err.remove());
   }
 
 function validarNombre(){
@@ -69,7 +67,7 @@ return true;
 function validarContraseña(){
   let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%.^&*-]).{8,}$")
   if(!contraseñaRegex.test(contraseñaRegistro.value)){
-    console.log("minimo 8 caracteres")
+    mensajesError.push({input:contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'});
     // mensajesError.push({input: contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'})
     return false;
   }
@@ -77,13 +75,11 @@ function validarContraseña(){
 }
 function validarConfirmarContraseña(){
   if (contraseñaRegistro.value !== confirmarContraseña.value){
-    console.log("las contraseñas no coinciden")
-    // mensajesError.push({input: confirmarContraseña, mensaje:'Las contraseñas no coinciden'})
+    mensajesError.push({input: confirmarContraseña, mensaje:'Las contraseñas no coinciden'})
   return false;
   }
   return true;
 }
-
 
 function validarFormulario(){
   borrarErrores();
@@ -92,8 +88,9 @@ function validarFormulario(){
   const isCorreoValido=validarCorreo();
   const isContraseñaValida=validarContraseña();
   const isConfirmarValida=validarConfirmarContraseña();
+  // const isEmpty= borrarErrores();
 
-  mensajesError.forEach(error => mostrarError(error.input, error.mensaje));
+  mensajesError.forEach(err => mostrarError(err.input, err.mensaje));
 
   if(isNombreValido && isApellidoValido && isCorreoValido && isContraseñaValida && isConfirmarValida){
     console.log("Formulario válido");
@@ -110,13 +107,13 @@ form2.addEventListener("submit", e =>{
   const esFormularioValido= validarFormulario();
   if(esFormularioValido){
     Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awiki! :)",
+            title: "¡Awikifeliz! :)",
             text: "Tu registro ha sido existoso",
             icon: "success"
           });
   }else{
     Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awiki! :(:",
+            title: "¡Awikitriste! :(",
             text: "Tu registro no ha sido existoso",
             icon: "error"
           });
