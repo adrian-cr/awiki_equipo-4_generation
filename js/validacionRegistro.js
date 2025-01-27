@@ -1,7 +1,7 @@
 //import * as validators from "../../modules/validators.js";
 const form2=document.getElementById("formulario2");
-const inputs= document.querySelectorAll('#formulario2 input');
-//Constantes formulario 1
+const inputsRegistro= document.querySelectorAll('#formulario2 input');
+//Constantes formulario de Inicio de Sesión
 const form1 = document.getElementById("formulario1");
 const correoSesion = document.getElementById("correoSesion");
 const contraseñaSesion = document.getElementById("contraseñaSesion");
@@ -14,16 +14,14 @@ const correoRegistro=document.getElementById("formCorreo");
 const contraseñaRegistro=document.getElementById("inputContraseña");
 const confirmarContraseña= document.getElementById("inputConfirmar");
 
-// const botonRegistro=document.getElementById("botonRegistro");
-// const mensajeError=document.getElementsByClassName("invalid-feedback");
-
-  // Verificar los valores de los campos
-  console.log("Nombre:", nombreRegistro.value);
-  console.log("Apellido:", apellidoRegistro.value);
-  console.log("Correo:", correoRegistro.value);
-  console.log("Contraseña:", contraseñaRegistro.value);
-  console.log("Confirmar Contraseña:", confirmarContraseña.value);
-
+  // // Verificar los valores de los campos
+  // console.log("Nombre:", nombreRegistro.value);
+  // console.log("Apellido:", apellidoRegistro.value);
+  // console.log("Correo:", correoRegistro.value);
+  // console.log("Contraseña:", contraseñaRegistro.value);
+  // console.log("Confirmar Contraseña:", confirmarContraseña.value);
+ 
+  //Mostrar, quitar errores y limpiar campos
   let mensajesError=[];
 
   function mostrarError(input, mensaje){
@@ -39,6 +37,12 @@ const confirmarContraseña= document.getElementById("inputConfirmar");
     errores.forEach(err=> err.remove());
   }
 
+  function limpiarFormulario(){
+    inputsRegistro.forEach(input => inputsRegistro.value=" ");
+  }
+
+
+/**Validación del formulario */
 function validarNombre(){
   let nombreRegex= new RegExp(/^[a-zA-ZÀ-ÿ\s]{1,40}$/);
   if(!nombreRegex.test(nombreRegistro.value)){
@@ -81,14 +85,30 @@ function validarConfirmarContraseña(){
   return true;
 }
 
+function validarLocalStorage(){
+  const newUsuario= validarFormulario();
+  if(newUsuario){
+    const datos=new FormData(event.target);
+    const datosCompletos = Object.fromEntries(datos.entries());
+    console.log(datosCompletos);
+    const usuariosPrevios= JSON.parse(localStorage.getItem('usuarios'))|| [];
+    usuariosPrevios.push(datosCompletos);
+
+    localStorage.setItem('usuarios', JSON.stringify(usuariosPrevios));
+
+    return datosCompletos;
+
+  }
+}
+
 function validarFormulario(){
   borrarErrores();
+  mensajesError=[];
   const isNombreValido= validarNombre();
   const isApellidoValido= validarApellido();
   const isCorreoValido=validarCorreo();
   const isContraseñaValida=validarContraseña();
   const isConfirmarValida=validarConfirmarContraseña();
-  // const isEmpty= borrarErrores();
 
   mensajesError.forEach(err => mostrarError(err.input, err.mensaje));
 
@@ -99,18 +119,21 @@ function validarFormulario(){
   console.log("Formulario inválido");
   return false;
   }
-
 }
+
 
 form2.addEventListener("submit", e =>{
   e.preventDefault();
   const esFormularioValido= validarFormulario();
-  if(esFormularioValido){
+  const esLocalStorage= validarLocalStorage();
+  if(esFormularioValido && esLocalStorage){
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikifeliz! :)",
             text: "Tu registro ha sido existoso",
             icon: "success"
-          });
+          }).then(()=>{
+            limpiarFormulario();
+          })
   }else{
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikitriste! :(",
@@ -119,6 +142,8 @@ form2.addEventListener("submit", e =>{
           });
   }
 });
+
+
 
 
 //------------------------Validación formulario inicia sesión
@@ -143,6 +168,7 @@ function validarContraseñaSesion(){
 
 function validarFormularioSesion(){
   borrarErrores();
+  mensajesError=[];
   const iscorreoSesion = validarCorreoSesion();
   const iscontraseñaSesion = validarContraseñaSesion();
 
