@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Reseñas</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="../../styles/forms/reseñas.css">
@@ -26,17 +27,60 @@
             </select>
         </div>
 
-
+ 
         <div class="form-group">
             <label>¿Cómo calificarías tu experiencia en este destino?</label>
             <div class="star-rating" data-category="experiencia">
-                <input type="radio" id="5-s" name="star-experiencia" value="5"><label for="5-s" class="fas fa-star"></label>
-                <input type="radio" id="4-s" name="star-experiencia" value="4"><label for="4-s" class="fas fa-star"></label>
-                <input type="radio" id="3-s" name="star-experiencia" value="3"><label for="3-s" class="fas fa-star"></label>
-                <input type="radio" id="2-s" name="star-experiencia" value="2"><label for="2-s" class="fas fa-star"></label>
-                <input type="radio" id="1-s" name="star-experiencia" value="1"><label for="1-s" class="fas fa-star"></label>
+                 <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-1" value="1" style="display:none">
+                    <label class="form-check-label" for="dest-exp-1">
+                    <i class="bi bi-star-fill"></i>
+                    </label>
+                       <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-2" value="2" style="display:none">
+                       <label class="form-check-label" for="dest-exp-2">
+                        <i class="bi bi-star-fill"></i>
+                    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-3" value="3" style="display:none">
+    <label class="form-check-label" for="dest-exp-3">
+      <i class="bi bi-star-fill"></i>
+    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-4" value="4" style="display:none">
+    <label class="form-check-label" for="dest-exp-4">
+      <i class="bi bi-star-fill"></i>
+    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-5" value="5" style="display:none" checked>
+    <label class="form-check-label" for="dest-exp-5">
+      <i class="bi bi-star-fill"></i>
+    </label>
             </div>
-        </div>
+        </div> 
+
+        
+<!-- <div class="bsu-form-section" id="destination-experience-section" hidden>
+  <p class="bsu-form-section-title">¿Cómo calificarías tu experiencia en el destino?</p>
+  <fieldset class="bsu-form-field bsu-form-destination-exp-option-container form-check" id="destination-experience">
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-1" value="1" style="display:none">
+    <label class="form-check-label" for="dest-exp-1">
+      <i class="bi bi-star-fill"></i>
+    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-2" value="2" style="display:none">
+    <label class="form-check-label" for="dest-exp-2">
+      <i class="bi bi-star-fill"></i>
+    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-3" value="3" style="display:none">
+    <label class="form-check-label" for="dest-exp-3">
+      <i class="bi bi-star-fill"></i>
+    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-4" value="4" style="display:none">
+    <label class="form-check-label" for="dest-exp-4">
+      <i class="bi bi-star-fill"></i>
+    </label>
+    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio" name="experienciaDestino" id="dest-exp-5" value="5" style="display:none" checked>
+    <label class="form-check-label" for="dest-exp-5">
+      <i class="bi bi-star-fill"></i>
+    </label>
+  </fieldset>
+</div> -->
+
 
         <div class="form-group">
             <label>¿Que tipo de viaje fue?</label>
