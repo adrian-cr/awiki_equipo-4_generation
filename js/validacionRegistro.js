@@ -1,26 +1,27 @@
-import * as validators from "../../modules/validators.js";
+//import * as validators from "../../modules/validators.js";
 const form2=document.getElementById("formulario2");
-const inputs= document.querySelectorAll('#formulario2 input');
+const inputsRegistro= document.querySelectorAll('#formulario2 input');
+//Constantes formulario de Inicio de Sesión
+const form1 = document.getElementById("formulario1");
+const correoSesion = document.getElementById("correoSesion");
+const contraseñaSesion = document.getElementById("contraseñaSesion");
+const btnSesion = document.getElementById("botonSesion");
 
-//Elementos del formulario//
+//Elementos del formulario registro//
 const nombreRegistro= document.getElementById("formNombre");
 const apellidoRegistro=document.getElementById("formApellido");
 const correoRegistro=document.getElementById("formCorreo");
 const contraseñaRegistro=document.getElementById("inputContraseña");
 const confirmarContraseña= document.getElementById("inputConfirmar");
 
-// const botonRegistro=document.getElementById("botonRegistro");
-// const mensajeError=document.getElementsByClassName("invalid-feedback");
-
-console.log("Validando formulario...");
-
-  // Verificar los valores de los campos
-  console.log("Nombre:", nombreRegistro.value);
-  console.log("Apellido:", apellidoRegistro.value);
-  console.log("Correo:", correoRegistro.value);
-  console.log("Contraseña:", contraseñaRegistro.value);
-  console.log("Confirmar Contraseña:", confirmarContraseña.value);
-
+  // // Verificar los valores de los campos
+  // console.log("Nombre:", nombreRegistro.value);
+  // console.log("Apellido:", apellidoRegistro.value);
+  // console.log("Correo:", correoRegistro.value);
+  // console.log("Contraseña:", contraseñaRegistro.value);
+  // console.log("Confirmar Contraseña:", confirmarContraseña.value);
+ 
+  //Mostrar, quitar errores y limpiar campos
   let mensajesError=[];
 
   function mostrarError(input, mensaje){
@@ -33,9 +34,15 @@ console.log("Validando formulario...");
 
   function borrarErrores(){
     const errores=document.querySelectorAll('.error-message');
-    errores.forEach(erro=> erro.remove());
+    errores.forEach(err=> err.remove());
   }
 
+  function limpiarFormulario(){
+    inputsRegistro.forEach(input => inputsRegistro.value=" ");
+  }
+
+
+/**Validación del formulario */
 function validarNombre(){
   let nombreRegex= new RegExp(/^[a-zA-ZÀ-ÿ\s]{1,40}$/);
   if(!nombreRegex.test(nombreRegistro.value)){
@@ -62,9 +69,9 @@ function validarCorreo(){
 return true;
 }
 function validarContraseña(){
-  let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
+  let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%.^&*-]).{8,}$")
   if(!contraseñaRegex.test(contraseñaRegistro.value)){
-    console.log("minimo 8 caracteres")
+    mensajesError.push({input:contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'});
     // mensajesError.push({input: contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'})
     return false;
   }
@@ -72,25 +79,102 @@ function validarContraseña(){
 }
 function validarConfirmarContraseña(){
   if (contraseñaRegistro.value !== confirmarContraseña.value){
-    console.log("las contraseñas no coinciden")
-    // mensajesError.push({input: confirmarContraseña, mensaje:'Las contraseñas no coinciden'})
+    mensajesError.push({input: confirmarContraseña, mensaje:'Las contraseñas no coinciden'})
   return false;
   }
   return true;
 }
 
+function validarLocalStorage(){
+  const newUsuario= validarFormulario();
+  if(newUsuario){
+    const datos=new FormData(event.target);
+    const datosCompletos = Object.fromEntries(datos.entries());
+    console.log(datosCompletos);
+    const usuariosPrevios= JSON.parse(localStorage.getItem('usuarios'))|| [];
+    usuariosPrevios.push(datosCompletos);
+
+    localStorage.setItem('usuarios', JSON.stringify(usuariosPrevios));
+
+    return datosCompletos;
+
+  }
+}
 
 function validarFormulario(){
   borrarErrores();
+  mensajesError=[];
   const isNombreValido= validarNombre();
   const isApellidoValido= validarApellido();
   const isCorreoValido=validarCorreo();
   const isContraseñaValida=validarContraseña();
   const isConfirmarValida=validarConfirmarContraseña();
 
+  mensajesError.forEach(err => mostrarError(err.input, err.mensaje));
+
+  if(isNombreValido && isApellidoValido && isCorreoValido && isContraseñaValida && isConfirmarValida){
+    console.log("Formulario válido");
+  return true;
+  }else{
+  console.log("Formulario inválido");
+  return false;
+  }
+}
+
+
+form2.addEventListener("submit", e =>{
+  e.preventDefault();
+  const esFormularioValido= validarFormulario();
+  const esLocalStorage= validarLocalStorage();
+  if(esFormularioValido && esLocalStorage){
+    Swal.fire({ //Alerta de SweetAlert
+            title: "¡Awikifeliz! :)",
+            text: "Tu registro ha sido existoso",
+            icon: "success"
+          }).then(()=>{
+            limpiarFormulario();
+          })
+  }else{
+    Swal.fire({ //Alerta de SweetAlert
+            title: "¡Awikitriste! :(",
+            text: "Tu registro no ha sido existoso",
+            icon: "error"
+          });
+  }
+});
+
+
+
+
+//------------------------Validación formulario inicia sesión
+
+function validarCorreoSesion(){
+  let correoRegex=new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
+  if(!correoRegex.test(correoSesion.value)){
+    mensajesError.push({input: correoSesion, mensaje:'Ingrese un correo válido'})
+    return false;
+  }
+return true;
+}
+function validarContraseñaSesion(){
+  let contraseñaRegex= new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$.%^&*-]).{8,}$")
+  if(!contraseñaRegex.test(contraseñaSesion.value)){
+    console.log("Error")
+    // mensajesError.push({input: contraseñaRegistro, mensaje:'Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial'})
+    return false;
+  }
+  return true;
+}
+
+function validarFormularioSesion(){
+  borrarErrores();
+  mensajesError=[];
+  const iscorreoSesion = validarCorreoSesion();
+  const iscontraseñaSesion = validarContraseñaSesion();
+
   mensajesError.forEach(error => mostrarError(error.input, error.mensaje));
 
-  if(isNombreValido && isApellidoValido&& isCorreoValido && isContraseñaValida && isConfirmarValida){
+  if(iscorreoSesion && iscontraseñaSesion){
     console.log("Formulario válido");
   return true;
   }else{
@@ -100,22 +184,16 @@ function validarFormulario(){
 
 }
 
-form2.addEventListener("submit", e =>{
+form1.addEventListener("submit", e =>{
   e.preventDefault();
-  const esFormularioValido= validarFormulario();
-  if(esFormularioValido){
-    Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awik! :)",
-            text: "Tu registro ha sido existoso",
-            icon: "success"
-          });
+  const esFormularioValidoSesion= validarFormularioSesion();
+  if(esFormularioValidoSesion){
+    //Ruta pagina de feed social;
   }else{
     Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awik! :(:",
-            text: "Tu registro no ha sido existoso",
+            title: "¡Awiki triste! :(",
+            text: "Error en inicio de sesión",
             icon: "error"
           });
   }
 });
-
-
