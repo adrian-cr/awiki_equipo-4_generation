@@ -1,6 +1,6 @@
 //import * as validators from "../../modules/validators.js";
 const form2=document.getElementById("formulario2");
-const inputsRegistro= document.querySelectorAll('#formulario2 input');
+
 //Constantes formulario de Inicio de Sesión
 const form1 = document.getElementById("formulario1");
 const correoSesion = document.getElementById("correoSesion");
@@ -37,9 +37,14 @@ const confirmarContraseña= document.getElementById("inputConfirmar");
     errores.forEach(err=> err.remove());
   }
 
-  function limpiarFormulario(){
-    inputsRegistro.forEach(input => inputsRegistro.value=" ");
-  }
+  // function limpiarFormulario(){
+  //   console.log("limpiando campos")
+  //   const inputsRegistro= document.querySelectorAll('#formulario2 input'); 
+  //   Array.from(inputsRegistro).forEach(input =>{
+  //     console.log("limpiando", nombreRegistro);
+  //     inputsRegistro.innerHTML=" ";
+  //   });
+  // }
 
 
 /**Validación del formulario */
@@ -121,19 +126,18 @@ function validarFormulario(){
   }
 }
 
-
 form2.addEventListener("submit", e =>{
   e.preventDefault();
   const esFormularioValido= validarFormulario();
   const esLocalStorage= validarLocalStorage();
   if(esFormularioValido && esLocalStorage){
+  // limpiarFormulario();
+    form2.reset(); //Método que restablece los valores del input a su estado inicial
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikifeliz! :)",
             text: "Tu registro ha sido existoso",
             icon: "success"
-          }).then(()=>{
-            limpiarFormulario();
-          })
+          });
   }else{
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikitriste! :(",
@@ -151,7 +155,7 @@ form2.addEventListener("submit", e =>{
 function validarCorreoSesion(){
   let correoRegex=new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
   if(!correoRegex.test(correoSesion.value)){
-    mensajesError.push({input: correoSesion, mensaje:'Ingrese un correo válido'})
+    // mensajesError.push({input: correoSesion, mensaje:'Ingrese un correo válido'})
     return false;
   }
 return true;
@@ -188,6 +192,7 @@ form1.addEventListener("submit", e =>{
   e.preventDefault();
   const esFormularioValidoSesion= validarFormularioSesion();
   if(esFormularioValidoSesion){
+    form1.reset();
     //Ruta pagina de feed social;
   }else{
     Swal.fire({ //Alerta de SweetAlert
