@@ -15,11 +15,22 @@ window.onload = function() {
               title: "¡Datos enviados con éxito!",
               text: "Gracias por contactarnos, te responderemos pronto",
               icon: "success",
-              draggable: true
+              customClass: {
+                title: 'swal-title',
+                text: 'swal-text',
+                popup: 'swal-popup',
+                confirmButton: 'swal-confirm-button'
+              },
+              buttonsStyling: false
             });
           }, (error) => {
-              console.log('FAILED...', error);
+            console.log('FAILED...', error);
           });
+          //     draggable: true
+          //   });
+          // }, (error) => {
+          //     console.log('FAILED...', error);
+          // });
 
     // window.location.assign("../index.html")
   });
