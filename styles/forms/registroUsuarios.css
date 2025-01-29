@@ -50,6 +50,15 @@
     text-align: center;
 }
 
+label{
+    text-align: left; 
+}
+
+.form-label {
+    text-align: left;
+    display: block; /* Asegura que el label ocupe toda la anchura disponible */
+}
+
 @media (max-width: 768px) {
     .formulario {
         flex: 1 1 100%; /*Cambia a 100% de ancho en pantallas pequeñas*/
@@ -104,7 +113,7 @@
 }
 
 h1{
-    color: white !important;
+    color: black !important;
     font-weight: bolder;
     font-size: 45px !important;
     text-align: center;
