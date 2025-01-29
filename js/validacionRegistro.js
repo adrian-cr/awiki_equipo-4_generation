@@ -136,13 +136,27 @@ form2.addEventListener("submit", e =>{
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikifeliz! :)",
             text: "Tu registro ha sido existoso",
-            icon: "success"
+            icon: "success",
+            customClass: {
+              title: 'swal-title',
+              text: 'swal-text',
+              popup: 'swal-popup',
+              confirmButton: 'swal-confirm-button',
+              icon: 'custom-icon'
+            },
           });
   }else{
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikitriste! :(",
-            text: "Tu registro no ha sido existoso",
-            icon: "error"
+            text: "Tu registro no ha sido existoso,por favor completa todos los campos.",
+            icon: "error",
+            customClass: {
+              title: 'swal-title',
+              text: 'swal-text',
+              popup: 'swal-popup',
+              confirmButton: 'swal-confirm-button',
+              icon: 'custom-icon'
+            },
           });
   }
 });
@@ -188,17 +202,24 @@ function validarFormularioSesion(){
 
 }
 
-form1.addEventListener("submit", e =>{
-  e.preventDefault();
-  const esFormularioValidoSesion= validarFormularioSesion();
-  if(esFormularioValidoSesion){
-    form1.reset();
-    //Ruta pagina de feed social;
-  }else{
-    Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awiki triste! :(",
-            text: "Error en inicio de sesión",
-            icon: "error"
-          });
-  }
-});
+// form1.addEventListener("submit", e =>{
+//   e.preventDefault();
+//   const esFormularioValidoSesion= validarFormularioSesion();
+//   if(esFormularioValidoSesion){
+//     form1.reset();
+//     //Ruta pagina de feed social;
+//   }else{
+//     Swal.fire({ //Alerta de SweetAlert
+//             title: "¡Awiki triste! :(",
+//             text: "Completa los campos para iniciar sesión",
+//             icon: "error",
+//             customClass: {
+//               title: 'swal-title',
+//               text: 'swal-text',
+//               popup: 'swal-popup',
+//               confirmButton: 'swal-confirm-button',
+//               icon: 'custom-icon'
+//             },
+//           });
+//   }
+// });
