@@ -30,7 +30,7 @@ main.main{
      background: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.9)
+            rgba(0, 0, 0, 0.5)
           ), 
           url(../images/beach-with0.jpg);
    
@@ -87,7 +87,7 @@ div.formatoCarta1 {
     text-align: center;
     color: black;
     font-family: var(--primary-font) !important;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
 
 }
 
@@ -145,11 +145,14 @@ div.formatoCarta1 {
 /*Alertas*/
 #mensajeError{
     border-radius: 5px;
+    font-size: 15px;
+    font-family: var(--secondary-font);
+    text-align: justify;
 }
 .alerta-error{
     font-size: 15px;
     font-family: var(--secondary-font);
-
+    text-align: justify;
 }
 
 /*Botones*/
@@ -217,6 +220,20 @@ font-weight: 700 !important;
     border-color: var(--secondary-color);
     border-radius: 5px;
   }
+
+
+.custom-icon .swal2-success-line-tip,
+.custom-icon .swal2-success-line-long {
+  background-color: var(--secondary-color) !important; /* Cambia este color según tus preferencias */
+}
+
+.custom-icon .swal2-success-ring {
+  border-color: var(--secondary-color) !important; /* Cambia este color según tus preferencias */
+}
+
+
+ 
+ 
 /*Media queries*/
 
 @media screen and (max-width:990px){

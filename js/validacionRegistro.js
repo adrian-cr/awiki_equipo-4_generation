@@ -68,7 +68,7 @@ return true;
 function validarCorreo(){
   let correoRegex=new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
   if(!correoRegex.test(correoRegistro.value)){
-    mensajesError.push({input: correoRegistro, mensaje:'Ingrese un correo valido'})
+    mensajesError.push({input: correoRegistro, mensaje:'Ingrese un correo válido'})
     return false;
   }
 return true;
