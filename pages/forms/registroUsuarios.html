@@ -22,7 +22,7 @@
                       <div class="col-mb-4">
                         <label for="formInicioSesion" class="form-label">Correo electrónico</label>
                         <input type="text" class="form-control" id="correoSesion" placeholder="Correo electrónico">
-                        <div class="invalid-feedback">Por favor, ingresa una dirección valida</div> 
+                        <div class="invalid-feedback">Por favor, ingresa una dirección válida</div> 
                         <div class="valid-feedback">Nice</div>
                       </div>
                       <div class="col-mb-4">
@@ -57,20 +57,58 @@
                       </div>
                       <div class="mb-3">
                         <label for="inputContraseña" class="form-label">Contraseña</label>
-                        <input name="campoContraseña"type="password" class="form-control" id="inputContraseña">
+                        <input name="campoContraseña"type="password" class="form-control" id="inputContraseña" placeholder="Contraseña">
                         <div class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
                         <label for="inputConfirmar" class="form-label">Confirmar contraseña</label>
-                        <input name="campoConfirmar"type="password" class="form-control" id="inputConfirmar">
+                        <input name="campoConfirmar"type="password" class="form-control" id="inputConfirmar" placeholder="Contraseña">
                         <div class="invalid-feedback"></div>
                       </div>
                       <div class="mb-3">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="gridCheck1">
-                          <label class="form-check-label" for="gridCheck1">
+                          <input class="form-check-input" type="checkbox" id="gridCheck1" required>
+                          <label class="form-check-label" for="gridCheck1" data-bs-toggle="modal" data-bs-target="#terminosModal">
                             Acepto los términos y condiciones
                           </label>
+
+                          <!-- Modal de Términos y Condiciones -->
+                            <div class="modal fade" id="terminosModal" tabindex="-1" aria-labelledby="terminosModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="terminosModalLabel">Términos y Condiciones</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="modal-body">
+                                      <p>Bienvenido/a a Awiki. Antes de registrarte, te pedimos que leas detenidamente los siguientes términos y condiciones.</p>
+                                      <p><span class="negrita">1. ACEPTACIÓN DE LOS TÉRMINOS<span class="negrita"></p>
+                                      <p>Al marcar la casilla de aceptación y completar tu registro, aceptas estar sujeto/a a estos términos y condiciones.</p>
+                                      <p><span class="negrita">2. USO DE LA PLATAFORMA</span class="negrita"></p>
+                                      <ul>
+                                        <li>Debes proporcionar información veraz y actualizada en el formulario de registro.</li>
+                                        <li>Eres responsable de la confidencialidad de tu cuenta y contraseña.</li>
+                                        <li>No puedes utilizar la plataforma para actividades ilegales o fraudulentas.</li>
+                                      </ul>
+                                      <p><span class="negrita">3. PRIVACIDAD Y PROTECCIÓN DE DATOS</span class="negrita"></p>
+                                      <p>La información que proporcionas será utilizada únicamente para fines relacionados con la prestación de nuestros servicios.</p>
+                                      <p><span class="negrita">4. RESPONSABILIDAD DEL USUARIO</strspan class="negrita"ong></p>
+                                      <p>Aceptas hacer un uso adecuado de la plataforma y no realizar actividades que puedan dañar, interferir o afectar negativamente a otros usuarios.</p>
+                                      <p><span class="negrita">5. MODIFICACIONES A LOS TÉRMINOS</span class="negrita"></p>
+                                      <p>Nos reservamos el derecho de modificar estos términos en cualquier momento.</p>
+                                      <p><span class="negrita">6. CONTACTO</span class="negrita"></p>
+                                      <p>Si tienes dudas o inquietudes sobre estos términos, puedes contactarnos en awiki@gmail.com</p>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button id="btn-terminos" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
                         </div>
                       </div>
                        <input type="submit" id="botonRegistro" value="Regístrate">

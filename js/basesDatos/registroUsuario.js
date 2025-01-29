@@ -7,9 +7,9 @@ loginuser.addEventListener("submit", (e) =>{
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || []
     const validUser = usuarios.find(Usuario => Usuario.campoCorreo === email && Usuario.campoContraseña === contraseña)
     if(!validUser){
-        return alert ("Usuario y/o contraseña incorrectos!")
+        //return alert ("Usuario y/o contraseña incorrectos!")
     }else {
-        alert(`Bienvenida ${validUser.campoCorreo}`)
+        alert(`Bienvenida/o ${validUser.campoCorreo}`)
     }
 }
 )

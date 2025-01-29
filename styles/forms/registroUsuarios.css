@@ -27,6 +27,13 @@
     border-radius: 10px;
     gap: 10px;
 }
+.formulario h2{ /*Titulo*/
+    text-align: center;
+}
+.formulario h3{ /*subtitulo*/
+    text-align: center;
+    font-size: medium;
+}
 
 /*Formulario de Inicio de Sesión*/
 .formulario1{
@@ -37,6 +44,10 @@
     border-radius: 10px;
     gap: 10px;
     height: 310px;
+}
+.formulario1 h2{
+    padding: 10px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -85,6 +96,7 @@ h1{
     color: white !important;
     font-weight: bolder;
     font-size: 45px !important;
+    text-align: center;
 }
 
 .warnings{
@@ -95,3 +107,20 @@ h1{
     padding-top: 20px;
 }
 
+/* Estilos para terminos y condiciones */
+.form-check-label {
+    color: blue; /* Hace que el texto sea azul */
+    cursor: pointer; /* Cambia el cursor a una mano (indica que es interactivo) */
+    text-decoration: underline; /* Opcional: subraya el texto para mayor visibilidad */
+}
+
+.form-check-label:hover {
+    color: darkblue; /* Cambia a un tono más oscuro al pasar el mouse */
+}
+
+#btn-terminos{
+    color: white;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+}
