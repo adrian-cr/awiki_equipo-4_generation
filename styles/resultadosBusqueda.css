@@ -22,7 +22,7 @@
 
 .card {
   background-color: white;
-  border: none;
+  border: solid 2px var(--primary-color);
   border-radius: 20px;
   padding-bottom: 15px;
   width: 300px;
@@ -32,7 +32,7 @@
   height: 200px;
 }
 .card-image{
-  border-radius: 20px 20px 0 0;
+  border-radius: 18px 18px 0 0;
   height: 100%;
   width:100%;
 }
