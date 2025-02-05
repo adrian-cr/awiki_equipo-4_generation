@@ -148,7 +148,6 @@ const footerHTML = `
 
 // * Main event listener *
 window.addEventListener("load", (e) => {
-  console.log(isGithubURL(pageURL));
   headElement.insertAdjacentHTML("beforeend", cssLinksHTML);
   bodyElement.insertAdjacentHTML(
     "afterbegin",
