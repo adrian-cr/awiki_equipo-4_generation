@@ -168,6 +168,12 @@ div.formatoCarta1 {
     border-radius: 5px;
 }
 
+
+#boton-enviar:hover {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
 /*Imagenes*/
 
 #imagenPiePagina{
@@ -229,7 +235,16 @@ font-weight: 700 !important;
 .custom-icon .swal2-success-ring {
   border-color: var(--secondary-color) !important; /* Cambia este color según tus preferencias */
 }
+.btn.btn-primary{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
 
+.btn.btn-primary:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+
+}
 
 
 
