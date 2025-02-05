@@ -31,7 +31,7 @@ function addListingCard(listing){
         </div>
           <p class="card-details-wrapper" >
             <p class="card-category">
-              <img class="category-icon${listing.categoria == "restaurante" ? " smaller" : ""}" src="../../assets/svg/${bizIcons[listing.categoria]}.svg"/>
+              <img class="category-icon${listing.categoria == "restaurante" ? " smaller" : ""}" src="./assets/svg/${bizIcons[listing.categoria]}.svg"/>
               ${capitalize(listing.categoria)}
             </p>
           </p>
