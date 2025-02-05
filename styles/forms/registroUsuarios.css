@@ -1,6 +1,6 @@
  @import url(../style.css);
 
- body{
+body{
     background: url(../../images/beach-with0.jpg);
     background-size: cover;
 }
@@ -10,11 +10,11 @@
     background-color: var(--primary-color);
 }
 
-.container {
+.contenedor {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    
+
 }
 
 /*Formulario Registro de Usuario*/
@@ -39,7 +39,7 @@
 .formulario1{
     flex: 1 1 45%; /*El 45% asegura que dos formularios quepan en una fila */
     box-sizing: border-box;
-    margin: 10px; 
+    margin: 10px;
     background-color: var(--hg-color);
     border-radius: 10px;
     gap: 10px;
@@ -51,7 +51,7 @@
 }
 
 label{
-    text-align: left; 
+    text-align: left;
 }
 
 .form-label {
@@ -79,9 +79,9 @@ label{
 }
 
 #formulario1 input:focus, #formulario-contacto textarea:focus {
-    border-color: var(--secondary-color); 
-    box-shadow: 0 0 5px var(--secondary-color); 
-    outline: none; 
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+    outline: none;
   }
 
 #botonSesion{
@@ -101,9 +101,9 @@ label{
 }
 
 #formulario2 input:focus, #formulario-contacto textarea:focus {
-    border-color: var(--secondary-color); 
-    box-shadow: 0 0 5px var(--secondary-color); 
-    outline: none; 
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+    outline: none;
   }
 #botonRegistro{
     color: white;
@@ -150,22 +150,22 @@ h1{
 /*Estilos para las alertas de sweet alert */
 
 .swal-popup {
-    background-color: var(--hg-color); 
+    background-color: var(--hg-color);
     border-radius: 25px;
     padding: 20px;
 }
 .swal-title {
 font-family: var(--primary-font) !important;
 font-weight: 700 !important;
- margin-bottom: 10px; 
+ margin-bottom: 10px;
  color: black;
 }
 
 .swal-text {
     font-family: var(--secondary-font) !important;
-   
+
     font-size: 20px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
   .swal-confirm-button {
