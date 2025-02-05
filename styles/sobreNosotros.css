@@ -1,13 +1,6 @@
-@import url(./style.css);
-
-
+@import url(../style.css);
 
 /* MAIN */
-.titulo {
-    font-weight: 600 !important;
-    text-align: center;
-    font-size: 30px;
-}
 
 .titulo-mv {
   font-weight: 400 !important;
@@ -36,9 +29,9 @@
 }
 
 .imagen-intro {
-    height: 300px; 
+    height: 300px;
     width: 500px; /* valor inicial 650px */
-    border-radius: 20px; 
+    border-radius: 20px;
 }
 .contenedor-intro {
     display: flex;
@@ -52,7 +45,7 @@
     width: 500px;
 }
 
-p {
+p:not(.container p) {
   font-size: 20px;
 }
 
@@ -69,9 +62,9 @@ p {
   }
 
   .imagen-intro {
-      width: 100%; 
-      height: auto; 
-      max-width: 400%; 
+      width: 100%;
+      height: auto;
+      max-width: 400%;
   }
 
   .intro {
