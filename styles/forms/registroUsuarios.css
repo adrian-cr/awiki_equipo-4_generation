@@ -91,6 +91,12 @@ label{
     border-radius: 5px;
 }
 
+#botonSesion:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+
 /*Formulario de Registro de Usuario*/
 #formulario2{
    display: flex;
@@ -110,6 +116,11 @@ label{
     background-color: var(--secondary-color);
     border-color: var(--secondary-color);
     border-radius: 5px;
+}
+
+#botonRegistro:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 h1{
@@ -179,7 +190,10 @@ font-weight: 700 !important;
     border-color: var(--secondary-color);
     border-radius: 5px;
   }
-
+  .swal-confirm-button:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
 
 .custom-icon .swal2-success-line-tip,
 .custom-icon .swal2-success-line-long {

@@ -134,11 +134,13 @@ p:not(.container p) {
   margin-bottom: 30px;
   object-fit: cover;
   width: 100%;
-  transform: rotate(-20deg);
-  transition: all .3s;
+  /* transform: rotate(-20deg); */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .foto-perfil:hover{
-transform: rotate(0);
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
 }
 
 .card-body {
@@ -147,6 +149,18 @@ transform: rotate(0);
   padding: 15px;
   text-align: center;
   justify-content: center !important;
+}
+
+@media (max-width: 1024px){
+  .foto-perfil{
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .foto-perfil:hover,
+  .foto-perfil:active{
+    transform: rotateY(0deg) scale(1.05);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+  } 
 }
 
 /* PIE DE PÁGINA */
