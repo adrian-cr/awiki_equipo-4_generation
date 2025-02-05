@@ -27,6 +27,13 @@
     border-radius: 10px;
     gap: 10px;
 }
+.formulario h2{ /*Titulo*/
+    text-align: center;
+}
+.formulario h3{ /*subtitulo*/
+    text-align: center;
+    font-size: medium;
+}
 
 /*Formulario de Inicio de Sesión*/
 .formulario1{
@@ -37,6 +44,19 @@
     border-radius: 10px;
     gap: 10px;
     height: 310px;
+}
+.formulario1 h2{
+    padding: 10px;
+    text-align: center;
+}
+
+label{
+    text-align: left; 
+}
+
+.form-label {
+    text-align: left;
+    display: block; /* Asegura que el label ocupe toda la anchura disponible */
 }
 
 @media (max-width: 768px) {
@@ -58,6 +78,12 @@
 
 }
 
+#formulario1 input:focus, #formulario-contacto textarea:focus {
+    border-color: var(--secondary-color); 
+    box-shadow: 0 0 5px var(--secondary-color); 
+    outline: none; 
+  }
+
 #botonSesion{
     color: white;
     background-color: var(--secondary-color);
@@ -74,6 +100,11 @@
    gap: 10px;
 }
 
+#formulario2 input:focus, #formulario-contacto textarea:focus {
+    border-color: var(--secondary-color); 
+    box-shadow: 0 0 5px var(--secondary-color); 
+    outline: none; 
+  }
 #botonRegistro{
     color: white;
     background-color: var(--secondary-color);
@@ -82,9 +113,10 @@
 }
 
 h1{
-    color: white !important;
+    color: black !important;
     font-weight: bolder;
     font-size: 45px !important;
+    text-align: center;
 }
 
 .warnings{
@@ -95,3 +127,65 @@ h1{
     padding-top: 20px;
 }
 
+/* Estilos para terminos y condiciones */
+
+
+.form-check-label {
+    color: var(--secondary-color); /* Hace que el texto sea azul */
+    cursor: pointer; /* Cambia el cursor a una mano (indica que es interactivo) */
+    text-decoration: underline; /* Opcional: subraya el texto para mayor visibilidad */
+}
+
+.form-check-label:hover {
+    color:#E73879 /* Cambia a un tono más oscuro al pasar el mouse */
+}
+
+#btn-terminos{
+    color: white;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+/*Estilos para las alertas de sweet alert */
+
+.swal-popup {
+    background-color: var(--hg-color); 
+    border-radius: 25px;
+    padding: 20px;
+}
+.swal-title {
+font-family: var(--primary-font) !important;
+font-weight: 700 !important;
+ margin-bottom: 10px; 
+ color: black;
+}
+
+.swal-text {
+    font-family: var(--secondary-font) !important;
+   
+    font-size: 20px;
+    margin-bottom: 10px; 
+}
+
+  .swal-confirm-button {
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: var(--secondary-font);
+    font-size: 1rem;
+    color: white;
+    background-color:var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+  }
+
+
+.custom-icon .swal2-success-line-tip,
+.custom-icon .swal2-success-line-long {
+  background-color: var(--secondary-color) !important; /* Cambia este color según tus preferencias */
+}
+
+.custom-icon .swal2-success-ring {
+  border-color: var(--secondary-color) !important; /* Cambia este color según tus preferencias */
+}

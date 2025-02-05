@@ -1,0 +1,75 @@
+@import url(../styles/style.css);
+
+h1{
+    display: flex;
+    justify-content: center;
+};
+
+/* .carousel-slide{
+    display: flex;
+    overflow-x: auto;  
+ 
+    
+} */
+
+.imagen-c{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}
+.imagenLugar{
+    display: flex;
+    width: 300px;
+    height: 500px;
+    justify-items: center;
+}
+
+.tarjeta-descripcion{
+    /* background-color: aquamarine !important; */
+    margin: 5px;
+    
+}
+/* .card-body{
+    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;    
+} */
+.card.text-bg-light{
+    background-color: var(--hg-color) !important;
+    border: 5px;
+    margin: 15px;
+}
+li{
+    text-align: left;
+}
+
+/* #carouselExample{
+    margin: 30px;
+    padding: 20px;
+} */
+
+#map { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    height: 300px;
+    width: 800px;
+
+}
+
+.bi-star-fill{
+    color: var(--secondary-color);
+    margin: 3px;
+}
+
+.btn.btn-primary{
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+.btn.btn-primary:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    
+}

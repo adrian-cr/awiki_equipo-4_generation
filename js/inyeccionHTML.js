@@ -26,9 +26,9 @@ const currentRoot = isGithubURL(pageURL) ? constants.GH_ROOT : getRootURL(pageUR
 
 // HTML/CSS Injectables
 const cssLinksHTML = `
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
   <link rel="stylesheet" href="${currentRoot}/styles/components/header.css"/>
-  <link rel="stylesheet" href="${currentRoot}/styles/components/footer.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>`;
+  <link rel="stylesheet" href="${currentRoot}/styles/components/footer.css"/>`;
 const userHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">

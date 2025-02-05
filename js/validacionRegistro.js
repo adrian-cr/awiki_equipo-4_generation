@@ -1,7 +1,7 @@
 //import * as validators from "../../modules/validators.js";
 const form2=document.getElementById("formulario2");
-const inputs= document.querySelectorAll('#formulario2 input');
-//Constantes formulario 1
+
+//Constantes formulario de Inicio de Sesión
 const form1 = document.getElementById("formulario1");
 const correoSesion = document.getElementById("correoSesion");
 const contraseñaSesion = document.getElementById("contraseñaSesion");
@@ -14,16 +14,14 @@ const correoRegistro=document.getElementById("formCorreo");
 const contraseñaRegistro=document.getElementById("inputContraseña");
 const confirmarContraseña= document.getElementById("inputConfirmar");
 
-// const botonRegistro=document.getElementById("botonRegistro");
-// const mensajeError=document.getElementsByClassName("invalid-feedback");
-
-  // Verificar los valores de los campos
-  console.log("Nombre:", nombreRegistro.value);
-  console.log("Apellido:", apellidoRegistro.value);
-  console.log("Correo:", correoRegistro.value);
-  console.log("Contraseña:", contraseñaRegistro.value);
-  console.log("Confirmar Contraseña:", confirmarContraseña.value);
-
+  // // Verificar los valores de los campos
+  // console.log("Nombre:", nombreRegistro.value);
+  // console.log("Apellido:", apellidoRegistro.value);
+  // console.log("Correo:", correoRegistro.value);
+  // console.log("Contraseña:", contraseñaRegistro.value);
+  // console.log("Confirmar Contraseña:", confirmarContraseña.value);
+ 
+  //Mostrar, quitar errores y limpiar campos
   let mensajesError=[];
 
   function mostrarError(input, mensaje){
@@ -39,6 +37,17 @@ const confirmarContraseña= document.getElementById("inputConfirmar");
     errores.forEach(err=> err.remove());
   }
 
+  // function limpiarFormulario(){
+  //   console.log("limpiando campos")
+  //   const inputsRegistro= document.querySelectorAll('#formulario2 input'); 
+  //   Array.from(inputsRegistro).forEach(input =>{
+  //     console.log("limpiando", nombreRegistro);
+  //     inputsRegistro.innerHTML=" ";
+  //   });
+  // }
+
+
+/**Validación del formulario */
 function validarNombre(){
   let nombreRegex= new RegExp(/^[a-zA-ZÀ-ÿ\s]{1,40}$/);
   if(!nombreRegex.test(nombreRegistro.value)){
@@ -59,7 +68,7 @@ return true;
 function validarCorreo(){
   let correoRegex=new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
   if(!correoRegex.test(correoRegistro.value)){
-    mensajesError.push({input: correoRegistro, mensaje:'Ingrese un correo valido'})
+    mensajesError.push({input: correoRegistro, mensaje:'Ingrese un correo válido'})
     return false;
   }
 return true;
@@ -81,14 +90,30 @@ function validarConfirmarContraseña(){
   return true;
 }
 
+function validarLocalStorage(){
+  const newUsuario= validarFormulario();
+  if(newUsuario){
+    const datos=new FormData(event.target);
+    const datosCompletos = Object.fromEntries(datos.entries());
+    console.log(datosCompletos);
+    const usuariosPrevios= JSON.parse(localStorage.getItem('usuarios'))|| [];
+    usuariosPrevios.push(datosCompletos);
+
+    localStorage.setItem('usuarios', JSON.stringify(usuariosPrevios));
+
+    return datosCompletos;
+
+  }
+}
+
 function validarFormulario(){
   borrarErrores();
+  mensajesError=[];
   const isNombreValido= validarNombre();
   const isApellidoValido= validarApellido();
   const isCorreoValido=validarCorreo();
   const isContraseñaValida=validarContraseña();
   const isConfirmarValida=validarConfirmarContraseña();
-  // const isEmpty= borrarErrores();
 
   mensajesError.forEach(err => mostrarError(err.input, err.mensaje));
 
@@ -99,26 +124,44 @@ function validarFormulario(){
   console.log("Formulario inválido");
   return false;
   }
-
 }
 
 form2.addEventListener("submit", e =>{
   e.preventDefault();
   const esFormularioValido= validarFormulario();
-  if(esFormularioValido){
+  const esLocalStorage= validarLocalStorage();
+  if(esFormularioValido && esLocalStorage){
+  // limpiarFormulario();
+    form2.reset(); //Método que restablece los valores del input a su estado inicial
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikifeliz! :)",
             text: "Tu registro ha sido existoso",
-            icon: "success"
+            icon: "success",
+            customClass: {
+              title: 'swal-title',
+              text: 'swal-text',
+              popup: 'swal-popup',
+              confirmButton: 'swal-confirm-button',
+              icon: 'custom-icon'
+            },
           });
   }else{
     Swal.fire({ //Alerta de SweetAlert
             title: "¡Awikitriste! :(",
-            text: "Tu registro no ha sido existoso",
-            icon: "error"
+            text: "Tu registro no ha sido existoso,por favor completa todos los campos.",
+            icon: "error",
+            customClass: {
+              title: 'swal-title',
+              text: 'swal-text',
+              popup: 'swal-popup',
+              confirmButton: 'swal-confirm-button',
+              icon: 'custom-icon'
+            },
           });
   }
 });
+
+
 
 
 //------------------------Validación formulario inicia sesión
@@ -126,7 +169,7 @@ form2.addEventListener("submit", e =>{
 function validarCorreoSesion(){
   let correoRegex=new RegExp(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/);
   if(!correoRegex.test(correoSesion.value)){
-    mensajesError.push({input: correoSesion, mensaje:'Ingrese un correo válido'})
+    // mensajesError.push({input: correoSesion, mensaje:'Ingrese un correo válido'})
     return false;
   }
 return true;
@@ -143,6 +186,7 @@ function validarContraseñaSesion(){
 
 function validarFormularioSesion(){
   borrarErrores();
+  mensajesError=[];
   const iscorreoSesion = validarCorreoSesion();
   const iscontraseñaSesion = validarContraseñaSesion();
 
@@ -158,16 +202,24 @@ function validarFormularioSesion(){
 
 }
 
-form1.addEventListener("submit", e =>{
-  e.preventDefault();
-  const esFormularioValidoSesion= validarFormularioSesion();
-  if(esFormularioValidoSesion){
-    //Ruta pagina de feed social;
-  }else{
-    Swal.fire({ //Alerta de SweetAlert
-            title: "¡Awiki triste! :(",
-            text: "Error en inicio de sesión",
-            icon: "error"
-          });
-  }
-});
+// form1.addEventListener("submit", e =>{
+//   e.preventDefault();
+//   const esFormularioValidoSesion= validarFormularioSesion();
+//   if(esFormularioValidoSesion){
+//     form1.reset();
+//     //Ruta pagina de feed social;
+//   }else{
+//     Swal.fire({ //Alerta de SweetAlert
+//             title: "¡Awiki triste! :(",
+//             text: "Completa los campos para iniciar sesión",
+//             icon: "error",
+//             customClass: {
+//               title: 'swal-title',
+//               text: 'swal-text',
+//               popup: 'swal-popup',
+//               confirmButton: 'swal-confirm-button',
+//               icon: 'custom-icon'
+//             },
+//           });
+//   }
+// });
