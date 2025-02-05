@@ -26,7 +26,11 @@ const currentRoot = isGithubURL(pageURL) ? constants.GH_ROOT : getRootURL(pageUR
 
 // HTML/CSS Injectables
 const cssLinksHTML = `
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="${currentRoot}/styles/components/header.css"/>
   <link rel="stylesheet" href="${currentRoot}/styles/components/footer.css"/>`;
 const userHeaderHTML = `
@@ -94,11 +98,11 @@ const nonUserHeaderHTML = `
     </nav>
   </header>`;
 const footerHTML = `
-<footer id="footer" class="footer text-center text-lg-start >
-      <section class="Links">
-        <div class="container text-left text-md-start mt-5 mb-4">
-          <div class="row mt-3">
-            <div class="ft-logo-container content-column d-flex justify-content-md-center justify-content-lg-start col-sm-12 col-md-3 col-lg-5 col-xl-5 mx-auto mb-4">
+<footer id="footer" class="footer text-center">
+      <section class="links">
+        <div class="container mt-5 mb-4">
+          <div class="row">
+            <div class="ft-logo-container content-column d-flex justify-content-md-center col-sm-12 col-md-3 col-lg-5 col-xl-5 mx-auto mb-4">
               <a href="${currentRoot}"><img class="ft-logo" src="${currentRoot}/images/Logo_de_pagina.webp" alt="Logo"/></a>
             </div>
             <div class="ft-menu-section col-sm-4 col-md-2 col-lg-2 col-xl-2 mx-auto">
