@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/empresa.css">
-    <link rel="stylesheet" href="../styles/components/header.css">
-    <link rel="stylesheet" href="../../styles/components/footer.css"/>
+    <title>Perfil de Empresa</title>
+    <link rel="stylesheet" href="/styles/empresa.css">
+    <link rel="stylesheet" href="/styles/components/footer.css">
+    <link rel="stylesheet" href="/styles/components/header.css"/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,31 +20,49 @@
 <body>
     <main>
         <!-- Nombre de la empresa -->
-         <h1>Museo Intereactivo de Economía (MIDE)</h1>
-        <!-- Carrousel de imagenes -->
-        <div class="imagenLugar">
-          <img class="imagen-c" src="../images/Slide 1.png" class="d-block w-100 d-img" alt="...">
-        </div>
-          <!-- <div class="container-tarjetas"> -->
+        <section id="galeria" class="container">
+          <div class="text-center pt-5">
+            <h1 id="nombreLugar"></h1>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img src="" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img  id="imagenLugar" src="" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img src="" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img src="" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img src="" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <img src="" alt="">
+            </div>
+  
+          </div>
+        </section>
+        
             <hr>
-            <h2>Conoce más de nosotros</h2>
+            <h2>Conoce más sobre nosotros</h2>
             <hr>
             <div class="card tarjeta-descripcion">
               <!-- <div class="card-header">Una pequeña descripción </div> -->
               <div class="card-body">
                 <h5 class="card-title" id="tituloh5">Una breve descripción</h5>
-                <p class="card-text" id="descripcionLugares">Primer museo del mundo dedicado a la economía. Inaugurado en julio de 2006, se organiza en tres secciones: Conceptos económicos básicos; Instituciones y economía y Crecimiento y bienestar. Otras áreas que complementan la museografía son El Banco Central de México;
-                  La inflación y el índice de precios al consumidor; Los flujos de los precios, y El papel del gobierno en la economía. 
-                  <br>
-                  Las instalaciones del Museo Interactivo de Economía (MIDE) cuentan con lo más avanzado de la informática, el diseño gráfico y la animación para ofrecer información sobre temas económicos de manera sencilla: el trabajo, el capital, la asignación de recursos, el costo de oportunidad, entre otros, temas que forman parte de la vida cotidiana y en los cuales no necesariamente interviene el dinero.
-                  <br>
-                  El MIDE ofrece la impresionante colección numismática del Banco de México y el espectáculo multimedia Voces de fuego.
-                  Para aquellos interesados en conocer la larga historia del edificio, nada mejor que las Voces del edificio, que contiene fragmentos de historia repartidos por todo el convento que evocan las transformaciones de este espacio.</p>
+                <p class="card-text" id="descripcionLugares"></p>
               </div>
           </div>
+
+          <div class="contenedor-dos">
             <div class="card text-bg-light mb-3" style="max-width: 18rem;">
               <!-- <div class="card-header">Una pequeña descripción </div> -->
-              <div class="card-body">
+              <div class="card-body" id="tarjetaReseña">
                 <h5 class="card-title">Reseña</h5>
                 <p class="card-text">
                 </p>
@@ -104,23 +122,29 @@
                   <button class="btn btn-primary w-100" >¡Danos tu opinión!</button></a>
                   <!-- <button type="submit" id="boton-reseña" class="btn btn-primary w-100" value="Escribe tu reseña">Escribe tu reseña -->
               </div>
-          </div>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx" width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
 
-          <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+          <a href="/pages/dummy pages/dummyUserPage.html" class="btn btn-secondary mt-3" id="button1">Boton para ir a la pagina de lugares</a>
 
           
 
 
+
+
+
+
+
+
     </main>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
     <!-- <script src="../js/mapaEmpresa.js"></script> -->
     <script type="module" src="/js/inyeccionHTML.js"></script>
-    <script src="../js/inyeccionLugares.js"></script>
+    <script src="/js/inyeccionLugares.js"></script>
+    <script src="/js/dummyUserPage.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
