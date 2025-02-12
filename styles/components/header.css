@@ -72,6 +72,24 @@ header {
   border-radius: 5px;
 }
 
+.dropdown-menu {
+  background-color: var(--bg-color); /* Fondo del menú */
+  border: 1px solid #e0e0e0; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+.dropdown-item {
+  color: black !important; 
+  padding: 0.5rem 1rem; 
+  transition: background-color 0.3s ease; 
+}
+.nb-icon-menu .dropdown-menu .dropdown-item:hover {
+  background-color: var(--secondary-color);
+  color: #ffffff; 
+  transform: translateX(3px); 
+}
+
 @media screen and (max-width:1250px) {
   .nb-text-menu-nu {
     min-width: 35%;
