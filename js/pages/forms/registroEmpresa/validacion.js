@@ -1,37 +1,33 @@
-import * as validators from "../../modules/validators.js";
+import * as validators from "../../../../modules/validators.js";
 
 const formElement = document.getElementsByClassName("bsu-form")[0];
+const formButtonElement = document.getElementsByClassName("bsu-form-submit-button")[0];
+const formFieldElements = Array.from(document.getElementsByClassName("bsu-form-field"));
 const errorFreeFields = ["bsu-time-field", "bsu-radio", "bsu-checkbox"];
 const errorFreeFieldSets = ["hotel-category"];
-const formFieldElements = Array.from(document.getElementsByClassName("bsu-form-field"));
 const errorProneFieldElements = formFieldElements.filter(field => {
   return !(
     errorFreeFields.some(errClass => Array.from(field.classList).includes(errClass))
     ||
     errorFreeFieldSets.some(errId => field.id == errId)
-  )
-});
+  )});
 
-const formButtonElement = document.getElementsByClassName("bsu-form-submit-button")[0];
-
-const getInvalidFieldIds = fieldArr => {
-  return fieldArr.filter(field => isFieldValid(field))
-}
 
 const isFieldValid = formField => {
   const fieldType = formField.type;
   const fieldId = formField.id;
   if (!validators.isParentSectionHidden(fieldId)){
     if (fieldType != "fieldset"){
-      if (validators.isFieldEmpty(fieldId)) {
+      if (fieldId.indexOf("street") == -1 && validators.isFieldEmpty(fieldId)) {
         return [false, "empty"];
       }//if
     }//if
+    /* #####Failed to evaluate updated DOM values; should be checked into later.#####
     else {
-      if (!validators.isFieldSetEmpty(fieldId)){
-        return [false, "empty"];
+      if (validators.isFieldSetEmpty(fieldId)){
+        // return [false, "empty"];
       }
-    }
+    }*/
     switch (fieldType) {
       case "text":
         if (formField.list != null) {
@@ -55,7 +51,7 @@ const isFieldValid = formField => {
             return [false, "wrong"];
           }
         }
-        if (fieldId.indexOf("street") != -1) {
+        if (fieldId.indexOf("street") != -1 && !validators.isFieldEmpty(fieldId)) {
           if (!validators.isStreetNumberValid(fieldId)) {
             return [false, "wrong"];
           }//if
@@ -130,19 +126,21 @@ const injectErrorMessages = formField => {
       document.querySelector(`#${formField.id} + .invalid-feedback`).hidden = false;
     }//if
   }//else
-}
+}//injectErrorMessages()
 
-// VALIDACIÓN DE FORMULARIO
-formElement.addEventListener("mousedown", e => {
-  if (!areFieldsValid(errorProneFieldElements)) {
-    formButtonElement.disabled = true;
-  }
-  else {
-    formButtonElement.disabled = false;
-  }
+// VALIDACIÓN DE FORMULARIO:
+formElement.addEventListener("click", e => {
+    if (!areFieldsValid(errorProneFieldElements)) {
+      formButtonElement.disabled = true;
+    }
+    else {
+      formButtonElement.disabled = false;
+    }
 });//form.addEventListener("click")
-
-// VALIDACIÓN DE CAMPOS
 errorProneFieldElements.forEach(elem => elem.addEventListener("blur", e => {
     injectErrorMessages(elem);
-}));
+}));//forEach()
+
+
+
+// VALIDACIÓN DE CAMPOS

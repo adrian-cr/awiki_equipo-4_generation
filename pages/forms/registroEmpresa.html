@@ -8,13 +8,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="../../styles/forms/registroEmpresa.css">
-  <script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>
+  <!--<script src="https://widget.cloudinary.com/v2.0/global/all.js"></script>-->
 </head>
 
   <body>
     <main class="main">
       <!-- bsu = Business SignUp -->
-      <form class="bsu-form">
+      <form class="bsu-form" novalidate>
         <h1 class="bsu-form-title">¡Registra tu negocio!</h1>
         <div class="bsu-form-body">
           <div class="bsu-form-column">
@@ -181,7 +181,7 @@
               <label
                 for="business-description"
                 class="bsu-form-section-title form-label"
-                >Describe tu negocio (30-200 caracteres):
+                >Describe tu negocio (30-255 caracteres):
               </label>
               <textarea
                 class="bsu-form-field form-control"
@@ -211,7 +211,7 @@
                   <input
                     type="tel"
                     class="bsu-form-field form-control"
-                    name="telefono"
+                    name="telefonoContacto"
                     id="phone-field"
                     placeholder="(55)-1302-6099"
                   />
@@ -227,7 +227,7 @@
                   <input
                     type="email"
                     class="bsu-form-field form-control"
-                    name="correo"
+                    name="emailContacto"
                     id="email-field"
                     placeholder="lacasadelqueso@gmail.com"
                   />
@@ -291,7 +291,7 @@
               >
               <select
                 class="bsu-form-field form-control"
-                name="tipo"
+                name="tipoNegocio"
                 id="business-type-selection"
               >
                 <option value="N/A" selected hidden>
@@ -389,7 +389,7 @@
               >
               <select
                 class="bsu-form-field form-control"
-                name="tipoProducto"
+                name="tipoProductos"
                 id="product-type-selection"
               >
                 <option value="N/A" disabled selected hidden>
@@ -414,7 +414,7 @@
               >
               <select
                 class="bsu-form-field form-control"
-                name="tipoComida"
+                name="tipoCocina"
                 id="cuisine-type-selection"
               >
                 <option value="N/A" selected hidden>
@@ -779,8 +779,10 @@
       crossorigin="anonymous"
     >
   </script>
-  <script type="module" src="../../js/registroEmpresa/validacion.js"></script>
-  <script type="module" src="../../js/registroEmpresa/gestionCampos.js"></script>
-  <script src="../../js/basesDatos/cloudinary.js"></script>
+  <script type="module" src="../../js/pages/forms/registroEmpresa/mapeoDatos.js"></script>
+  <script type="module" src="../../js/pages/forms/registroEmpresa/gestionCampos.js"></script>
+  <!-- <script src="../../js/basesDatos/cloudinary.js"></script>-->
+  <script type="module" src="../../js/pages/forms/registroEmpresa/envioDatos.js"></script>
+  <script type="module" src="../../js/pages/forms/registroEmpresa/validacion.js" defer></script>
 </body>
 </html>

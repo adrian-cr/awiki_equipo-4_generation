@@ -140,6 +140,10 @@ fieldset {
   justify-content: center;
 }
 
+.bsu-form-schedule-subsection>.bsu-form-schedule-field-container:not(:has(input:checked)) + div input  {
+  color:lightgray;
+}
+
 /* HORARIOS CHECK-IN/OUT (SOLO HOTELES) */
 #check-in-out-container {
   display: flex;
