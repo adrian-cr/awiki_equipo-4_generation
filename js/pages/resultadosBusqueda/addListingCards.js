@@ -20,7 +20,7 @@ const fillStar = (starPosition, rating) => {
 }
 
 function addListingCard(listing){
-  const listingCardHTML = `
+  const listingCardHTML = `<a href="../../pages/dummy pages/empresa.html?listing=1">
     <div class="card" title="${capitalize(listing.categoria)} • ${listing.ubicacion.municipio}, ${listing.ubicacion.estado}">
       <div class="card-image-wrapper">
         <img src=${listing.imagen} class="card-image" alt="image">
@@ -47,7 +47,8 @@ function addListingCard(listing){
           </p>
           <p class="card-rating">Rating: <span class="rating rating-${Math.floor(listing.rating)}">${parseFloat(listing.rating).toFixed(1)}</span></p>
       </div>
-    </div>`;
+    </div>
+    </a>`;
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 
