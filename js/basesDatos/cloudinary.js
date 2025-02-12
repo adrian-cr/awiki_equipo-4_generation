@@ -4,7 +4,7 @@ const boton_imagen = document.querySelector('#btn-imagen');
 const imagen = document.querySelector('#user-photo');
 
 let widget_cloudinary = cloudinary.createUploadWidget({
-    cloudName: 'dawddkonk',
+    cloudName: 'dxqqdk4jv',
     uploadPreset: 'preset_awiki'
 }, (err, result) => {
     if(!err && result && result.event === 'success'){
