@@ -25,6 +25,10 @@ loginuser.addEventListener("submit", (e) => {
       
     });
   } else {
+
+
+    localStorage.setItem("usuarioActivo",JSON.stringify(validUser));
+
     Swal.fire({
       title: "¡Bienvenid@!",
       text: `Bienvenid@ ${validUser.campoCorreo}, ahora eres parte de Awiki :)`,
@@ -40,8 +44,11 @@ loginuser.addEventListener("submit", (e) => {
       },
 
       willClose: () => {
+       
         window.location.href = "/index.html"; 
       }
     });
+ 
+    
   }
 });

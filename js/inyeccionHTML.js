@@ -36,43 +36,63 @@ const cssLinksHTML = `
 const userHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">
-      <!-- nb = navbar -->
-      <div class="container-fluid">
-        <a href="${currentRoot}"><img class="nb-logo" src="${currentRoot}/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"/></a>
-        <button class="nb-collapse-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon nb-collapse-button-icon"></span>
-        </button>
-        <div class="nb-main-container justify-content-end ms-auto collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="nb-search-form d-flex search-form mx-auto" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar restaurantes, hoteles, personas..." aria-label="Search"/>
-            <button class="nb-search-button btn btn-outline-success" type="submit">Buscar</button>
-          </form>
-          <div class="nb-icon-menu">
-            <a class="nb-icon-menu-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" title="Amigos" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-              </svg>
-            </a>
-            <a class="nb-icon-menu-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" title="Notificaciones" width="36" height="36" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
-                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
-              </svg>
-            </a>
-            <a class="nb-icon-menu-link" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" title="Perfil" width="40" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-              </svg>
-            </a>
-          </div>
-          <div class="nb-text-menu" style="display:none">
-            <a href="#" class="nb-text-menu-link">Mis Conexiones</a>
-            <a href="#" class="nb-text-menu-link">Mis Notificaciones</a>
-            <a href="#" class="nb-text-menu-link">Mi Perfil</a>
-          </div>
+        <!-- nb = navbar -->
+        <div class="container-fluid">
+            <a href="${currentRoot}"><img class="nb-logo" src="${currentRoot}/images/Logo_de_pagina.webp" href="#home" alt="Logo" width="100" height="24" class="logo d-inline-block align-text-top"/></a>
+            <button class="nb-collapse-button navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon nb-collapse-button-icon"></span>
+            </button>
+            <div class="nb-main-container justify-content-end ms-auto collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="nb-search-form d-flex search-form mx-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar restaurantes, hoteles, personas..." aria-label="Search"/>
+                    <button class="nb-search-button btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <div class="nb-icon-menu">
+                 
+                    <div class="dropdown">
+                        <a class="nb-icon-menu-link dropdown-toggle" title="Amigos" href="#" role="button" id="dropdownMenuFriends" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" title="Amigos" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                            </svg>
+                        </a>
+                       
+                    </div>
+
+                 
+                    <div class="dropdown">
+                        <a class="nb-icon-menu-link dropdown-toggle" title="Notificaciones" href="#" role="button" id="dropdownMenuNotifications" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" title="Notificaciones" width="36" height="36" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+                            </svg>
+                        </a>
+     
+                    </div>
+
+                
+                    <div class="dropdown">
+                        <a class="nb-icon-menu-link dropdown-toggle" title="Perfil" href="#" role="button" id="dropdownMenuProfile" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" title="Perfil" alt="Mi perfil" width="40" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuProfile">
+                            <li><a class="dropdown-item" href="/pages/miPerfil.html" >Mi Perfil </a></li>
+                           <li>
+                              <button class="dropdown-item " id="logout">Cerrar sesión</button>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nb-text-menu" style="display:none">
+                    <a href="#" class="nb-text-menu-link">Mis Conexiones</a>
+                    <a href="#" class="nb-text-menu-link">Mis Notificaciones</a>
+                    <a href="" class="nb-text-menu-link">Mi Perfil</a>
+                </div>
+                
+            </div>
         </div>
-      </div>
     </nav>
-  </header>`;
+</header>`;
 const nonUserHeaderHTML = `
   <header>
     <nav class="navbar navbar-expand-lg">
@@ -149,11 +169,23 @@ const footerHTML = `
 // * Main event listener *
 window.addEventListener("load", (e) => {
   headElement.insertAdjacentHTML("beforeend", cssLinksHTML);
+//
+const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+
   bodyElement.insertAdjacentHTML(
     "afterbegin",
-    userPages.includes(getCurrentPage(pageURL))
-      ? userHeaderHTML
-      : nonUserHeaderHTML
+    usuarioActivo ? userHeaderHTML : nonUserHeaderHTML
   );
   bodyElement.insertAdjacentHTML("beforeend", footerHTML);
+
+  //
+  const logoutButton = document.getElementById("logout");
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("usuarioActivo"); // Eliminar el usuario activo
+      window.location.href = "/pages/forms/registroUsuarios.html"; // Redirigir a la página de registro
+    });
+  }
+
+
 });
