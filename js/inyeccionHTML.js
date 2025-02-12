@@ -50,7 +50,7 @@ const userHeaderHTML = `
                 <div class="nb-icon-menu">
                  
                     <div class="dropdown">
-                        <a class="nb-icon-menu-link dropdown-toggle" href="#" role="button" id="dropdownMenuFriends" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nb-icon-menu-link dropdown-toggle" title="Amigos" href="#" role="button" id="dropdownMenuFriends" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" title="Amigos" width="40" height="40" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
                             </svg>
@@ -60,7 +60,7 @@ const userHeaderHTML = `
 
                  
                     <div class="dropdown">
-                        <a class="nb-icon-menu-link dropdown-toggle" href="#" role="button" id="dropdownMenuNotifications" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nb-icon-menu-link dropdown-toggle" title="Notificaciones" href="#" role="button" id="dropdownMenuNotifications" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" title="Notificaciones" width="36" height="36" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
                                 <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                             </svg>
@@ -70,13 +70,13 @@ const userHeaderHTML = `
 
                 
                     <div class="dropdown">
-                        <a class="nb-icon-menu-link dropdown-toggle" href="#" role="button" id="dropdownMenuProfile" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nb-icon-menu-link dropdown-toggle" title="Perfil" href="#" role="button" id="dropdownMenuProfile" data-bs-toggle="dropdown" aria-expanded="false">
                             <svg xmlns="http://www.w3.org/2000/svg" title="Perfil" alt="Mi perfil" width="40" height="40" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                             </svg>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuProfile">
-                            <li><a class="dropdown-item" href="/pages/miPerfil.html" >Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="/pages/miPerfil.html" >Mi Perfil </a></li>
                            <li>
                               <button class="dropdown-item " id="logout">Cerrar sesión</button>
                           </li>
