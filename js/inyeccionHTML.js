@@ -76,7 +76,7 @@ const userHeaderHTML = `
                             </svg>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuProfile">
-                            <li><a class="dropdown-item" href="/pages/miblog.html" >Mi Blog</a></li>
+                            <li><a class="dropdown-item" href="/pages/miPerfil.html" >Mi Perfil</a></li>
                            <li>
                               <button class="dropdown-item " id="logout">Cerrar sesión</button>
                           </li>
