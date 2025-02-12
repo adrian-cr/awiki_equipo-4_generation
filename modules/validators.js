@@ -127,7 +127,7 @@ export const isPasswordValid = fieldID =>{
 //VALIDACIÓN DE INFORMACIÓN DE NEGOCIO: descripción, tipo de negocio, tipo de comida, tipo de producto, categoría de hotel
 export const isBusinessDescriptionValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
-  return fieldValue.length >= 30  && fieldValue.length <= 200;
+  return fieldValue.length >= 30  && fieldValue.length <= 255;
 }
 export const isBusinessTypeValid = fieldID => {
   const BIZ_TYPE_LIST = [
