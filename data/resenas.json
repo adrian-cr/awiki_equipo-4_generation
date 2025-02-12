@@ -1,0 +1,32 @@
+{
+    
+    "data": [
+
+      {
+        "nombre-lugar": "Museo Intereactivo de Economía (MIDE)",
+        "descripcion": "Es un museo muy interesante e interactivo. Ideal para grupos escolares y niños pequeños",
+        "calificacion": "8.5"
+      },
+      {
+        "nombre-lugar": "York Pub",
+        "descripcion": "El restaurante York tiene muy buena iluminación y se siente familiar. La comida y la atención es muy buena",
+        "calificacion": "9.0"
+      },
+      {
+        "nombre-lugar": "Hotel RIU",
+        "descripcion": "Hotel RIU siempre con muchas atracciones y cosas por hacer. En temporada vacacional hay mucha gente",
+        "calificacion": "8.0"
+      },
+      {
+        "nombre-lugar": "Moshi Moshi",
+        "descripcion": "Moshi Moshi es de los mejores restaurantes de Monterrey",
+        "calificacion": "9.0"
+      },
+      {
+        "nombre-lugar": "Museo del Desierto",
+        "descripcion": "El museo del desierto está lleno de dinosaurio y mucho que ver. De los mejores museos a los que he ido ",
+        "calificacion": "10.0"
+      }
+
+    ]
+}

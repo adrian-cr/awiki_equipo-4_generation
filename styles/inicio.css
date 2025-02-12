@@ -135,10 +135,31 @@ h1{
 
 .mejores-calificados{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
     padding: 50px auto;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    margin: 0px auto;
+    /* border: 3px solid black; */
+    /* margin-right: 30px; */
+    }
+
+
+    @media (max-width: 1024px) {
+        .mejores-calificados {
+            max-width: 95%;
+            gap: 20px; /* Reducir espacio entre cards */
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .mejores-calificados {
+            flex-direction: column; /* Apilar las cards en pantallas pequeñas */
+            align-items: center; /* Centrar en la columna */
+            justify-content: center;
+        }
     }
 
 

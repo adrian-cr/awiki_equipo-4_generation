@@ -160,7 +160,7 @@ p:not(.container p) {
     transform: rotateY(0deg) scale(1.05);
     z-index: 1;
     box-shadow: 0 25px 40px rgba(0,0,0,0.5);
-  } 
+  }
 }
 
 /* PIE DE PÁGINA */
