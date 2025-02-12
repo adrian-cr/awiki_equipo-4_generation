@@ -60,6 +60,18 @@ header {
   text-align: center;
 }
 
+.btn-logout{
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: white;
+  background-color:var(--secondary-color);
+  border-color: var(--secondary-color);
+  border-radius: 5px;
+}
+
 @media screen and (max-width:1250px) {
   .nb-text-menu-nu {
     min-width: 35%;

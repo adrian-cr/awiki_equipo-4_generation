@@ -69,6 +69,8 @@ const userHeaderHTML = `
             <a href="#" class="nb-text-menu-link">Mis Notificaciones</a>
             <a href="#" class="nb-text-menu-link">Mi Perfil</a>
           </div>
+          <!-- Botón para cerrar sesión -->
+          <button id="logout" class="btn-logout ">Cerrar sesión</button>
         </div>
       </div>
     </nav>
@@ -149,11 +151,26 @@ const footerHTML = `
 // * Main event listener *
 window.addEventListener("load", (e) => {
   headElement.insertAdjacentHTML("beforeend", cssLinksHTML);
+//
+const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
+
   bodyElement.insertAdjacentHTML(
     "afterbegin",
-    userPages.includes(getCurrentPage(pageURL))
-      ? userHeaderHTML
-      : nonUserHeaderHTML
+    // userPages.includes(getCurrentPage(pageURL))
+    //   ? userHeaderHTML
+    //   : nonUserHeaderHTML
+    usuarioActivo ? userHeaderHTML : nonUserHeaderHTML
   );
   bodyElement.insertAdjacentHTML("beforeend", footerHTML);
+
+  //
+  const logoutButton = document.getElementById("logout");
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("usuarioActivo"); // Eliminar el usuario activo
+      window.location.href = "/pages/forms/registroUsuarios.html"; // Redirigir a la página de registro
+    });
+  }
+
+
 });
