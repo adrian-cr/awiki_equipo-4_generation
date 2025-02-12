@@ -147,8 +147,8 @@ h1{
     text-decoration: underline; /* Opcional: subraya el texto para mayor visibilidad */
 }
 
-.form-check-label:hover {
-    color:#E73879 /* Cambia a un tono más oscuro al pasar el mouse */
+.form-check-label {
+    color:black 
 }
 
 #btn-terminos{
