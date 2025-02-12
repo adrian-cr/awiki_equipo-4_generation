@@ -3,6 +3,7 @@
     {
       "id": 1,
       "nombre": "Museo Intereactivo de Economía (MIDE)",
+      "imagen": "https://www.mexicoescultura.com/galerias/espacios/principal/mide_museo.jpg",
       "nombreCalle": "Tacuba",
       "numeroCalle": "17",
       "colonia": "Centro",
@@ -19,11 +20,13 @@
       "categoriaHotel": null,
       "horarios": "martes=10:00-18:00;miercoles=10:00-18:00;jueves=10:00-18:00;viernes=10:00-18:00;sabado=10:00-18:00;domingo=10:00-18:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0
+      "rating": 5.0,
+      "user_id": 3
     },
     {
       "id": 2,
       "nombre": "York Pub",
+      "imagen": "https://yorkpub.com.mx/img/ambiente/foto4.jpg",
       "nombreCalle": "Chapultepec Sur",
       "numeroCalle": "179",
       "colonia": "Americana",
@@ -40,11 +43,13 @@
       "categoriaHotel": null,
       "horarios": "lunes=13:00-01:00;martes=13:00-01:00;miercoles=13:00-01:00;jueves=13:00-01:00;viernes=13:00-02:00;sabado=13:00-02:00;domingo=13:00-01:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0
+      "rating": 5.0,
+      "user_id": 3
     },
     {
       "id": 3,
       "nombre": "Museo Maya de Cancún y Zona Arqueológica de San Miguelito",
+      "imagen": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/260000/260778-Maya-Cancun-Museum.jpg",
       "nombreCalle": "Blvd. Kukulcan km 16.5",
       "numeroCalle": "S/N",
       "colonia": "Zona Hotelera",
@@ -61,11 +66,13 @@
       "categoriaHotel": null,
       "horarios": "martes=09:00-18:00;miercoles=09:00-18:00;jueves=09:00-18:00;viernes=09:00-18:00;sabado=09:00-18:00;domingo=09:00-18:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0
+      "rating": 5.0,
+      "user_id": 3
     },
     {
       "id": 4,
       "nombre": "Hotel RIU Vallarta",
+      "imagen": "https://cdn-bunny.menteurbana.mx/wp-content/uploads/2016/08/1in2D78N-e24nKE6I-Destacada-9.jpg",
       "nombreCalle": "Paseo de los Cocoteros",
       "numeroCalle": "S/N",
       "colonia": "Flamingos",
@@ -82,11 +89,13 @@
       "categoriaHotel": 4,
       "horarios": null,
       "horarioCheckInOut": "in=16:00;out=11:00",
-      "rating": 5.0
+      "rating": 5.0,
+      "user_id": 3
     },
     {
       "id": 5,
       "nombre": "Porfirio's",
+      "imagen": "https://porfirios.com.mx/en/wp-content/uploads/sites/2/2023/09/porfirios-mejor-restaurante-mexicano-en-puebla.jpg",
       "nombreCalle": "Niño Poblano",
       "numeroCalle": "2510",
       "colonia": "Reserva Territorial Atlixcáyotl",
@@ -103,7 +112,8 @@
       "categoriaHotel": null,
       "horarios": "lunes=13:00-22:00;martes=13:00-01:00;miercoles=13:00-01:00;jueves=13:00-01:00;viernes=13:00-01:00;sabado=13:00-01:00;domingo=13:00-22:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0
+      "rating": 5.0,
+      "user_id": 3
     }
   ]
 }
