@@ -1,6 +1,7 @@
 {
   "data": [
     {
+      "id": 1,
       "categoria": "museo",
       "descripcion": "Museo contemporáneo con exhibiciones sobre economía, finanzas y desarrollo sustentable",
       "imagen": "https://www.mexicoescultura.com/galerias/espacios/principal/mide_museo.jpg",
@@ -12,6 +13,7 @@
       }
     },
     {
+      "id":2,
       "categoria": "restaurante",
       "descripcion": "York Pub debuta en la Colonia Americana de Guadalajara, Jalisco en el año 2012 como un verdadero y original pub inglés, inspirado en la cultura británica y su gran afición por el trago, la buena cerveza, ricos platillos y la convivencia en grupo.",
       "imagen": "https://yorkpub.com.mx/img/ambiente/foto4.jpg",
@@ -23,6 +25,7 @@
       }
     },
     {
+      "id":3,
       "categoria": "museo",
       "descripcion": " Museo con una colección importante de artefactos arqueológicos mayas en un ambiente diseñado elegantemente.",
       "imagen": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/260000/260778-Maya-Cancun-Museum.jpg",

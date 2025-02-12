@@ -1,0 +1,76 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "descripción": "museo",
+        "imagen": "https://www.mexicoescultura.com/galerias/espacios/principal/mide_museo.jpg"
+      },
+      {
+        "categoria": "restaurante",
+        "descripcion": "York Pub debuta en la Colonia Americana de Guadalajara, Jalisco en el año 2012 como un verdadero y original pub inglés, inspirado en la cultura británica y su gran afición por el trago, la buena cerveza, ricos platillos y la convivencia en grupo.",
+        "imagen": "https://yorkpub.com.mx/img/ambiente/foto4.jpg",
+        "nombre": "York Pub",
+        "rating": 4.8,
+        "ubicacion": {
+          "estado": "Jalisco",
+          "municipio": "Guadalajara"
+        }
+      },
+      {
+        "categoria": "museo",
+        "descripcion": " Museo con una colección importante de artefactos arqueológicos mayas en un ambiente diseñado elegantemente.",
+        "imagen": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/260000/260778-Maya-Cancun-Museum.jpg",
+        "nombre": "Museo Maya de Cancún y Zona Arqueológica de San Miguelito",
+        "rating": 4.5,
+        "ubicacion": {
+          "estado": "Quintana Roo",
+          "municipio": "Cancún"
+        }
+      },
+      {
+        "categoria": "museo",
+        "descripcion": "Sitio único en México, con una amplia variedad de especias endémicas y un ecosistema valioso para la investigación científica y el turismo.",
+        "imagen": "https://sanluis.eluniversal.com.mx/resizer/v2/RNU2OD3XJNHUDLSE6LDEIB4KNU.jpg?auth=a02a6ffa736d7344a2998b8f2e7d75cdf74713279aefa5e350ddcd5a126860e1",
+        "nombre": "Museo Casa Carranza",
+        "rating": 4.0,
+        "ubicacion": {
+          "estado": "San Luis Potosí",
+          "municipio": "Cuatro Ciénegas de Carranza"
+        }
+      },
+      {
+        "categoria": "hotel",
+        "descripcion": "El Hotel Riu Cancún (Todo Incluido 24 horas) está situado en el corazón de una de las zonas más populares de Cancún para los turistas, en una ubicación privilegiada en una playa de arena blanca y agua turquesa.",
+        "imagen": "https://cdn-bunny.menteurbana.mx/wp-content/uploads/2016/08/1in2D78N-e24nKE6I-Destacada-9.jpg",
+        "nombre": "Hotel RIU",
+        "rating": 5.0,
+        "ubicacion": {
+          "estado": "Yucatán",
+          "municipio": "Cancún"
+        }
+      },
+      {
+        "categoria": "museo",
+        "descripcion": "El Museo Nacional de la Ballena (MUNBA) es un espacio para sumergirse en el fascinante mundo de los cetáceos; desde las majestuosas ballenas, hasta los simpáticos delfines.Como visitante podrás adquirir un conocimiento profundo sobre su historia de vida a través de experiencias sensoriales, exhibiciones interactivas y una de las más diversas colecciones de esqueletos de cetáceos en México y Latinoamérica.",
+        "imagen": "https://noro.mx/wp-content/uploads/2024/06/Este-es-uno-de-los-proyectos-mas-importantes-de-las-ultimas-decadas-en-nuestro-pais-y-tendra-un-impacto-bastante-positivo-a-nuestra-sociedad-se-trata-del-MUNBA-Museo-Nacional-de-la-Ballena-un-proyecto-anexo-4.png",
+        "nombre": "Museo Nacional de la Ballena (Munba)",
+        "rating": 4.6,
+        "ubicacion": {
+          "estado": "Sinaloa",
+          "municipio": "Mazatlán"
+        }
+      },
+      {
+        "categoria": "museo",
+        "descripcion": "Museo de historia natural y regional con fósiles, esqueletos de dinosaurios y un zoológico de animales vivos.",
+        "imagen": "https://elheraldodesaltillo.mx/wp-content/uploads/2024/03/Listo-el-Museo-del-Desierto-para-recibir-visitantes-en-Semana-Santa-.jpg",
+        "nombre": "Museo del Desierto",
+        "rating": 4.8,
+        "ubicacion": {
+          "estado": "Coahuila",
+          "municipio": "Saltillo"
+        }
+      }
+    ]
+  }
+  
