@@ -51,101 +51,109 @@
                 <p class="card-text">
                 </p>
                 <h6>Dirección</h6>
-                <p class="card-text" id="datoDireccion"></p>
-                <h6>Contacto</h6>
-                <p class="card-text" id="datoTel"></p>
-                <p class="card-text" id="datoEmail"></p>
-                <p class="card-text" id="datoSitio"></p>
-                <h6>Horarios de atención</h6>
-                <p class="card-text" id="datoHorario"></p>
-               
-                  <!-- <button type="submit" id="boton-reseña" class="btn btn-primary w-100" value="Escribe tu reseña">Escribe tu reseña -->
-              </div>
-            </div>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx" width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-
-          <div class="contenedor-dos">
-            <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-              <!-- <div class="card-header">Una pequeña descripción </div> -->
-              <div class="card-body" id="tarjetaReseña">
-                <h5 class="card-title">Reseña</h5>
-                <p class="card-text">
+                <p class="direccion">
+                  <span id="datoCalle"></span>,
+                  <span id="datoNumero"></span>,
+                  <span id="datoColonia"></span>,
+                  <span id="datoMunicipio"></span>,
+                  <span id="datoEstado"></span>,
+                  <span id="datoCp"></span>.
                 </p>
-                <li>
-                  <ul> Ubicación:
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                  </ul>
-                  <!-- Precio, en vez de atención u horario -->
-                  <ul>Atención:
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                  </ul>
-
-                  <ul>Horarios:
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                  </ul>
-                </li>
-                  <a href="../pages/forms/reseñas.html">
-                  <button class="btn btn-primary w-100" >¡Danos tu opinión!</button></a>
-                  <!-- <button type="submit" id="boton-reseña" class="btn btn-primary w-100" value="Escribe tu reseña">Escribe tu reseña -->
+                <h6>Contacto y teléfono</h6>
+                <p class="direccion">
+                  <span>Teléfono:</span>
+                  <span id="datoTel"></span>
+                  <span>Correo electrónico:</span>
+                  <span id="datoEmail"></span>
+                  <span>Sitio web:</span>
+                  <span id="datoSitio"></span>
+                  <!-- <span>Horarios de atención:</span> -->
+                  <span id="datoHorario"></span>
+                </p>
+                <!-- <h6>Horarios de atención</h6> -->
+                <!-- <p class="card-text" id="datoHorario"></p> -->
               </div>
             </div>
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx" width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx"
+        width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="contenedor-dos">
+        <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+          <!-- <div class="card-header">Una pequeña descripción </div> -->
+          <div class="card-body" id="tarjetaReseña">
+            <h5 class="card-title">Rating</h5>
+            <p class="card-text" id="datoRatin"></p>
+       <!-- Modal de reseña -->
+       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+       data-bs-whatever="@mdo" disabled>En construcción, no tocar</button>
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h1 class="modal-title fs-5" id="exampleModalLabel">Cuéntanos tu experiencia</h1>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nombre del lugar:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+
+              <div class="form-group">
+                <label>¿Cómo calificarías tu experiencia en este destino?</label>
+                <div class="star-rating" data-category="experiencia">
+                  <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                    name="experienciaDestino" id="dest-exp-1" value="1" style="display:none">
+                  <label class="form-check-label" for="dest-exp-1">
+                    <i class="bi bi-star-fill"></i>
+                  </label>
+
+                  <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                          name="experienciaDestino" id="dest-exp-2" value="2" style="display:none">
+                        <label class="form-check-label" for="dest-exp-2">
+                          <i class="bi bi-star-fill"></i>
+                        </label>
+                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                          name="experienciaDestino" id="dest-exp-3" value="3" style="display:none">
+                        <label class="form-check-label" for="dest-exp-3">
+                          <i class="bi bi-star-fill"></i>
+                        </label>
+
+                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                        name="experienciaDestino" id="dest-exp-4" value="4" style="display:none">
+                      <label class="form-check-label" for="dest-exp-4">
+                        <i class="bi bi-star-fill"></i>
+                      </label>
+                      <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                        name="experienciaDestino" id="dest-exp-5" value="5" style="display:none" checked>
+                      <label class="form-check-label" for="dest-exp-5">
+                        <i class="bi bi-star-fill"></i>
+                      </label>
+
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Descripción:</label>
+                    <textarea class="form-control" id="message-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Enviar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
           </div>
-
-
-
-
-
-
-
-
-          <a href="/pages/dummy pages/dummyUserPage.html" class="btn btn-secondary mt-3" id="button1">Boton para ir a la pagina de lugares</a>
-
-          
-
-
-
+        </div>
+      </div>
+    </div>
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    data-bs-whatever="@mdo" disabled>No tocar, funcionaldad en construcción</button> -->
+<a href="/pages/dummy pages/dummyUserPage.html" class="btn btn-secondary mt-3" id="button1"  disabled>No tocar,
+        funcionalidad en construcción</a>
 
 
 
