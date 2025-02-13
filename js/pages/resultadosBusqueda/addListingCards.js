@@ -20,7 +20,7 @@ const fillStar = (starPosition, rating) => {
 }
 
 function addListingCard(listing){
-  const listingLink = `../../pages/dummy pages/empresa.html?listing=${listing.id}`;
+  const listingLink = `../../pages/dummy pages/empresa.html?newListing=${listing.id}`;
   const listingCardHTML = `<a href="${listingLink}">
     <div class="card" title="${capitalize(listing.categoria)} • ${listing.ubicacion.municipio}, ${listing.ubicacion.estado}">
       <div class="card-image-wrapper">
@@ -53,10 +53,14 @@ function addListingCard(listing){
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 
-fetch("../data/listings.json")
+fetch("../../../data/newListings.json")
   .then(
     res => res.json())
   .then( res => {
+    console.log(res);
     listings = listings.concat(res.data);
     listings.forEach(e => addListingCard(e));
     });
+
+    // ../../../data/newListings.json
+    // ../../data/listings.json

@@ -1,5 +1,5 @@
 const urlParams= new URLSearchParams(window.location.search);
-const listingId= urlParams.get('listing');
+const listingId= urlParams.get('newListing');
 console.log("ID del newlistin del URL", listingId);
 const titulo=document.getElementById("nombreLugar");
 const descripcion= document.getElementById("descripcionLugares");
