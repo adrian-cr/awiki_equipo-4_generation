@@ -14,9 +14,10 @@ const telefono= document.getElementById("datoTel");
 const email=document.getElementById("datoEmail");
 const sitio=document.getElementById("datoSitio");
 const horario= document.getElementById("datoHorario");
+const URL='http://3.141.25.162/api/listings/';
+//'../../data/newListings.json'
 
-
-fetch('../../data/newListings.json')
+fetch(URL)
   .then( res => res.json())
   .then( res => {
     console.log("DATOS OBTENIDOS", res);
