@@ -13,11 +13,23 @@
 #galeria .imagenListing{
     margin: 0 !important;
     padding: 20px;
+
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px;
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita espacios extra */
 }
 .contenedorImagen{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe el ancho completo */
+    flex-wrap: wrap; /* Hace que las imágenes bajen en pantallas pequeñas */
 
 }
 /* .imagenListing{
@@ -32,6 +44,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    
 }
 #galeria img{
     width: 100%;
