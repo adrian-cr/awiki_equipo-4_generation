@@ -18,29 +18,69 @@
     crossorigin=""/>
 </head>
 <body>
-    <main>
-        <!-- Nombre de la empresa -->
-        <section id="galeria" class="container">
-          <div class="text-center pt-5">
-            <h1 id="nombreLugar"></h1>
-          </div>
-  
-          <div class="contenedorImagen">
-            <div class="imagenListing">
-              <img  id="imagenLugar" src="" alt="">
-            </div>  
-          </div>
-        </section>
-        
-            <hr>
-            <h2>Conoce más sobre nosotros</h2>
-            <hr>
-            <div class="card tarjeta-descripcion">
-              <!-- <div class="card-header">Una pequeña descripción </div> -->
-              <div class="card-body">
-                <h5 class="card-title" id="tituloh5">Una breve descripción</h5>
-                <p class="card-text" id="descripcionLugares"></p>
-              </div>
+  <main>
+    <!-- Nombre de la empresa -->
+    <section id="galeria" class="container">
+      <div class="text-center pt-5">
+        <h1 id="nombreLugar"></h1>
+      </div>
+
+      <div class="contenedorImagen">
+        <div class="imagenListing">
+          <img id="imagenLugar" src="" alt="">
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <h2>Conoce más sobre nosotros</h2>
+    <hr>
+    <div class="card tarjeta-descripcion">
+      <!-- <div class="card-header">Una pequeña descripción </div> -->
+      <div class="card-body">
+        <h5 class="card-title" id="tituloh5">Una breve descripción</h5>
+        <p class="card-text" id="descripcionLugares"></p>
+      </div>
+    </div>
+
+    <div class="contenedor-dos">
+      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
+        <!-- <div class="card-header">Una pequeña descripción </div> -->
+        <div class="card-body" id="tarjetaReseña">
+          <h5 class="card-title">Información adicional</h5>
+          <p class="card-text">
+          </p>
+          <h6>Dirección y ubicación</h6>
+          <p class="direccion">
+            <span id="datoCalle"></span>,
+            <span id="datoNumero"></span>,
+            <span id="datoColonia"></span>,
+            <span id="datoMunicipio"></span>,
+            <span id="datoEstado"></span>,
+            <span id="datoCp"></span>.
+          </p>
+          <h6>Contacto y teléfono</h6>
+          <p class="direccion">
+            <span>Teléfono:</span>
+            <span id="datoTel"></span>
+            <span>Correo electrónico:</span>
+            <span id="datoEmail"></span>
+            <span>Sitio web:</span>
+            <span id="datoSitio"></span>
+            <!-- <span>Horarios de atención:</span> -->
+            <span id="datoHorario"></span>
+          </p>
+
+          <!-- <h6>Horarios de atención</h6> -->
+          <!-- <p class="card-text" id="datoHorario"></p> -->
+        </div>
+      </div>
+
+      <!-- <div>
+        <div class="card">
+          <div class="card-body">
+              <p>FUNCIONALIDAD TEMPORALMENTE NO DISPONIBLE</p>
+              <P>Mapa del lugar</P>
           </div>
 
           <div class="contenedor-dos">

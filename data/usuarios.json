@@ -7,7 +7,8 @@
       "email":"sofia.garcia@awiki.com",
       "contrasena":"Sofia123.",
       "imagenPerfil":"/images/Foto_Perfil_Sofía.jpeg",
-      "descripcionPerfil":"¡Hola! mi nombre es Sofía y soy una Desarrolladora Jr. FullStack, amante de las tecnología y la información, dedicada a mejorar día con día."
+      "descripcionPerfil":"¡Hola! mi nombre es Sofía y soy una Desarrolladora Jr. FullStack, amante de las tecnología y la información, dedicada a mejorar día con día.",
+      "esPerfilEmpresa": false
     },
     {
       "id":2,
@@ -16,7 +17,8 @@
       "email":"adrian.camacho@awiki.com",
       "contrasena":"Adrian123.",
       "imagenPerfil": "/images/foto_perfil_adrian.jpeg",
-      "descripcionPerfil":"¡Hola! Me llamo Adrián. Soy un profesionista de Guadalajara, Jalisco, que busca incursionar en el sector del desarrollo web a través de este gran proyecto que es Awiki."
+      "descripcionPerfil":"¡Hola! Me llamo Adrián. Soy un profesionista de Guadalajara, Jalisco, que busca incursionar en el sector del desarrollo web a través de este gran proyecto que es Awiki.",
+      "esPerfilEmpresa": false
     },
     {
       "id":3,
@@ -25,7 +27,8 @@
       "email":"diana.cantillo@awiki.com",
       "contrasena":"Diana123.",
       "imagenPerfil": "/images/foto_perfil_diana.jpeg",
-      "descripcionPerfil":"Soy Diana Isabel, mi pasión por la programación la encontré en medio de datos geográficos y ambientales, así que le he dado un enfoque tecnológico a mi carrera aprendiendo distintos lenguajes de programación y desarrollo web."
+      "descripcionPerfil":"Soy Diana Isabel, mi pasión por la programación la encontré en medio de datos geográficos y ambientales, así que le he dado un enfoque tecnológico a mi carrera aprendiendo distintos lenguajes de programación y desarrollo web.",
+      "esPerfilEmpresa": true
     },
     {
       "id":4,
@@ -34,7 +37,8 @@
       "email":"jorge.mendoza@awiki.com",
       "contrasena":"Jorge123.",
       "imagenPerfil": "/images/Foto_perfil_Jorge.png",
-      "descripcionPerfil":"Soy Jorge Mendoza, un profesional comprometido y altamente responsable, teniendo una capacidad de análisis , aprendizaje y facilidad de adaptarme a equipos de trabajo, llevar a cabo con éxito las tareas que se me asignen."
+      "descripcionPerfil":"Soy Jorge Mendoza, un profesional comprometido y altamente responsable, teniendo una capacidad de análisis , aprendizaje y facilidad de adaptarme a equipos de trabajo, llevar a cabo con éxito las tareas que se me asignen.",
+      "esPerfilEmpresa": false
     },
     {
       "id":5,
@@ -43,7 +47,8 @@
       "email":"lizbeth.delgado@awiki.com",
       "contrasena":"Lizbeth123.",
       "imagenPerfil": "/images/Foto_Perfil_Lizbeth.jpg",
-      "descripcionPerfil":"Mi nombre es Lizbeth Delgado, tengo 25 años. Soy apasionada por el desarrollo web y participar en la creación de Awiki es un reto que me entusiasma demasiado."
+      "descripcionPerfil":"Mi nombre es Lizbeth Delgado, tengo 25 años. Soy apasionada por el desarrollo web y participar en la creación de Awiki es un reto que me entusiasma demasiado.",
+      "esPerfilEmpresa": false
     }
   ]
 }
