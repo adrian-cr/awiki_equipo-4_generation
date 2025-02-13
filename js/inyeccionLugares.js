@@ -1,6 +1,6 @@
 const urlParams= new URLSearchParams(window.location.search);
 const listingId= urlParams.get('listing');
-console.log("ID del listin del URL", listingId);
+console.log("ID del newlistin del URL", listingId);
 const titulo=document.getElementById("nombreLugar");
 const descripcion= document.getElementById("descripcionLugares");
 const imagen= document.getElementById("imagenLugar");

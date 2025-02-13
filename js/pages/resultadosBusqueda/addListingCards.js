@@ -20,7 +20,8 @@ const fillStar = (starPosition, rating) => {
 }
 
 function addListingCard(listing){
-  const listingCardHTML = `<a href="../../pages/dummy pages/empresa.html?listing=1">
+  const listingLink = `../../pages/dummy pages/empresa.html?listing=${listing.id}`;
+  const listingCardHTML = `<a href="${listingLink}">
     <div class="card" title="${capitalize(listing.categoria)} • ${listing.ubicacion.municipio}, ${listing.ubicacion.estado}">
       <div class="card-image-wrapper">
         <img src=${listing.imagen} class="card-image" alt="image">
