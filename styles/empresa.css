@@ -1,110 +1,180 @@
 @import url(../styles/style.css);
 
-/* Titulo */
-.h1{
-    display: flex;
-    justify-content: center;
-};
-/* Tarjeta de descripcion */
-.tarjeta-descripcion{
-    margin: 5px;
 
-}
-#galeria .imagenListing{
-    margin: 0 !important;
-    padding: 20px;
-
-    margin: 0 auto; /* Centrar horizontalmente */
-    padding: 20px;
-    max-width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Evita espacios extra */
-}
-.contenedorImagen{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Asegura que ocupe el ancho completo */
-    flex-wrap: wrap; /* Hace que las imágenes bajen en pantallas pequeñas */
-
-}
-/* .imagenListing{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-} */
-.imagenLugar{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-}
-#galeria img{
-    width: 100%;
-    height: 450px;
-}
-#galeria img:hover{
-    border: 5px solid ;
+.img-cover {
+    width: 1110px;
+    height: 200px;
+    object-fit: cover;
+    border-radius:25px ;
+   
 }
 
-/* Contenedor de Tarjeta Reseña y Mapa */
-.contenedor-dos{
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: space-evenly; 
-    align-items:center;
-    gap:5px;
-    padding: 20px;
+h1{
+    font-size: 15px;
 }
-/* Tarjeta Reseña */
- .card.text-bg-light{
+.card-body {
     background-color: var(--hg-color) !important;
-    border: 5px;
+    border: 2px solid #77aaff;
     margin: 10px; 
     padding: auto;
     height: 100%;
     width: 100%;
+    border-radius: 25px;
+    font-size: 15px;
 }
-li{
-    text-align: left;  
-}
-.direccion{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin: 20px;
-}
+
 .card-text{
-    margin: 0;
+    margin-left: 15px; /* Ajusta este valor según sea necesario */
+    margin-right: 15px; /* Ajusta este valor según sea necesario */
+   text-align: center;
+   font-size: 15px;
+}
+p{
+    margin-left: 1px; /* Ajusta este valor según sea necesario */
+    margin-right: 15px; /* Ajusta este valor según sea necesario */
+   text-align: left;
+   font-size: 15px;
 }
 
-#tarjertaReseña{
-    margin: 40px;
-    padding: 45px;
+
+.icono {
+    margin-left: 15px; 
+    color: #ff83c2;
+   font-size: 20px;
+}
+
+.iframe-container {
+    width: 100%; 
+    height: 100%; /* Altura fija (ajusta según tus necesidades) */
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 25px;
 }
 
 
-/* Mapa */
-#map {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    height: 300px;
-    width: 800px;
-
+.iframe-responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    border: none; 
 }
+
+.overflow-hidden {
+    overflow: hidden!important;
+}
+
+.p-0 {
+    padding: 0!important;
+}
+
+.mt-n5 {
+    margin-top: -3rem!important;
+}
+
+.linear-gradient {
+    background-image: linear-gradient( #ff83c2 60%, #77aaff 30%, #b4ffe3 );
+ 
+}
+.rounded-circle {
+    border-radius: 50%!important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+.justify-content-center {
+    justify-content: center!important;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.rounded-2 {
+    border-radius: 7px !important;
+}
+
+.bg-light-info {
+    --bs-bg-opacity: 1;
+    background-color: rgb(48, 114, 206)!important;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.position-relative {
+    position: relative!important;
+}
+
+.shadow-none {
+    box-shadow: none!important;
+}
+
+.overflow-hidden {
+    overflow: hidden!important;
+}
+
+.border {
+    border: 1px solid #ff83c2 !important;
+}
+
+.fs-6 {
+    font-size: 1.25rem!important;
+}
+
+
+
+.d-block {
+    display: block!important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.user-profile-tab .nav-item .nav-link.active {
+    color: #5d87ff;
+    border-bottom: 2px solid #5d87ff;
+}
+
+
+.fw-semibold {
+    font-weight: 600!important;
+}
+.fs-4 {
+    font-size: 1rem!important;
+}
+
+.card, .bg-light {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+}
+
+.fs-2 {
+    font-size: .75rem!important;
+}
+
+.rounded-4 {
+    border-radius: 4px !important;
+}
+
+.ms-7 {
+    margin-left: 30px!important;
+}
+   
+span{
+    text-align: right;
+}
+
 
 /* Estrellas */
 .bi-star-fill{
     color: var(--secondary-color);
     margin: 3px;
+    font-size: 30px;
 }
 /* Boton de Reseña */
 .btn.btn-primary{
@@ -114,7 +184,7 @@ li{
 }
 .btn.btn-primary:hover{
     /* background-color: var(--primary-color); */
-    background-color: gray;
+    background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
 
 }
