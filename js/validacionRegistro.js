@@ -110,11 +110,33 @@ function validarFormulario(){
   }
 }
 
+function enviarDatosApi(datosCompletos) { //se agrego
+  const requestOptions = {
+    method: "POST",
+    headers: new Headers({
+      'Content-Type': 'application/json; charset=UTF-8'
+    }),
+    body: JSON.stringify(datosCompletos),
+    redirect: "follow"
+  };
+
+  fetch("http://3.141.25.162/api/usuarios/", requestOptions)
+    .then((response) => response.json())// responde con JSON
+    .then((result) => console.log("Resultado de la API",result))
+    .catch((error) => console.error("Error al enviar datos", error));
+  }
+
 form2.addEventListener("submit", e =>{
   e.preventDefault();
   const esFormularioValido= validarFormulario();
   const esLocalStorage= validarLocalStorage();
   if(esFormularioValido && esLocalStorage){
+    const datos=new FormData(form2);// se agrego
+    datos.set("descripcionPerfil", "Hola, me llamo Sofía y soy programadora web.");
+    datos.set("esPerfilEmpresa", datos.get("esPerfilEmpresa")==""? true : false);
+    const datosCompletos= Object.fromEntries(datos.entries()); //se agrego
+
+    enviarDatosApi(datosCompletos);
   // limpiarFormulario();
     form2.reset(); //Método que restablece los valores del input a su estado inicial
     Swal.fire({ //Alerta de SweetAlert
@@ -144,6 +166,8 @@ form2.addEventListener("submit", e =>{
           });
   }
 });
+
+
 
 //------------------------Validación formulario inicia sesión
 
