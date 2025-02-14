@@ -1,0 +1,47 @@
+
+body{
+ background-color: var(--bg-color);
+}
+
+.feed-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 30px auto 30px auto;
+}
+
+.post {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.post-content img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  
+    
+}
+
+
