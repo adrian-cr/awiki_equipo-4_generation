@@ -104,8 +104,9 @@ h1{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 150px;
     padding: 50px auto;
+    
 }
 
 .tarjetaImagen{
@@ -118,7 +119,7 @@ h1{
 }
 
 .imagen-container {
-    position: relative; /* 🔹 Necesario para que `.overlay` y `textoSobreImagen` se ubiquen bien */
+    position: relative; 
     width: 100%;
     height: 590px;
     border-radius: 55px;
