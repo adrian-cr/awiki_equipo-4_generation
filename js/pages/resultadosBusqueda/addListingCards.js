@@ -60,7 +60,7 @@ function addListingCard(listing){
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 
-fetch("../../../data/newListings.json")
+fetch("../../data/listings.json")
   .then(
     res => res.json())
   .then( res => {
