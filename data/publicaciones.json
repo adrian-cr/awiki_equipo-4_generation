@@ -2,52 +2,33 @@
     "data": [
       {
         "id": 1,
-        "descripción": "museo",
-        "imagen": "https://www.mexicoescultura.com/galerias/espacios/principal/mide_museo.jpg"
+        "descripción": "¡Hola a todos! Quería compartirles mi experiencuia en el Museo Interactivo de Economía. ¡Fue una visita fascinante! Nunca pensé que aprende sobre economía pudiera ser tan divertido e interesante",
+        "imagen": "https://www.mexicoescultura.com/galerias/espacios/principal/mide_museo.jpg",
+        "usuariosId": 1 
       },
       {
-        "categoria": "restaurante",
-        "descripcion": "York Pub debuta en la Colonia Americana de Guadalajara, Jalisco en el año 2012 como un verdadero y original pub inglés, inspirado en la cultura británica y su gran afición por el trago, la buena cerveza, ricos platillos y la convivencia en grupo.",
+        "id": 2,
+        "descripcion": "¡York es una delicia! Cené en York y fue increíble: tacos de pescado frescos, cocktails creativos y un ambiente con mucho estilo. ¡Imperdible en la Guadalajara!",
         "imagen": "https://yorkpub.com.mx/img/ambiente/foto4.jpg",
-        "nombre": "York Pub",
-        "rating": 4.8,
-        "ubicacion": {
-          "estado": "Jalisco",
-          "municipio": "Guadalajara"
-        }
+        "usuariosId": 2
       },
       {
-        "categoria": "museo",
-        "descripcion": " Museo con una colección importante de artefactos arqueológicos mayas en un ambiente diseñado elegantemente.",
+        "id": 3,
+        "descripcion": "Visité el Museo Maya y quedé fascinado: su arquitectura moderna, las increíbles piezas arqueológicas y la vista al mar lo hacen único. ¡Un must en Cancún!",
         "imagen": "https://a.travel-assets.com/findyours-php/viewfinder/images/res70/260000/260778-Maya-Cancun-Museum.jpg",
-        "nombre": "Museo Maya de Cancún y Zona Arqueológica de San Miguelito",
-        "rating": 4.5,
-        "ubicacion": {
-          "estado": "Quintana Roo",
-          "municipio": "Cancún"
-        }
+        "usuariosId": 3
       },
       {
-        "categoria": "museo",
-        "descripcion": "Sitio único en México, con una amplia variedad de especias endémicas y un ecosistema valioso para la investigación científica y el turismo.",
+        "id": 4,
+        "descripcion": "Mi estancia en el RIU Vallarta fue increíble: playa privada, alberques espectaculares y comida deliciosa. ¡El lugar perfecto para relajarse en Puerto Vallarta!",
         "imagen": "https://sanluis.eluniversal.com.mx/resizer/v2/RNU2OD3XJNHUDLSE6LDEIB4KNU.jpg?auth=a02a6ffa736d7344a2998b8f2e7d75cdf74713279aefa5e350ddcd5a126860e1",
-        "nombre": "Museo Casa Carranza",
-        "rating": 4.0,
-        "ubicacion": {
-          "estado": "San Luis Potosí",
-          "municipio": "Cuatro Ciénegas de Carranza"
-        }
+        "usuariosId":3
       },
       {
-        "categoria": "hotel",
-        "descripcion": "El Hotel Riu Cancún (Todo Incluido 24 horas) está situado en el corazón de una de las zonas más populares de Cancún para los turistas, en una ubicación privilegiada en una playa de arena blanca y agua turquesa.",
+        "id":5,
+        "descripcion": "Cenar en Porfirio's fue una experiencia gourmet: sus cortes de carne son exquisitos, el ambiente es elegante y los margaritas ¡inolvidables!",
         "imagen": "https://cdn-bunny.menteurbana.mx/wp-content/uploads/2016/08/1in2D78N-e24nKE6I-Destacada-9.jpg",
-        "nombre": "Hotel RIU",
-        "rating": 5.0,
-        "ubicacion": {
-          "estado": "Yucatán",
-          "municipio": "Cancún"
-        }
+        "usuariosId":4
       },
       {
         "categoria": "museo",

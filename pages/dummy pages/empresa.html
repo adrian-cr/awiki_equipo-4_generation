@@ -1,185 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil de Empresa</title>
-  <link rel="stylesheet" href="/styles/empresa.css">
+  <link rel="stylesheet" href="../../styles/empresa.css">
   <link rel="stylesheet" href="/styles/components/footer.css">
   <link rel="stylesheet" href="/styles/components/header.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-</head>
+   
+  </head>
 
 <body>
   <main>
-    <!-- Nombre de la empresa -->
-    <section id="galeria" class="container">
-      <div class="text-center pt-5">
-        <h1 id="nombreLugar"></h1>
-      </div>
 
-      <div class="contenedorImagen">
-        <div class="imagenListing">
-          <img id="imagenLugar" src="" alt="">
-        </div>
-      </div>
-    </section>
+   
+    <br>
+    <div class="container">
+      
+        <div class="card-body p-0">
+          <!-- Imagen principal -->
+           
 
-    <hr>
-    <h2>Conoce más sobre nosotros</h2>
-    <hr>
-    <div class="card tarjeta-descripcion">
-      <!-- <div class="card-header">Una pequeña descripción </div> -->
-      <div class="card-body">
-        <h5 class="card-title" id="tituloh5">Una breve descripción</h5>
-        <p class="card-text" id="descripcionLugares"></p>
-      </div>
-    </div>
-
-    <div class="contenedor-dos">
-      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-        <!-- <div class="card-header">Una pequeña descripción </div> -->
-        <div class="card-body" id="tarjetaReseña">
-          <h5 class="card-title">Información adicional</h5>
-          <p class="card-text">
-          </p>
-          <h6>Dirección y ubicación</h6>
-          <p class="direccion">
-            <span id="datoCalle"></span>,
-            <span id="datoNumero"></span>,
-            <span id="datoColonia"></span>,
-            <span id="datoMunicipio"></span>,
-            <span id="datoEstado"></span>,
-            <span id="datoCp"></span>.
-          </p>
-          <h6>Contacto y teléfono</h6>
-          <p class="direccion">
-            <span>Teléfono:</span>
-            <span id="datoTel"></span>
-            <span>Correo electrónico:</span>
-            <span id="datoEmail"></span>
-            <span>Sitio web:</span>
-            <span id="datoSitio"></span>
-            <!-- <span>Horarios de atención:</span> -->
-            <span id="datoHorario"></span>
-          </p>
-
-          <!-- <h6>Horarios de atención</h6> -->
-          <!-- <p class="card-text" id="datoHorario"></p> -->
-        </div>
-      </div>
-
-      <!-- <div>
-        <div class="card">
-          <div class="card-body">
-              <p>FUNCIONALIDAD TEMPORALMENTE NO DISPONIBLE</p>
-              <P>Mapa del lugar</P>
+          <div class="row align-items-center">
+            <div class="col-lg-4 order-lg-1 order-2">
+              <div class="d-flex align-items-center justify-content-around m-4">
+                <div class="form-group">
+                  <label>Ranking</label>
+                  <div class="star-rating" data-category="ranking">
+                    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                      name="rankingDestino" id="dest-rank-1" value="1" style="display:none">
+                    <label class="form-check-label" for="dest-rank-1">
+                      <i class="bi bi-star-fill"></i>
+                    </label>
+                    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                      name="rankingDestino" id="dest-rank-2" value="2" style="display:none">
+                    <label class="form-check-label" for="dest-rank-2">
+                      <i class="bi bi-star-fill"></i>
+                    </label>
+                    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                      name="rankingDestino" id="dest-rank-3" value="3" style="display:none">
+                    <label class="form-check-label" for="dest-rank-3">
+                      <i class="bi bi-star-fill"></i>
+                    </label>
+                    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                      name="rankingDestino" id="dest-rank-4" value="4" style="display:none">
+                    <label class="form-check-label" for="dest-rank-4">
+                      <i class="bi bi-star-fill"></i>
+                    </label>
+                    <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
+                      name="rankingDestino" id="dest-rank-5" value="5" style="display:none" checked>
+                    <label class="form-check-label" for="dest-rank-5">
+                      <i class="bi bi-star-fill"></i>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 mt-n3 order-lg-2 order-1">
+              <div class="mt-n5">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                  <div class="linear-gradient d-flex align-items-center justify-content-center rounded-circle" style="width: 110px; height: 110px;">
+                    <div class="border border-4 border-white d-flex align-items-center justify-content-center rounded-circle overflow-hidden" style="width: 100px; height: 100px;">
+                      <img id="imagenLugar" src="" alt="" class="w-100 h-100 img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <h5 class="fs-5 mb-3 fw-semibold card-title" id="nombreLugar"></h5>
+                  <p class="mb-0 fs-4"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 order-last">
+              <ul class="list-unstyled d-flex align-items-center justify-content-center justify-content-lg-start my-3 gap-3">
+                <li><button class="btn btn-primary">Añadir reseña</button></li>
+              </ul>
+            </div>
           </div>
-        </div> -->
-
-      <!-- </div> -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx"
-        width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <!-- </div> -->
-
-
-    </div>
-
-
-
-    <div class="contenedor-dos">
-      <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-        <!-- <div class="card-header">Una pequeña descripción </div> -->
-        <div class="card-body" id="tarjetaReseña">
-          <h5 class="card-title">Rating</h5>
-          <p class="card-text" id="datoRatin"></p>
-
-          <!-- Modal de reseña -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@mdo" disabled>En construcción, no tocar</button>
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Cuéntanos tu experiencia</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="mb-3">
-                      <label for="recipient-name" class="col-form-label">Nombre del lugar:</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                      <label>¿Cómo calificarías tu experiencia en este destino?</label>
-                      <div class="star-rating" data-category="experiencia">
-                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
-                          name="experienciaDestino" id="dest-exp-1" value="1" style="display:none">
-                        <label class="form-check-label" for="dest-exp-1">
-                          <i class="bi bi-star-fill"></i>
-                        </label>
-                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
-                          name="experienciaDestino" id="dest-exp-2" value="2" style="display:none">
-                        <label class="form-check-label" for="dest-exp-2">
-                          <i class="bi bi-star-fill"></i>
-                        </label>
-                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
-                          name="experienciaDestino" id="dest-exp-3" value="3" style="display:none">
-                        <label class="form-check-label" for="dest-exp-3">
-                          <i class="bi bi-star-fill"></i>
-                        </label>
-                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
-                          name="experienciaDestino" id="dest-exp-4" value="4" style="display:none">
-                        <label class="form-check-label" for="dest-exp-4">
-                          <i class="bi bi-star-fill"></i>
-                        </label>
-                        <input class="bsu-form-destination-exp-option bsu-form-subfield form-check-input" type="radio"
-                          name="experienciaDestino" id="dest-exp-5" value="5" style="display:none" checked>
-                        <label class="form-check-label" for="dest-exp-5">
-                          <i class="bi bi-star-fill"></i>
-                        </label>
-                      </div>
-                    </div>
-
-                    <div class="mb-3">
-                      <label for="message-text" class="col-form-label">Descripción:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Enviar</button>
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <div class="row">
+              <div class="col-lg-4">
+               
+                <div class="card-body tarjetaresena" id="tarjetaReseña">
+                  <br>
+                  <h4 class="card-title fw-semibold mb-3" id="tituloh5">Conócenos</h4>
+                  <p class="card-text" id="descripcionLugares"></p>
+                  <br>
+                  <ul class="list-unstyled mb-0">
+                      <li class="infolugar d-flex align-items-center gap-3 mb-2">
+                          <i class="bi bi-envelope-fill icono"></i>
+                          <span id="datoEmail"></span>
+                      </li>
+                      <li class="d-flex align-items-center gap-3 mb-2">
+                          <i class="bi bi-telephone-fill icono"></i>
+                          <span id="datoTel"></span>
+                      </li>
+                      <li class="d-flex align-items-center gap-3 mb-2">
+                          <i class="bi bi-geo-alt-fill icono"></i>
+                          <p class="direccion">
+                              <span id="datoCalle"></span>,
+                              <span id="datoNumero"></span>,
+                              <span id="datoColonia"></span>,
+                              <span id="datoMunicipio"></span>,
+                              <br>
+                              <span id="datoEstado"></span>,
+                              <span id="datoCp"></span>.
+                          </p>
+                      </li>
+                      <li class="d-flex align-items-center gap-3 mb-2">
+                          <i class="bi bi-globe icono"></i>
+                          <span id="datoSitio"></span>
+                      </li>
+                      <li class="d-flex align-items-center gap-3 mb-2">
+                          <i class="bi bi-clock icono"></i>
+                          <span id="datoHorario"></span>
+                      </li>
+                  </ul>
+              </div>
+             
+              </div>
+              <div class="col-lg-8">
+                
+                <div class="card-body border-bottom">
+                  <div class="iframe-container">
+                      <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx"
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"
+                          class="iframe-responsive">
+                      </iframe>
+                  </div>
+              </div>
+                
               </div>
             </div>
           </div>
         </div>
-
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.463935171718!2d-99.140920925087!3d19.435554440587175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f92cf20ea183%3A0x2cf06c7f4a8f31ff!2sMIDE%2C%20Museo%20Interactivo%20de%20Econom%C3%ADa!5e0!3m2!1ses-419!2smx!4v1738702266101!5m2!1ses-419!2smx" width="600" height="400" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-      </div>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-      data-bs-whatever="@mdo" disabled>No tocar, funcionaldad en construcción</button>
-      <!-- <a href="/pages/dummy pages/dummyUserPage.html" class="btn btn-secondary mt-3" id="button1"  disabled>No tocar,
-        funcionalidad en construcción</a> -->
-
+    
+  
+      <!-- Botones adicionales -->
+      <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo" disabled>No tocar, funcionalidad en construcción</button> -->
+      <a href="/pages/dummy pages/dummyUserPage.html" class="btn btn-secondary mt-3" id="button1" disabled>No tocar,
+        funcionalidad en construcción</a>
+    </div>
   </main>
-
-
-  <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script> -->
-  <!-- <script src="../js/mapaEmpresa.js"></script> -->
+  
+  <!-- Scripts -->
+  <script src="../js/mapaEmpresa.js"></script>
   <script type="module" src="/js/inyeccionHTML.js"></script>
   <script src="/js/inyeccionLugares.js"></script>
-  <script src="/js/dummyUserPage.js"></script>
+  <script src="../../js/pages/resultadosBusqueda/addListingCards.js"></script> -->
+  <!-- <script src="/js/dummyUserPage.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-</body>
 
+
+ 
+</body>
 </html>

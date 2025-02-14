@@ -14,13 +14,6 @@ const correoRegistro=document.getElementById("formCorreo");
 const contraseñaRegistro=document.getElementById("inputContraseña");
 const confirmarContraseña= document.getElementById("inputConfirmar");
 
-  // // Verificar los valores de los campos
-  // console.log("Nombre:", nombreRegistro.value);
-  // console.log("Apellido:", apellidoRegistro.value);
-  // console.log("Correo:", correoRegistro.value);
-  // console.log("Contraseña:", contraseñaRegistro.value);
-  // console.log("Confirmar Contraseña:", confirmarContraseña.value);
- 
   //Mostrar, quitar errores y limpiar campos
   let mensajesError=[];
 
@@ -37,16 +30,7 @@ const confirmarContraseña= document.getElementById("inputConfirmar");
     errores.forEach(err=> err.remove());
   }
 
-  // function limpiarFormulario(){
-  //   console.log("limpiando campos")
-  //   const inputsRegistro= document.querySelectorAll('#formulario2 input'); 
-  //   Array.from(inputsRegistro).forEach(input =>{
-  //     console.log("limpiando", nombreRegistro);
-  //     inputsRegistro.innerHTML=" ";
-  //   });
-  // }
-
-
+ 
 /**Validación del formulario */
 function validarNombre(){
   let nombreRegex= new RegExp(/^[a-zA-ZÀ-ÿ\s]{1,40}$/);
@@ -126,11 +110,33 @@ function validarFormulario(){
   }
 }
 
+function enviarDatosApi(datosCompletos) { //se agrego
+  const requestOptions = {
+    method: "POST",
+    headers: new Headers({
+      'Content-Type': 'application/json; charset=UTF-8'
+    }),
+    body: JSON.stringify(datosCompletos),
+    redirect: "follow"
+  };
+
+  fetch("http://3.141.25.162/api/usuarios/", requestOptions)
+    .then((response) => response.json())// responde con JSON
+    .then((result) => console.log("Resultado de la API",result))
+    .catch((error) => console.error("Error al enviar datos", error));
+  }
+
 form2.addEventListener("submit", e =>{
   e.preventDefault();
   const esFormularioValido= validarFormulario();
   const esLocalStorage= validarLocalStorage();
   if(esFormularioValido && esLocalStorage){
+    const datos=new FormData(form2);// se agrego
+    datos.set("descripcionPerfil", "Hola, me llamo Sofía y soy programadora web.");
+    datos.set("esPerfilEmpresa", datos.get("esPerfilEmpresa")==""? true : false);
+    const datosCompletos= Object.fromEntries(datos.entries()); //se agrego
+
+    enviarDatosApi(datosCompletos);
   // limpiarFormulario();
     form2.reset(); //Método que restablece los valores del input a su estado inicial
     Swal.fire({ //Alerta de SweetAlert
@@ -160,7 +166,6 @@ form2.addEventListener("submit", e =>{
           });
   }
 });
-
 
 
 
