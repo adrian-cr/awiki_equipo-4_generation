@@ -19,6 +19,13 @@ const fillStar = (starPosition, rating) => {
 
 }
 
+//Obtener categoría de la URL
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+const categoriaSeleccionada = getQueryParam("categoria");
+
 function addListingCard(listing){
   const listingCardHTML = `<a href="../../pages/dummy pages/empresa.html?listing=1">
     <div class="card" title="${capitalize(listing.categoria)} • ${listing.ubicacion.municipio}, ${listing.ubicacion.estado}">
@@ -58,4 +65,15 @@ fetch("../data/listings.json")
   .then( res => {
     listings = listings.concat(res.data);
     listings.forEach(e => addListingCard(e));
+
+    if (categoriaSeleccionada) {
+      listings = listings.filter(lugar => lugar.categoria.toLowerCase() === categoriaSeleccionada.toLowerCase());
+    }
+
+    // Limpiar el contenedor antes de agregar las tarjetas
+    listingsContainer.innerHTML = "";
+
+    // Agregar los lugares (filtrados o todos)
+    listings.forEach(e => addListingCard(e));
+
     });
