@@ -4,7 +4,7 @@ import { capitalize, fillStar } from "../../../modules/utils.js";
 var listings = [];
 const listingsContainer = document.getElementsByClassName("listings")[0];
 
-
+const isHitHubPage = window.location.href.indexOf("github") != -1;
 
 //Obtener categoría de la URL
 function getQueryParam(param) {
@@ -47,7 +47,7 @@ function addListingCard(listing){
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 // ruteo original  ../../data/listings.json
-fetch("../../data/listings.json")
+fetch(`${isHitHubPage? "../" :"/"}data/listings.json`)
   .then(
     res => res.json())
   .then( res => {
