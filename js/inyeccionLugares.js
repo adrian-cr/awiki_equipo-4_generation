@@ -1,6 +1,6 @@
 const urlParams= new URLSearchParams(window.location.search);
 const listingId= urlParams.get('newListing');
-console.log("ID del newlistin del URL", listingId);
+// console.log("ID del listin del URL", listingId);
 const titulo=document.getElementById("nombreLugar");
 const descripcion= document.getElementById("descripcionLugares");
 const imagen= document.getElementById("imagenLugar");
@@ -14,19 +14,18 @@ const telefono= document.getElementById("datoTel");
 const email=document.getElementById("datoEmail");
 const sitio=document.getElementById("datoSitio");
 const horario= document.getElementById("datoHorario");
-const URL='http://3.141.25.162/api/listings/';
-//'../../data/newListings.json'
+const URL=`http://3.141.25.162/api/listings/${listingId}`;
+//'../../data/listings.json'
 
 fetch(URL)
-  .then( res => res.json())
-  .then( res => {
+.then( res => res.json())
+.then( res => {
     console.log("DATOS OBTENIDOS", res);
-    const listings=res.data;
-        console.log(listings);
-        const listing= listings.find(item=>item.id==listingId)
+    const listing=res;
         if(listing){
             titulo.textContent=listing.nombre;
             descripcion.textContent=listing.descripcion;
+            imagen.setAttribute("src", listing.imagen);
             imagen.src=listing.imagen;
             calle.textContent=listing.nombreCalle;
             numero.textContent=listing.numeroCalle;
@@ -37,6 +36,7 @@ fetch(URL)
             telefono.textContent=listing.telefonoContacto;
             email.textContent=listing.emailContacto;
             sitio.textContent=listing.sitioWeb;
+
             // horario.textContent=listing.horarios;
 
         }else{
@@ -46,7 +46,7 @@ fetch(URL)
         }
     })
     .catch(err=>{
-            console.log("No se pudieron obtener los productos");
+            // console.log("No se pudieron obtener los productos");
             titulo.textContent="Error al cargar la información";
             descripcion.textContent="Lo sentimos, no hay información que mostrar";
     })
