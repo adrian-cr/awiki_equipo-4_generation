@@ -46,8 +46,8 @@ function addListingCard(listing){
     </a>`;
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
-
-fetch("../../data/listings.json")
+// ruteo original  ../../data/listings.json
+fetch("../../../data/listings.json")
   .then(
     res => res.json())
   .then( res => {
@@ -67,5 +67,4 @@ fetch("../../data/listings.json")
 
     });
 
-    // ../../../data/newListings.json
-    // ../../data/listings.json
+   

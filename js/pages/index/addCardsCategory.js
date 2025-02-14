@@ -54,7 +54,8 @@ function addListingCard(listing){
 }
 
 // Obtener los datos y mostrar las categorías
-fetch("../data/listings.json")
+
+fetch("../../../data/listings.json")
   .then(res => res.json())
   .then(res => {
     const categories = getFilteredCategories(res.data);
