@@ -20,7 +20,7 @@
       "categoriaHotel": null,
       "horarios": "martes=10:00-18:00;miercoles=10:00-18:00;jueves=10:00-18:00;viernes=10:00-18:00;sabado=10:00-18:00;domingo=10:00-18:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0,
+      "rating": 3.6,
       "usuariosId": 3
     },
     {
@@ -43,7 +43,7 @@
       "categoriaHotel": null,
       "horarios": "lunes=13:00-01:00;martes=13:00-01:00;miercoles=13:00-01:00;jueves=13:00-01:00;viernes=13:00-02:00;sabado=13:00-02:00;domingo=13:00-01:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0,
+      "rating": 3.9,
       "usuariosId": 3
     },
     {
@@ -66,7 +66,7 @@
       "categoriaHotel": null,
       "horarios": "martes=09:00-18:00;miercoles=09:00-18:00;jueves=09:00-18:00;viernes=09:00-18:00;sabado=09:00-18:00;domingo=09:00-18:00;",
       "horarioCheckInOut": null,
-      "rating": 5.0,
+      "rating": 4.8,
       "usuariosId": 3
     },
     {

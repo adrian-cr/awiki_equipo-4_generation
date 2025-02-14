@@ -16,7 +16,7 @@ const categoriaSeleccionada = getQueryParam("categoria");
 function addListingCard(listing){
   const listingLink = `../../pages/dummy pages/empresa.html?newListing=${listing.id}`;
   const listingCardHTML = `<a href="${listingLink}">
-    <div class="card" title="${capitalize(listing.categoria)} • ${listing.ubicacion.municipio}, ${listing.ubicacion.estado}">
+    <div class="card" title="${capitalize(listing.tipoNegocio)} • ${listing.municipio}, ${listing.estado}">
       <div class="card-image-wrapper">
         <img src=${listing.imagen} class="card-image" alt="image">
       </div>
@@ -26,12 +26,12 @@ function addListingCard(listing){
         </div>
           <p class="card-details-wrapper" >
             <p class="card-category">
-              <img class="category-icon${listing.categoria == "restaurante" ? " smaller" : ""}" src="../assets/svg/${bizIcons[listing.categoria]}.svg"/>
-              ${capitalize(listing.categoria)}
+              <img class="category-icon${listing.tipoNegocio == "restaurante" ? " smaller" : ""}" src="../assets/svg/${bizIcons[listing.tipoNegocio]}.svg"/>
+              ${capitalize(listing.tipoNegocio)}
             </p>
           </p>
           <p class="card-location">
-              ${listing.ubicacion.municipio} (${stateAbbreviations[listing.ubicacion.estado]})
+              ${listing.municipio} (${stateAbbreviations[listing.estado]})
           </p>
           <p class="card-star-rating">
             <i class="bi bi-star${fillStar(1, listing.rating)} rating-star"></i>
@@ -47,7 +47,7 @@ function addListingCard(listing){
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 // ruteo original  ../../data/listings.json
-fetch(`${isHitHubPage? "../" :"/"}data/listings.json`)
+fetch(`${isHitHubPage? "../" :"/"}data/newListings.json`)
   .then(
     res => res.json())
   .then( res => {
@@ -56,7 +56,7 @@ fetch(`${isHitHubPage? "../" :"/"}data/listings.json`)
     listings.forEach(e => addListingCard(e));
 
     if (categoriaSeleccionada) {
-      listings = listings.filter(lugar => lugar.categoria.toLowerCase() === categoriaSeleccionada.toLowerCase());
+      listings = listings.filter(lugar => lugar.tipoNegocio.toLowerCase() === categoriaSeleccionada.toLowerCase());
     }
 
     // Limpiar el contenedor antes de agregar las tarjetas
