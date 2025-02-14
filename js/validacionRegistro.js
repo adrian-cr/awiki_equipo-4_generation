@@ -14,13 +14,6 @@ const correoRegistro=document.getElementById("formCorreo");
 const contraseñaRegistro=document.getElementById("inputContraseña");
 const confirmarContraseña= document.getElementById("inputConfirmar");
 
-  // // Verificar los valores de los campos
-  // console.log("Nombre:", nombreRegistro.value);
-  // console.log("Apellido:", apellidoRegistro.value);
-  // console.log("Correo:", correoRegistro.value);
-  // console.log("Contraseña:", contraseñaRegistro.value);
-  // console.log("Confirmar Contraseña:", confirmarContraseña.value);
- 
   //Mostrar, quitar errores y limpiar campos
   let mensajesError=[];
 
@@ -37,16 +30,7 @@ const confirmarContraseña= document.getElementById("inputConfirmar");
     errores.forEach(err=> err.remove());
   }
 
-  // function limpiarFormulario(){
-  //   console.log("limpiando campos")
-  //   const inputsRegistro= document.querySelectorAll('#formulario2 input'); 
-  //   Array.from(inputsRegistro).forEach(input =>{
-  //     console.log("limpiando", nombreRegistro);
-  //     inputsRegistro.innerHTML=" ";
-  //   });
-  // }
-
-
+ 
 /**Validación del formulario */
 function validarNombre(){
   let nombreRegex= new RegExp(/^[a-zA-ZÀ-ÿ\s]{1,40}$/);
@@ -160,9 +144,6 @@ form2.addEventListener("submit", e =>{
           });
   }
 });
-
-
-
 
 //------------------------Validación formulario inicia sesión
 

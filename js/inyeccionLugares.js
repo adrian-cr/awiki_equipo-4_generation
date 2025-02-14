@@ -1,6 +1,6 @@
 const urlParams= new URLSearchParams(window.location.search);
-const listingId= urlParams.get('listing');
-console.log("ID del listin del URL", listingId);
+const listingId= urlParams.get('newListing');
+console.log("ID del newlistin del URL", listingId);
 const titulo=document.getElementById("nombreLugar");
 const descripcion= document.getElementById("descripcionLugares");
 const imagen= document.getElementById("imagenLugar");
@@ -14,9 +14,10 @@ const telefono= document.getElementById("datoTel");
 const email=document.getElementById("datoEmail");
 const sitio=document.getElementById("datoSitio");
 const horario= document.getElementById("datoHorario");
+const URL='http://3.141.25.162/api/listings/';
+//'../../data/newListings.json'
 
-
-fetch('../../data/newListings.json')
+fetch(URL)
   .then( res => res.json())
   .then( res => {
     console.log("DATOS OBTENIDOS", res);
