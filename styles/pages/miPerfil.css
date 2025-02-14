@@ -1,0 +1,183 @@
+@import url(../style.css);
+
+
+#mp .main {
+  padding:0;
+  text-align: left;
+}
+
+/* SECCIÓN SUPERIOR */
+
+#mp #imagen-portada {
+  aspect-ratio: 4/1;
+  object-fit: cover;
+  object-position: 0 20%;
+  height: 20vw;
+  width: 100%;
+}
+
+#mp #imagen-perfil {
+  aspect-ratio: 1/1;
+  border: solid 5px var(--primary-color);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0 20%;
+  margin-left: 13vw;
+  margin-top: -10vw;
+  width: 20vw;
+}
+
+#mp .speech-bubble {
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  color: white;
+  left: 27vw;
+  opacity: .95;
+  padding: 1vw 2vw;
+  position: absolute;
+  top: 14vw;
+  width: max-content;
+}
+
+#mp .speech-bubble::after {
+  border-right: 5vw solid transparent;
+  border-top: 3vw solid var(--secondary-color);
+  content: '';
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 4vw;
+  width: 0;
+  z-index: -1;
+
+}
+
+#mp #nombre-usuario {
+  margin: 0;
+  font-size: 3vw;
+}
+/*-------------------------------------------*/
+
+/* ***** SECCIÓN PRINCIPAL ***** */
+
+/*----------------- MI INFO -----------------*/
+#mp #seccion-principal {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+#mp .dashboard {
+  background-color: white;
+  /* border: solid 3px var(--primary-color); */
+  border-radius: 25px;
+  height:100vh;
+  padding: 2% 1%;
+}
+
+#mp #info-usuario {
+  text-align: center;
+  width: 40%;
+}
+
+#mp #feed-usuario {
+  width: 50%;
+}
+
+#mp .dashboard-section {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  margin: 5%;
+  padding: 5%;
+}
+
+#mp .dashboard-subtitle {
+  font-size: 1.5vw;
+}
+
+/*------------- TARJETA CALIFICACION -------------*/
+#mp .review-card {
+  align-items: center;
+  background-color: #fff;
+  border: 3px solid var(--primary-color);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#mp .card-info-wrapper {
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 14px 14px 0 0;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  width: 100%;
+}
+
+#mp .review-card .card-title-wrapper {
+  text-align: left;
+  margin: 1vw;
+}
+
+#mp .review-card .card-title-image {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-left: 1vw;
+  width: 3vw;
+}
+
+#mp .review-card .card-title {
+  font-size: 1.3vw;
+  width: 22vw;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  /*display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;*/
+}
+
+#mp .rating-container {
+  height: fit-content;
+}
+
+#mp .rating-star {
+  font-size: 1.5vw;
+}
+
+#mp .rating-star.bi-star{
+  color: var(--primary-color)
+}
+
+#mp .rating-star.bi-star-fill{
+  color: var(--secondary-color)
+}
+
+#mp .card-review-wrapper {
+  padding: 0.5vw
+}
+
+#mp .review-text {
+  display: -webkit-box;
+  font-size: 1rem;
+  font-style: italic;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+#mp #aviso-sin-resenas {
+  background-color: rgb(155, 155, 155);
+  height: 10vw;
+  color: white;
+}
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+/*----------------- MI FEED -----------------*/
+/*-------------------------------------------*/
