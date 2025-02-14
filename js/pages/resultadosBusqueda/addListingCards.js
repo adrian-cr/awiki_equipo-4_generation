@@ -46,7 +46,7 @@ function addListingCard(listing){
     </a>`;
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
-// ruteo original  ../../data/listings.json
+
 fetch(`${isGitHubPage? "../" :"/"}data/newListings.json`)
   .then(
     res => res.json())
