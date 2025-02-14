@@ -1,7 +1,24 @@
 import * as formatters from "../../../../modules/formatters.js";
 
-/* DOM ELEMENT CONSTANT */
+/* DOM ELEMENT CONSTANTS */
 const formElement = document.getElementsByTagName("form")[0];
+const imageButton = document.querySelector('#btn-imagen');
+const image = document.querySelector('#user-photo');
+
+/* CLOUDINARY IMAGE LOADER */
+let imgUrl = null;
+let widget_cloudinary = cloudinary.createUploadWidget(
+  {
+    cloudName: 'dxqqdk4jv',
+    uploadPreset: 'preset_awiki'
+  },
+  (err, result) => {
+      if(!err && result && result.event === 'success'){
+          console.log('Imagen subida con exito', result.info);
+          image.src = result.info.secure_url;
+          imgUrl = result.info.url;
+      }
+});
 
 /* DATA GETTERS */
 const getScheduleData = data => {
@@ -33,23 +50,39 @@ const isCheckInOutField = fieldName => {
   return ["checkIn", "checkOut"].includes(fieldName);
 }
 
-/* MAIN EVENT LISTENER */
+/* OUTPUT FORMATTER */
+
+/* MAIN EVENT LISTENERS */
+imageButton.addEventListener('click', () => {
+  widget_cloudinary.open();
+}, false);
+
 formElement.addEventListener("submit", e => {
-  e.preventDefault();
   const formData = new FormData(formElement);
+  e.preventDefault();
   //Format, set street number:
   formData.set("numeroCalle", formatters.streetNumberFormatter(formData.get("numeroCalle")));
   //Format, set schedule data:
   const [days, open, closed] = getScheduleData(formData);
   formData.set("horarios", formatters.scheduleFormatter(days, open, closed));
-  //Format, set check-in/out data:
+  //Format, set check-in/out and hotel category data:
   if (formData.get("tipoNegocio")=="hotel"){
     const [checkIn, checkOut] = getCheckInOutData(formData);
     formData.set("horarioCheckInOut", formatters.checkInOutFormatter(checkIn, checkOut));
   }
   else {
     formData.set("horarioCheckInOut", null);
+    formData.set("categoriaHotel", null);
   }
+  //Set product type data:
+  if (formData.get("tipoNegocio")!="tienda"){
+    formData.set("tipoProductos", null);
+  }
+  //Set image url:
+  formData.set("imagen", imgUrl);
+  //Set municipality (TODO - ADD NEW FORM FIELD):
+  formData.set("municipio", "N/A");
+
   //Remove superfluous fields:
   formData.entries().toArray().forEach(e => {
     if (isScheduleField(e[0]) || isCheckInOutField(e[0])) {
@@ -58,8 +91,27 @@ formElement.addEventListener("submit", e => {
       return;
     }
   })
-  //Send formatted data [NOT YET IMPLEMENTED]:
-  console.log(formData.entries().toArray());
-})
 
-//Maps
+  //Convert formData to JSON:
+  const dataObject = {};
+  for (let pair of formData.entries().toArray()){
+    dataObject[pair[0]] = pair[1];
+  }
+  const formattedData = formatters.formatOutput(dataObject);
+  formattedData.usuariosId = 6;
+  const dataJSON = JSON.stringify(formattedData);
+
+  //Send JSON to remote server:
+  const requestOptions = {
+    method: "POST",
+    body: dataJSON,
+    redirect: "follow",
+    headers: new Headers({
+      'Content-Type': 'application/json',
+    })}
+
+  fetch("http://3.141.25.162/api/listings/", requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.error(error));
+});
