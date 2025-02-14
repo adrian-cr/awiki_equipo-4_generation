@@ -1,47 +1,92 @@
+@import url(../../styles/style.css);
 
-body{
- background-color: var(--bg-color);
+body {
+    background-color: var(--bg-color);
 }
-
 .feed-container {
-    width: 100%;
+    width: 95%; 
     max-width: 800px;
     background-color: transparent;
     padding: 10px;
     border-radius: 10px;
-    margin: 30px auto 30px auto;
+    margin: 30px auto; 
 }
-
 .post {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 10px;
     margin: 15px;
 }
-
 .post-header {
     display: flex;
     align-items: center;
-    
 }
-
 .avatar {
     border-radius: 50%;
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
-
 .username {
-    font-weight: bold;
+    font-family: var(--primary-font);
 }
-
-.post-content img{
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
-  
+.post-content img {
+    max-width: 100%;
+    height: auto; 
+    border-radius: 10px;
+}
+.create-post-input {
+    max-width: 100%; 
+    width: 100%;
+    border-radius: 15px;    
+    padding: 10px; 
     
 }
 
+.post-actions {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 10px; 
+}
+
+.post-actions button {
+    margin-left: 10px; /* Espacio entre los botones (si hay más de uno) */
+}
+
+button, #btn-imagen{
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color:var(--secondary-color);
+    border-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) { 
+  .feed-container {
+        width: 90%; 
+    }
+
+  .post {
+        margin: 10px; 
+    }
+}
+
+@media (max-width: 576px) { 
+  .feed-container {
+        width: 95%; 
+    }
+  .post {
+        margin: 5px; 
+        padding: 10px; 
+    }
+  .avatar {
+        width: 30px; 
+        height: 30px;
+    }
+}
 
