@@ -38,18 +38,16 @@ function getFilteredCategories(listings) {
 // Función para agregar las tarjetas de categorías
 function addListingCard(listing){
   const listingCardHTML = `
-                <a href="pages/resultadosBusqueda.html?categoria=${listing.categoria}" class="tarjeta-link">
-                  <div class="tarjetaImagen" style="position: relative;">
-                   <div class="imagen-container">
-                    <img class="imagen" src="${listing.imagen}">
-                    <div class="overlay"></div>
-                    <div class="textoSobreImagen">
-                      ${capitalize(listing.categoria)}
-                    </div>
-                  </div>
-                  </div>
-
-    `;
+    <a href="pages/resultadosBusqueda.html?categoria=${listing.categoria}" class="tarjeta-link">
+      <div class="tarjetaImagen" style="position: relative;">
+        <div class="imagen-container">
+        <img class="imagen" src="${listing.imagen}">
+        <div class="overlay"></div>
+        <div class="textoSobreImagen">
+          ${capitalize(listing.categoria)}
+        </div>
+      </div>
+      </div>`;
     categoriasContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 

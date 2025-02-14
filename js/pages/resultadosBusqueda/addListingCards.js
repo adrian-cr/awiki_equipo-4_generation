@@ -47,7 +47,7 @@ function addListingCard(listing){
   listingsContainer.insertAdjacentHTML("beforeend", listingCardHTML);
 }
 // ruteo original  ../../data/listings.json
-fetch("../../../data/listings.json")
+fetch("../../data/listings.json")
   .then(
     res => res.json())
   .then( res => {
@@ -66,5 +66,3 @@ fetch("../../../data/listings.json")
     listings.forEach(e => addListingCard(e));
 
     });
-
-   
