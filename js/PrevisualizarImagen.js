@@ -8,7 +8,6 @@ const imagePreview = document.getElementById('image-preview');
               reader.onload = (e) => {
                 imagePreview.src = e.target.result;
               };
-
               reader.readAsDataURL(file);
   }
 );

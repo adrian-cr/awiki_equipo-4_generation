@@ -206,7 +206,6 @@ function validarFormularioSesion(){
   }
 
 }
-
 // form1.addEventListener("submit", e =>{
 //   e.preventDefault();
 //   const esFormularioValidoSesion= validarFormularioSesion();

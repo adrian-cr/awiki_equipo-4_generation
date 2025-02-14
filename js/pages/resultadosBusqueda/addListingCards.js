@@ -1,23 +1,10 @@
 import {stateAbbreviations, bizIcons} from "../../../modules/dictionaries.js";
-import { capitalize } from "../../../modules/utils.js";
+import { capitalize, fillStar } from "../../../modules/utils.js";
 
 var listings = [];
 const listingsContainer = document.getElementsByClassName("listings")[0];
 
-const fillStar = (starPosition, rating) => {
-  //rating=4.5, starPosition=3 --> STAR FILLED
-  rating = parseFloat(rating);
-  starPosition = parseFloat(starPosition);
-  if (rating >= starPosition) {
-    return "-fill";
-  }
-  //rating=1.5, starPosition=3 --> STAR EMPTY
-  if (rating > starPosition - 1) {
-    return "-half"
-  }
-  return "";
 
-}
 
 //Obtener categoría de la URL
 function getQueryParam(param) {

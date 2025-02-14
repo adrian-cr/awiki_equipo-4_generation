@@ -115,7 +115,7 @@ export const isEmailValid = fieldID => {
 }
 export const isUrlValid = fieldID => {
   let fieldValue = document.getElementById(fieldID).value;
-  let websiteValRegex = new RegExp(/^(www\.)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,5}$/);
+  let websiteValRegex = new RegExp(/^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#-]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/);
   return websiteValRegex.test(fieldValue);
 }
 export const isPasswordValid = fieldID =>{

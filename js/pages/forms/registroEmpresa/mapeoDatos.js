@@ -107,6 +107,6 @@ fetch("../../data/newListings.json")
     res => res.json())
   .then( res => {
     //Import data [NOT YET IMPLEMENTED]:
-    let listing = res.data[2];
+    let listing = res.data[4];
     insertValues(formElement, listing);
     });
