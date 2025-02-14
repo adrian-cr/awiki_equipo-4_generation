@@ -20,6 +20,11 @@ const getCheckInOutData = data => {
   return null;
 }
 
+//lat-lon
+ const getLatLonData = data =>{
+
+ }
+
 /* BOOLEAN-RETURNING FUNCTIONS */
 const isScheduleField = fieldName => {
   return ["Abierto", "apertura", "cierre"].some(e => fieldName.indexOf(e) != -1);
@@ -56,3 +61,5 @@ formElement.addEventListener("submit", e => {
   //Send formatted data [NOT YET IMPLEMENTED]:
   console.log(formData.entries().toArray());
 })
+
+//Maps
