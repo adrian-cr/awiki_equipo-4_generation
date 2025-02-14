@@ -38,7 +38,7 @@ function getFilteredCategories(listings) {
 // Función para agregar las tarjetas de categorías
 function addListingCard(listing){
   const listingCardHTML = `
-                <a href="/pages/resultadosBusqueda.html?categoria=${listing.categoria}" class="tarjeta-link">
+                <a href="pages/resultadosBusqueda.html?categoria=${listing.categoria}" class="tarjeta-link">
                   <div class="tarjetaImagen" style="position: relative;">
                    <div class="imagen-container">
                     <img class="imagen" src="${listing.imagen}">
