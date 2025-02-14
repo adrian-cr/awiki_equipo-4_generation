@@ -21,6 +21,10 @@ body {
     display: flex;
     align-items: center;
 }
+
+.create-post-header{
+    display: flex;
+}
 .avatar {
     border-radius: 50%;
     width: 40px;
