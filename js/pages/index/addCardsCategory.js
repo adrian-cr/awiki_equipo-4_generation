@@ -20,18 +20,18 @@ function getCategoryImage(categoria) {
 
 function getFilteredCategories(listings) {
     const categoriasUnicas = {};
-  
+
     listings.forEach(lugar => {
       if (categoriasPermitidas.includes(lugar.categoria)) {
         if (categoriasPermitidas.includes(lugar.categoria) && !categoriasUnicas[lugar.categoria]) {
             categoriasUnicas[lugar.categoria] = {
                 categoria: lugar.categoria,
-                imagen: getCategoryImage(lugar.categoria) 
+                imagen: getCategoryImage(lugar.categoria)
           };
         }
       }
     });
-  
+
     return Object.values(categoriasUnicas);
   }
 
@@ -42,7 +42,7 @@ function addListingCard(listing){
                   <div class="tarjetaImagen" style="position: relative;">
                    <div class="imagen-container">
                     <img class="imagen" src="${listing.imagen}">
-                    <div class="overlay"></div> 
+                    <div class="overlay"></div>
                     <div class="textoSobreImagen">
                       ${capitalize(listing.categoria)}
                     </div>
@@ -55,9 +55,9 @@ function addListingCard(listing){
 
 // Obtener los datos y mostrar las categorías
 
-fetch("../../../data/listings.json")
+fetch("data/listings.json")
   .then(res => res.json())
   .then(res => {
     const categories = getFilteredCategories(res.data);
-    categories.forEach(e => addListingCard(e, categoriasContainer)); 
+    categories.forEach(e => addListingCard(e, categoriasContainer));
   });
